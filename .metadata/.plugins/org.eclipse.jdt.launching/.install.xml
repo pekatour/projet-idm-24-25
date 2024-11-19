@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-    <entry loc="/usr/lib/jvm/java-17-openjdk-amd64" stamp="1695114563690"/>
-    <entry loc="/usr/lib/jvm/java-8-openjdk-amd64" stamp="1690141641690"/>
-    <entry loc="/usr/lib/jvm/java-11-openjdk-amd64" stamp="1693598461973"/>
+    <entry loc="/usr/lib/jvm/java-17-openjdk-amd64" stamp="1721913028220"/>
+    <entry loc="/usr/lib/jvm/java-8-openjdk-amd64" stamp="1721919631891"/>
+    <entry loc="/usr/lib/jvm/java-11-openjdk-amd64" stamp="1721913008679"/>
 </dirs>

@@ -1,3 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    name="schemaTable" nsURI="http://www.example.org/schemaTable" nsPrefix="schemaTable"/>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="schemaTable" nsURI="http://schemaTable" nsPrefix="schemaTable">
+  <eClassifiers xsi:type="ecore:EClass" name="Table">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tailleCol" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="colonne" upperBound="-1"
+        eType="#//Colonne" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Colonne">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="defaultName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elements" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contrainteCol" upperBound="-1"
+        eType="#//Contrainte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Contrainte"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ColonneDerivee" eSuperTypes="#//Colonne">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="colonneDerivee" lowerBound="1"
+        upperBound="-1" eType="#//Colonne"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="algorithme" lowerBound="1"
+        eType="#//Algorithme"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ColonneEtrangere" eSuperTypes="#//Colonne">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tableEtrangere" lowerBound="1"
+        eType="#//Table"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Algorithme"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="NewEnum1"/>
+</ecore:EPackage>
