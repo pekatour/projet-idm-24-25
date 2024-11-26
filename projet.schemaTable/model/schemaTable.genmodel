@@ -10,6 +10,10 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="SchemaTable" basePackage="projet" disposableProviderFactory="true"
       ecorePackage="schemaTable.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="schemaTable.ecore#//newPackage3/Langage">
+      <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//newPackage3/Langage/PYTHON"/>
+      <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//newPackage3/Langage/INTERNE"/>
+    </genEnums>
     <genClasses ecoreClass="schemaTable.ecore#//Table">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Table/tailleCol"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/colonneData"/>
@@ -19,18 +23,45 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/nom"/>
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//ColonneDerivee">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//ColonneDerivee/colonneDerivee"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//ColonneDerivee/algorithme"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//ColonneDerivee/colonneIn"/>
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//ColonneEtrangere">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//ColonneEtrangere/tableEtrangere"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//ColonneEtrangere/idColonneTableEtrangere"/>
     </genClasses>
     <nestedGenPackages prefix="Algorithme" disposableProviderFactory="true" ecorePackage="schemaTable.ecore#//algorithme">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="schemaTable.ecore#//algorithme/Langage">
+        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//algorithme/Langage/PYTHON"/>
+        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//algorithme/Langage/INTERNE"/>
+      </genEnums>
       <genClasses ecoreClass="schemaTable.ecore#//algorithme/Algorithme">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//algorithme/Algorithme/nom"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//algorithme/Algorithme/ressource"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference schemaTable.ecore#//algorithme/Algorithme/entree"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference schemaTable.ecore#//algorithme/Algorithme/sortie"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//algorithme/Algorithme/documentation"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//algorithme/Algorithme/langage"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Calcul" disposableProviderFactory="true" ecorePackage="schemaTable.ecore#//calcul">
+      <genClasses ecoreClass="schemaTable.ecore#//calcul/calcul"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="NewPackage3" disposableProviderFactory="true" ecorePackage="schemaTable.ecore#//newPackage3">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="schemaTable.ecore#//newPackage3/Langage">
+        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//newPackage3/Langage/PYTHON"/>
+        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//newPackage3/Langage/INTERNE"/>
+      </genEnums>
+      <genClasses ecoreClass="schemaTable.ecore#//newPackage3/Algorithme">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//newPackage3/Algorithme/nom"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//newPackage3/Algorithme/ressource"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference schemaTable.ecore#//newPackage3/Algorithme/entree"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference schemaTable.ecore#//newPackage3/Algorithme/sortie"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//newPackage3/Algorithme/documentation"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//newPackage3/Algorithme/langage"/>
       </genClasses>
     </nestedGenPackages>
   </genPackages>

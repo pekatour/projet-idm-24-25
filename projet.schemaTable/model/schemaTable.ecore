@@ -16,8 +16,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="ColonneDerivee" eSuperTypes="#//Colonne">
     <eStructuralFeatures xsi:type="ecore:EReference" name="colonneIn" lowerBound="1"
         upperBound="-1" eType="#//Colonne"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="algorithme" lowerBound="1"
-        eType="#//algorithme/Algorithme"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ColonneEtrangere" eSuperTypes="#//Colonne">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tableEtrangere" lowerBound="1"
@@ -25,6 +23,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idColonneTableEtrangere"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eSubpackages name="calcul" nsURI="http://calcul" nsPrefix="calcul">
+    <eClassifiers xsi:type="ecore:EClass" name="calcul"/>
+  </eSubpackages>
   <eSubpackages name="algorithme" nsURI="http://algorithme" nsPrefix="algorithme">
     <eClassifiers xsi:type="ecore:EClass" name="Algorithme">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -34,9 +35,11 @@
           eType="#//Colonne"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sortie" eType="#//Colonne"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="documentation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="langage" eType="#//algorithme/Langage"/>
     </eClassifiers>
-  </eSubpackages>
-  <eSubpackages name="calcul" nsURI="http://calcul" nsPrefix="calcul">
-    <eClassifiers xsi:type="ecore:EClass" name="calcul"/>
+    <eClassifiers xsi:type="ecore:EEnum" name="Langage">
+      <eLiterals name="PYTHON" value="1"/>
+      <eLiterals name="INTERNE"/>
+    </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>
