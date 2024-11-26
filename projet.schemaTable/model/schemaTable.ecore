@@ -25,7 +25,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idColonneTableEtrangere"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eSubpackages name="algorithme" nsURI="algorithme" nsPrefix="http://algorithme">
+  <eSubpackages name="algorithme" nsURI="http://algorithme" nsPrefix="algorithme">
     <eClassifiers xsi:type="ecore:EClass" name="Algorithme">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ressource" lowerBound="1"
@@ -35,5 +35,8 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="sortie" eType="#//Colonne"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="documentation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="calcul" nsURI="http://calcul" nsPrefix="calcul">
+    <eClassifiers xsi:type="ecore:EClass" name="calcul"/>
   </eSubpackages>
 </ecore:EPackage>
