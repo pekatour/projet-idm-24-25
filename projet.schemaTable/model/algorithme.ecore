@@ -9,16 +9,28 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ressource" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entree" upperBound="-1"
-        eType="ecore:EClass schemaTable.ecore#//Colonne"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sortie" upperBound="-1"
-        eType="ecore:EClass schemaTable.ecore#//Colonne"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="documentation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="langage" eType="#//Langage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sortie" lowerBound="1"
+        eType="#//Sortie" eOpposite="#//Sortie/algorithme"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entree" upperBound="-1"
+        eType="#//Entree" eOpposite="#//Entree/algorithme"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Catalogue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="algorithmes" lowerBound="1"
         upperBound="-1" eType="#//Algorithme" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entree">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entree" lowerBound="1"
+        eType="ecore:EClass schemaTable.ecore#//Colonne"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="algorithme" lowerBound="1"
+        eType="#//Algorithme" eOpposite="#//Algorithme/entree"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sortie">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sortie" lowerBound="1"
+        eType="ecore:EClass schemaTable.ecore#//Colonne"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="algorithme" lowerBound="1"
+        eType="#//Algorithme" eOpposite="#//Algorithme/sortie"/>
   </eClassifiers>
 </ecore:EPackage>
