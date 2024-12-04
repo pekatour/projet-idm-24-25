@@ -12,10 +12,12 @@
       ecorePackage="schemaTable.ecore#/">
     <genClasses ecoreClass="schemaTable.ecore#//Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/colonneData"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/colonneidentifiants"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/colonneIdentifiants"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Table/nom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/algoContrainte"/>
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//Colonne">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/id"/>
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//ColonneDerivee">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//ColonneDerivee/colonneIn"/>
@@ -26,67 +28,23 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//ColonneEtrangere/idColonneTableEtrangere"/>
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//ColonneIdentifiants"/>
-    <nestedGenPackages prefix="Calcul" disposableProviderFactory="true" ecorePackage="schemaTable.ecore#//calcul">
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="schemaTable.ecore#//calcul/Type">
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/Type/INT"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/Type/FLOAT"/>
-      </genEnums>
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="schemaTable.ecore#//calcul/TypeBinaire">
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeBinaire/ADDITION"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeBinaire/SOUSTRACTION"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeBinaire/MULTIPLICATION"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeBinaire/DIVISION"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeBinaire/MAXIMUM"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeBinaire/MINIMUM"/>
-      </genEnums>
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="schemaTable.ecore#//calcul/TypeUnaire">
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeUnaire/INVERSE"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeUnaire/OPPOSE"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeUnaire/EXP"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeUnaire/COS"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeUnaire/SIN"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//calcul/TypeUnaire/RACINE"/>
-      </genEnums>
-      <genClasses ecoreClass="schemaTable.ecore#//calcul/Calcul">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference schemaTable.ecore#//calcul/Calcul/sortie"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//calcul/Calcul/expression"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//calcul/Calcul/entree"/>
-      </genClasses>
-      <genClasses ecoreClass="schemaTable.ecore#//calcul/Entree">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference schemaTable.ecore#//calcul/Entree/valeur"/>
-      </genClasses>
-      <genClasses ecoreClass="schemaTable.ecore#//calcul/Expression"/>
-      <genClasses ecoreClass="schemaTable.ecore#//calcul/Binaire">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//calcul/Binaire/type"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//calcul/Binaire/expressiong"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//calcul/Binaire/expressiond"/>
-      </genClasses>
-      <genClasses ecoreClass="schemaTable.ecore#//calcul/Unaire">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//calcul/Unaire/type"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//calcul/Unaire/expression"/>
-      </genClasses>
-      <genClasses ecoreClass="schemaTable.ecore#//calcul/Constante">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//calcul/Constante/valeur"/>
-      </genClasses>
-      <genClasses ecoreClass="schemaTable.ecore#//calcul/FonctionMath"/>
-    </nestedGenPackages>
-    <nestedGenPackages prefix="Algorithme" disposableProviderFactory="true" ecorePackage="schemaTable.ecore#//algorithme">
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="schemaTable.ecore#//algorithme/Langage">
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//algorithme/Langage/PYTHON"/>
-        <genEnumLiterals ecoreEnumLiteral="schemaTable.ecore#//algorithme/Langage/INTERNE"/>
-      </genEnums>
-      <genClasses ecoreClass="schemaTable.ecore#//algorithme/Algorithme">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//algorithme/Algorithme/nom"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//algorithme/Algorithme/ressource"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference schemaTable.ecore#//algorithme/Algorithme/entree"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference schemaTable.ecore#//algorithme/Algorithme/sortie"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//algorithme/Algorithme/documentation"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//algorithme/Algorithme/langage"/>
-      </genClasses>
-    </nestedGenPackages>
+  </genPackages>
+  <genPackages prefix="Algorithme" ecorePackage="algorithme.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="algorithme.ecore#//Langage">
+      <genEnumLiterals ecoreEnumLiteral="algorithme.ecore#//Langage/PYTHON"/>
+      <genEnumLiterals ecoreEnumLiteral="algorithme.ecore#//Langage/INTERNE"/>
+    </genEnums>
+    <genClasses ecoreClass="algorithme.ecore#//Algorithme">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/ressource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithme.ecore#//Algorithme/entree"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithme.ecore#//Algorithme/sortie"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/documentation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/langage"/>
+    </genClasses>
+    <genClasses ecoreClass="algorithme.ecore#//Catalogue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithme.ecore#//Catalogue/algorithmes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Catalogue/nom"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
