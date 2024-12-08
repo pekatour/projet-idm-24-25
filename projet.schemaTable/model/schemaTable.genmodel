@@ -12,12 +12,10 @@
       ecorePackage="schemaTable.ecore#/">
     <genClasses ecoreClass="schemaTable.ecore#//Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/colonneData"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/colonneIdentifiants"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Table/nom"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/algoContrainte"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/colonneidentifiants"/>
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//Colonne">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/nom"/>
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//ColonneDerivee">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//ColonneDerivee/algorithme"/>
