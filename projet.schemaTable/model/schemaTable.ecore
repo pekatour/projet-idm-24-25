@@ -6,6 +6,9 @@
         eType="#//Colonne" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="colonneidentifiants" lowerBound="1"
         eType="#//ColonneIdentifiants"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="algoContrainte" upperBound="-1"
+        eType="ecore:EClass algorithme.ecore#//Algorithme" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Colonne">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -13,7 +16,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ColonneDerivee" eSuperTypes="#//Colonne">
     <eStructuralFeatures xsi:type="ecore:EReference" name="algorithme" lowerBound="1"
-        eType="ecore:EClass algorithme.ecore#//Algorithme"/>
+        eType="ecore:EClass algorithme.ecore#//Algorithme" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ColonneEtrangere" eSuperTypes="#//Colonne">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tableEtrangere" lowerBound="1"

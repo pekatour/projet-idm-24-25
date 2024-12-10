@@ -1,7 +1,19 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: projet.schemaTable
-Bundle-SymbolicName: projet.schemaTable; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: projet.schemaTable;singleton:=true
+Automatic-Module-Name: projet.schemaTable
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: algorithme,
+ algorithme.impl,
+ algorithme.util,
+ projet.schemaTable,
+ projet.schemaTable.impl,
+ projet.schemaTable.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy

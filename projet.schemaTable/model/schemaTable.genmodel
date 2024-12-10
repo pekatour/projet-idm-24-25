@@ -13,12 +13,14 @@
     <genClasses ecoreClass="schemaTable.ecore#//Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/colonneData"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/colonneidentifiants"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Table/nom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/algoContrainte"/>
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//Colonne">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/nom"/>
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//ColonneDerivee">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//ColonneDerivee/algorithme"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//ColonneDerivee/algorithme"/>
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//ColonneEtrangere">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//ColonneEtrangere/tableEtrangere"/>
@@ -36,12 +38,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/ressource"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/documentation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/langage"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithme.ecore#//Algorithme/sortie"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithme.ecore#//Algorithme/entree"/>
-    </genClasses>
-    <genClasses ecoreClass="algorithme.ecore#//Catalogue">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithme.ecore#//Catalogue/algorithmes"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Catalogue/nom"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference algorithme.ecore#//Algorithme/sortie"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference algorithme.ecore#//Algorithme/entree"/>
     </genClasses>
     <genClasses ecoreClass="algorithme.ecore#//Entree">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithme.ecore#//Entree/entree"/>
