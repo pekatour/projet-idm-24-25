@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemaTable:Table
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:schemaTable="http://schemaTable"
+    colonneidentifiants="//@colonneData.1"
+    nom="exemple">
+  <colonneData
+      nom="joliecolonne"/>
+  <colonneData
+      xsi:type="schemaTable:ColonneIdentifiants"
+      nom="identifiants"/>
+  <colonneData
+      xsi:type="schemaTable:ColonneDerivee"
+      nom="+1">
+    <algorithme
+        nom="addition"
+        ressource="./?"
+        documentation="rien">
+      <sortie
+          sortie="+1"/>
+      <entree
+          entree="joliecolonne"/>
+    </algorithme>
+  </colonneData>
+  <colonneData
+      xsi:type="schemaTable:ColonneEtrangere"
+      nom="étrange"
+      idColonneTableEtrangere="zear">
+    <tableEtrangere
+        href="t1.xmi#/"/>
+  </colonneData>
+  <algoContrainte
+      nom="Contrainte1"
+      ressource="./?"
+      documentation="rien">
+    <sortie
+        sortie="joliecolonne"/>
+  </algoContrainte>
+</schemaTable:Table>

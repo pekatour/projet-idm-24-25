@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="FL"/>
 			<item value="platform:/resource/projet.schemaTable/model/Algorithme.ecore"/>
 			<item value="platform:/resource/projet.schemaTable/model/algorithme.ecore"/>
 		</list>
