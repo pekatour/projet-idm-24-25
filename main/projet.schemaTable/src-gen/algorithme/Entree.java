@@ -4,8 +4,6 @@ package algorithme;
 
 import org.eclipse.emf.ecore.EObject;
 
-import projet.schemaTable.Colonne;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Entree</b></em>'.
@@ -15,8 +13,8 @@ import projet.schemaTable.Colonne;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link algorithme.Entree#getEntree <em>Entree</em>}</li>
  *   <li>{@link algorithme.Entree#getAlgorithme <em>Algorithme</em>}</li>
+ *   <li>{@link algorithme.Entree#getEntree <em>Entree</em>}</li>
  * </ul>
  *
  * @see algorithme.AlgorithmePackage#getEntree()
@@ -25,46 +23,46 @@ import projet.schemaTable.Colonne;
  */
 public interface Entree extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Entree</b></em>' reference.
+	 * Returns the value of the '<em><b>Entree</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entree</em>' reference.
-	 * @see #setEntree(Colonne)
+	 * @return the value of the '<em>Entree</em>' attribute.
+	 * @see #setEntree(String)
 	 * @see algorithme.AlgorithmePackage#getEntree_Entree()
 	 * @model required="true"
 	 * @generated
 	 */
-	Colonne getEntree();
+	String getEntree();
 
 	/**
-	 * Sets the value of the '{@link algorithme.Entree#getEntree <em>Entree</em>}' reference.
+	 * Sets the value of the '{@link algorithme.Entree#getEntree <em>Entree</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Entree</em>' reference.
+	 * @param value the new value of the '<em>Entree</em>' attribute.
 	 * @see #getEntree()
 	 * @generated
 	 */
-	void setEntree(Colonne value);
+	void setEntree(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Algorithme</b></em>' reference.
+	 * Returns the value of the '<em><b>Algorithme</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link algorithme.Algorithme#getEntree <em>Entree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Algorithme</em>' reference.
+	 * @return the value of the '<em>Algorithme</em>' container reference.
 	 * @see #setAlgorithme(Algorithme)
 	 * @see algorithme.AlgorithmePackage#getEntree_Algorithme()
 	 * @see algorithme.Algorithme#getEntree
-	 * @model opposite="entree" required="true"
+	 * @model opposite="entree" required="true" transient="false"
 	 * @generated
 	 */
 	Algorithme getAlgorithme();
 
 	/**
-	 * Sets the value of the '{@link algorithme.Entree#getAlgorithme <em>Algorithme</em>}' reference.
+	 * Sets the value of the '{@link algorithme.Entree#getAlgorithme <em>Algorithme</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Algorithme</em>' reference.
+	 * @param value the new value of the '<em>Algorithme</em>' container reference.
 	 * @see #getAlgorithme()
 	 * @generated
 	 */

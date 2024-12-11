@@ -171,6 +171,26 @@ public class SchemaTablePackageImpl extends EPackageImpl implements SchemaTableP
 	 * @generated
 	 */
 	@Override
+	public EAttribute getTable_Nom() {
+		return (EAttribute) tableEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTable_AlgoContrainte() {
+		return (EReference) tableEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getColonne() {
 		return colonneEClass;
 	}
@@ -278,6 +298,8 @@ public class SchemaTablePackageImpl extends EPackageImpl implements SchemaTableP
 		tableEClass = createEClass(TABLE);
 		createEReference(tableEClass, TABLE__COLONNE_DATA);
 		createEReference(tableEClass, TABLE__COLONNEIDENTIFIANTS);
+		createEAttribute(tableEClass, TABLE__NOM);
+		createEReference(tableEClass, TABLE__ALGO_CONTRAINTE);
 
 		colonneEClass = createEClass(COLONNE);
 		createEAttribute(colonneEClass, COLONNE__NOM);
@@ -337,6 +359,11 @@ public class SchemaTablePackageImpl extends EPackageImpl implements SchemaTableP
 		initEReference(getTable_Colonneidentifiants(), this.getColonneIdentifiants(), null, "colonneidentifiants", null,
 				1, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTable_Nom(), ecorePackage.getEString(), "nom", null, 1, 1, Table.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTable_AlgoContrainte(), theAlgorithmePackage.getAlgorithme(), null, "algoContrainte", null, 0,
+				-1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(colonneEClass, Colonne.class, "Colonne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getColonne_Nom(), ecorePackage.getEString(), "nom", "", 1, 1, Colonne.class, !IS_TRANSIENT,
@@ -345,8 +372,8 @@ public class SchemaTablePackageImpl extends EPackageImpl implements SchemaTableP
 		initEClass(colonneDeriveeEClass, ColonneDerivee.class, "ColonneDerivee", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getColonneDerivee_Algorithme(), theAlgorithmePackage.getAlgorithme(), null, "algorithme", null,
-				1, 1, ColonneDerivee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				1, 1, ColonneDerivee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(colonneEtrangereEClass, ColonneEtrangere.class, "ColonneEtrangere", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

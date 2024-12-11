@@ -4,6 +4,7 @@ package algorithme.provider;
 
 import algorithme.AlgorithmePackage;
 
+import algorithme.Sortie;
 import java.util.Collection;
 import java.util.List;
 
@@ -19,6 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 import projet.schemaTable.provider.SchemaTableEditPlugin;
@@ -52,8 +54,8 @@ public class SortieItemProvider extends ItemProviderAdapter implements IEditingD
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSortiePropertyDescriptor(object);
 			addAlgorithmePropertyDescriptor(object);
+			addSortiePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,7 +71,8 @@ public class SortieItemProvider extends ItemProviderAdapter implements IEditingD
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Sortie_sortie_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Sortie_sortie_feature", "_UI_Sortie_type"),
-						AlgorithmePackage.Literals.SORTIE__SORTIE, true, false, true, null, null, null));
+						AlgorithmePackage.Literals.SORTIE__SORTIE, true, false, true,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -116,7 +119,9 @@ public class SortieItemProvider extends ItemProviderAdapter implements IEditingD
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Sortie_type");
+		String label = ((Sortie) object).getSortie();
+		return label == null || label.length() == 0 ? getString("_UI_Sortie_type")
+				: getString("_UI_Sortie_type") + " " + label;
 	}
 
 	/**

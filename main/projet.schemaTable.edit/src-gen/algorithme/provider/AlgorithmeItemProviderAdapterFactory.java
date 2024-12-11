@@ -95,29 +95,6 @@ public class AlgorithmeItemProviderAdapterFactory extends AlgorithmeAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link algorithme.Catalogue} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CatalogueItemProvider catalogueItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link algorithme.Catalogue}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCatalogueAdapter() {
-		if (catalogueItemProvider == null) {
-			catalogueItemProvider = new CatalogueItemProvider(this);
-		}
-
-		return catalogueItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link algorithme.Entree} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

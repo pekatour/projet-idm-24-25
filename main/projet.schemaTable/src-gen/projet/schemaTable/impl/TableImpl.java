@@ -2,6 +2,7 @@
  */
 package projet.schemaTable.impl;
 
+import algorithme.Algorithme;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -33,6 +34,8 @@ import projet.schemaTable.Table;
  * <ul>
  *   <li>{@link projet.schemaTable.impl.TableImpl#getColonneData <em>Colonne Data</em>}</li>
  *   <li>{@link projet.schemaTable.impl.TableImpl#getColonneidentifiants <em>Colonneidentifiants</em>}</li>
+ *   <li>{@link projet.schemaTable.impl.TableImpl#getNom <em>Nom</em>}</li>
+ *   <li>{@link projet.schemaTable.impl.TableImpl#getAlgoContrainte <em>Algo Contrainte</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,6 +60,36 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 	 * @ordered
 	 */
 	protected ColonneIdentifiants colonneidentifiants;
+
+	/**
+	 * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNom()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOM_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNom()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nom = NOM_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getAlgoContrainte() <em>Algo Contrainte</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlgoContrainte()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Algorithme> algoContrainte;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,10 +173,49 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 	 * @generated
 	 */
 	@Override
+	public String getNom() {
+		return nom;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNom(String newNom) {
+		String oldNom = nom;
+		nom = newNom;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchemaTablePackage.TABLE__NOM, oldNom, nom));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Algorithme> getAlgoContrainte() {
+		if (algoContrainte == null) {
+			algoContrainte = new EObjectContainmentEList<Algorithme>(Algorithme.class, this,
+					SchemaTablePackage.TABLE__ALGO_CONTRAINTE);
+		}
+		return algoContrainte;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case SchemaTablePackage.TABLE__COLONNE_DATA:
 			return ((InternalEList<?>) getColonneData()).basicRemove(otherEnd, msgs);
+		case SchemaTablePackage.TABLE__ALGO_CONTRAINTE:
+			return ((InternalEList<?>) getAlgoContrainte()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -162,6 +234,10 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 			if (resolve)
 				return getColonneidentifiants();
 			return basicGetColonneidentifiants();
+		case SchemaTablePackage.TABLE__NOM:
+			return getNom();
+		case SchemaTablePackage.TABLE__ALGO_CONTRAINTE:
+			return getAlgoContrainte();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -182,6 +258,13 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 		case SchemaTablePackage.TABLE__COLONNEIDENTIFIANTS:
 			setColonneidentifiants((ColonneIdentifiants) newValue);
 			return;
+		case SchemaTablePackage.TABLE__NOM:
+			setNom((String) newValue);
+			return;
+		case SchemaTablePackage.TABLE__ALGO_CONTRAINTE:
+			getAlgoContrainte().clear();
+			getAlgoContrainte().addAll((Collection<? extends Algorithme>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -200,6 +283,12 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 		case SchemaTablePackage.TABLE__COLONNEIDENTIFIANTS:
 			setColonneidentifiants((ColonneIdentifiants) null);
 			return;
+		case SchemaTablePackage.TABLE__NOM:
+			setNom(NOM_EDEFAULT);
+			return;
+		case SchemaTablePackage.TABLE__ALGO_CONTRAINTE:
+			getAlgoContrainte().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -216,8 +305,29 @@ public class TableImpl extends MinimalEObjectImpl.Container implements Table {
 			return colonneData != null && !colonneData.isEmpty();
 		case SchemaTablePackage.TABLE__COLONNEIDENTIFIANTS:
 			return colonneidentifiants != null;
+		case SchemaTablePackage.TABLE__NOM:
+			return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
+		case SchemaTablePackage.TABLE__ALGO_CONTRAINTE:
+			return algoContrainte != null && !algoContrainte.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (nom: ");
+		result.append(nom);
+		result.append(')');
+		return result.toString();
 	}
 
 } //TableImpl

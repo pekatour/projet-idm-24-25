@@ -59,8 +59,6 @@ public class AlgorithmeFactoryImpl extends EFactoryImpl implements AlgorithmeFac
 		switch (eClass.getClassifierID()) {
 		case AlgorithmePackage.ALGORITHME:
 			return createAlgorithme();
-		case AlgorithmePackage.CATALOGUE:
-			return createCatalogue();
 		case AlgorithmePackage.ENTREE:
 			return createEntree();
 		case AlgorithmePackage.SORTIE:
@@ -109,17 +107,6 @@ public class AlgorithmeFactoryImpl extends EFactoryImpl implements AlgorithmeFac
 	public Algorithme createAlgorithme() {
 		AlgorithmeImpl algorithme = new AlgorithmeImpl();
 		return algorithme;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Catalogue createCatalogue() {
-		CatalogueImpl catalogue = new CatalogueImpl();
-		return catalogue;
 	}
 
 	/**

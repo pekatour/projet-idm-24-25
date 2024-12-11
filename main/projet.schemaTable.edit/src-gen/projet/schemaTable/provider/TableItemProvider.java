@@ -2,6 +2,7 @@
  */
 package projet.schemaTable.provider;
 
+import algorithme.AlgorithmeFactory;
 import java.util.Collection;
 import java.util.List;
 
@@ -19,6 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -56,6 +58,7 @@ public class TableItemProvider extends ItemProviderAdapter implements IEditingDo
 			super.getPropertyDescriptors(object);
 
 			addColonneidentifiantsPropertyDescriptor(object);
+			addNomPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -76,6 +79,21 @@ public class TableItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
+	 * This adds a property descriptor for the Nom feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNomPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Table_nom_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Table_nom_feature", "_UI_Table_type"),
+						SchemaTablePackage.Literals.TABLE__NOM, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -88,6 +106,7 @@ public class TableItemProvider extends ItemProviderAdapter implements IEditingDo
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(SchemaTablePackage.Literals.TABLE__COLONNE_DATA);
+			childrenFeatures.add(SchemaTablePackage.Literals.TABLE__ALGO_CONTRAINTE);
 		}
 		return childrenFeatures;
 	}
@@ -134,7 +153,9 @@ public class TableItemProvider extends ItemProviderAdapter implements IEditingDo
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Table_type");
+		String label = ((Table) object).getNom();
+		return label == null || label.length() == 0 ? getString("_UI_Table_type")
+				: getString("_UI_Table_type") + " " + label;
 	}
 
 	/**
@@ -149,7 +170,11 @@ public class TableItemProvider extends ItemProviderAdapter implements IEditingDo
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Table.class)) {
+		case SchemaTablePackage.TABLE__NOM:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		case SchemaTablePackage.TABLE__COLONNE_DATA:
+		case SchemaTablePackage.TABLE__ALGO_CONTRAINTE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -178,6 +203,9 @@ public class TableItemProvider extends ItemProviderAdapter implements IEditingDo
 
 		newChildDescriptors.add(createChildParameter(SchemaTablePackage.Literals.TABLE__COLONNE_DATA,
 				SchemaTableFactory.eINSTANCE.createColonneIdentifiants()));
+
+		newChildDescriptors.add(createChildParameter(SchemaTablePackage.Literals.TABLE__ALGO_CONTRAINTE,
+				AlgorithmeFactory.eINSTANCE.createAlgorithme()));
 	}
 
 	/**

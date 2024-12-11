@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import projet.schemaTable.Colonne;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,32 +25,32 @@ import projet.schemaTable.Colonne;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link algorithme.impl.EntreeImpl#getEntree <em>Entree</em>}</li>
  *   <li>{@link algorithme.impl.EntreeImpl#getAlgorithme <em>Algorithme</em>}</li>
+ *   <li>{@link algorithme.impl.EntreeImpl#getEntree <em>Entree</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class EntreeImpl extends MinimalEObjectImpl.Container implements Entree {
 	/**
-	 * The cached value of the '{@link #getEntree() <em>Entree</em>}' reference.
+	 * The default value of the '{@link #getEntree() <em>Entree</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEntree()
 	 * @generated
 	 * @ordered
 	 */
-	protected Colonne entree;
+	protected static final String ENTREE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getAlgorithme() <em>Algorithme</em>}' reference.
+	 * The cached value of the '{@link #getEntree() <em>Entree</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAlgorithme()
+	 * @see #getEntree()
 	 * @generated
 	 * @ordered
 	 */
-	protected Algorithme algorithme;
+	protected String entree = ENTREE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,25 +77,7 @@ public class EntreeImpl extends MinimalEObjectImpl.Container implements Entree {
 	 * @generated
 	 */
 	@Override
-	public Colonne getEntree() {
-		if (entree != null && entree.eIsProxy()) {
-			InternalEObject oldEntree = (InternalEObject) entree;
-			entree = (Colonne) eResolveProxy(oldEntree);
-			if (entree != oldEntree) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AlgorithmePackage.ENTREE__ENTREE,
-							oldEntree, entree));
-			}
-		}
-		return entree;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Colonne basicGetEntree() {
+	public String getEntree() {
 		return entree;
 	}
 
@@ -105,8 +87,8 @@ public class EntreeImpl extends MinimalEObjectImpl.Container implements Entree {
 	 * @generated
 	 */
 	@Override
-	public void setEntree(Colonne newEntree) {
-		Colonne oldEntree = entree;
+	public void setEntree(String newEntree) {
+		String oldEntree = entree;
 		entree = newEntree;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AlgorithmePackage.ENTREE__ENTREE, oldEntree, entree));
@@ -119,25 +101,9 @@ public class EntreeImpl extends MinimalEObjectImpl.Container implements Entree {
 	 */
 	@Override
 	public Algorithme getAlgorithme() {
-		if (algorithme != null && algorithme.eIsProxy()) {
-			InternalEObject oldAlgorithme = (InternalEObject) algorithme;
-			algorithme = (Algorithme) eResolveProxy(oldAlgorithme);
-			if (algorithme != oldAlgorithme) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AlgorithmePackage.ENTREE__ALGORITHME,
-							oldAlgorithme, algorithme));
-			}
-		}
-		return algorithme;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Algorithme basicGetAlgorithme() {
-		return algorithme;
+		if (eContainerFeatureID() != AlgorithmePackage.ENTREE__ALGORITHME)
+			return null;
+		return (Algorithme) eInternalContainer();
 	}
 
 	/**
@@ -146,16 +112,7 @@ public class EntreeImpl extends MinimalEObjectImpl.Container implements Entree {
 	 * @generated
 	 */
 	public NotificationChain basicSetAlgorithme(Algorithme newAlgorithme, NotificationChain msgs) {
-		Algorithme oldAlgorithme = algorithme;
-		algorithme = newAlgorithme;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					AlgorithmePackage.ENTREE__ALGORITHME, oldAlgorithme, newAlgorithme);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eBasicSetContainer((InternalEObject) newAlgorithme, AlgorithmePackage.ENTREE__ALGORITHME, msgs);
 		return msgs;
 	}
 
@@ -166,11 +123,13 @@ public class EntreeImpl extends MinimalEObjectImpl.Container implements Entree {
 	 */
 	@Override
 	public void setAlgorithme(Algorithme newAlgorithme) {
-		if (newAlgorithme != algorithme) {
+		if (newAlgorithme != eInternalContainer()
+				|| (eContainerFeatureID() != AlgorithmePackage.ENTREE__ALGORITHME && newAlgorithme != null)) {
+			if (EcoreUtil.isAncestor(this, newAlgorithme))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
-			if (algorithme != null)
-				msgs = ((InternalEObject) algorithme).eInverseRemove(this, AlgorithmePackage.ALGORITHME__ENTREE,
-						Algorithme.class, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			if (newAlgorithme != null)
 				msgs = ((InternalEObject) newAlgorithme).eInverseAdd(this, AlgorithmePackage.ALGORITHME__ENTREE,
 						Algorithme.class, msgs);
@@ -191,9 +150,8 @@ public class EntreeImpl extends MinimalEObjectImpl.Container implements Entree {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case AlgorithmePackage.ENTREE__ALGORITHME:
-			if (algorithme != null)
-				msgs = ((InternalEObject) algorithme).eInverseRemove(this, AlgorithmePackage.ALGORITHME__ENTREE,
-						Algorithme.class, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			return basicSetAlgorithme((Algorithme) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -219,16 +177,27 @@ public class EntreeImpl extends MinimalEObjectImpl.Container implements Entree {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+		case AlgorithmePackage.ENTREE__ALGORITHME:
+			return eInternalContainer().eInverseRemove(this, AlgorithmePackage.ALGORITHME__ENTREE, Algorithme.class,
+					msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case AlgorithmePackage.ENTREE__ENTREE:
-			if (resolve)
-				return getEntree();
-			return basicGetEntree();
 		case AlgorithmePackage.ENTREE__ALGORITHME:
-			if (resolve)
-				return getAlgorithme();
-			return basicGetAlgorithme();
+			return getAlgorithme();
+		case AlgorithmePackage.ENTREE__ENTREE:
+			return getEntree();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -241,11 +210,11 @@ public class EntreeImpl extends MinimalEObjectImpl.Container implements Entree {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case AlgorithmePackage.ENTREE__ENTREE:
-			setEntree((Colonne) newValue);
-			return;
 		case AlgorithmePackage.ENTREE__ALGORITHME:
 			setAlgorithme((Algorithme) newValue);
+			return;
+		case AlgorithmePackage.ENTREE__ENTREE:
+			setEntree((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -259,11 +228,11 @@ public class EntreeImpl extends MinimalEObjectImpl.Container implements Entree {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case AlgorithmePackage.ENTREE__ENTREE:
-			setEntree((Colonne) null);
-			return;
 		case AlgorithmePackage.ENTREE__ALGORITHME:
 			setAlgorithme((Algorithme) null);
+			return;
+		case AlgorithmePackage.ENTREE__ENTREE:
+			setEntree(ENTREE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -277,12 +246,29 @@ public class EntreeImpl extends MinimalEObjectImpl.Container implements Entree {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case AlgorithmePackage.ENTREE__ENTREE:
-			return entree != null;
 		case AlgorithmePackage.ENTREE__ALGORITHME:
-			return algorithme != null;
+			return getAlgorithme() != null;
+		case AlgorithmePackage.ENTREE__ENTREE:
+			return ENTREE_EDEFAULT == null ? entree != null : !ENTREE_EDEFAULT.equals(entree);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (entree: ");
+		result.append(entree);
+		result.append(')');
+		return result.toString();
 	}
 
 } //EntreeImpl

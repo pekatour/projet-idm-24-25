@@ -31,15 +31,6 @@ public interface AlgorithmeFactory extends EFactory {
 	Algorithme createAlgorithme();
 
 	/**
-	 * Returns a new object of class '<em>Catalogue</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Catalogue</em>'.
-	 * @generated
-	 */
-	Catalogue createCatalogue();
-
-	/**
 	 * Returns a new object of class '<em>Entree</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

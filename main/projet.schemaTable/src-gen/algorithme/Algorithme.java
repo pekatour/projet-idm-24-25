@@ -120,39 +120,39 @@ public interface Algorithme extends EObject {
 	void setLangage(Langage value);
 
 	/**
-	 * Returns the value of the '<em><b>Sortie</b></em>' reference.
+	 * Returns the value of the '<em><b>Sortie</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link algorithme.Sortie#getAlgorithme <em>Algorithme</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sortie</em>' reference.
+	 * @return the value of the '<em>Sortie</em>' containment reference.
 	 * @see #setSortie(Sortie)
 	 * @see algorithme.AlgorithmePackage#getAlgorithme_Sortie()
 	 * @see algorithme.Sortie#getAlgorithme
-	 * @model opposite="algorithme" required="true"
+	 * @model opposite="algorithme" containment="true" required="true"
 	 * @generated
 	 */
 	Sortie getSortie();
 
 	/**
-	 * Sets the value of the '{@link algorithme.Algorithme#getSortie <em>Sortie</em>}' reference.
+	 * Sets the value of the '{@link algorithme.Algorithme#getSortie <em>Sortie</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sortie</em>' reference.
+	 * @param value the new value of the '<em>Sortie</em>' containment reference.
 	 * @see #getSortie()
 	 * @generated
 	 */
 	void setSortie(Sortie value);
 
 	/**
-	 * Returns the value of the '<em><b>Entree</b></em>' reference list.
+	 * Returns the value of the '<em><b>Entree</b></em>' containment reference list.
 	 * The list contents are of type {@link algorithme.Entree}.
 	 * It is bidirectional and its opposite is '{@link algorithme.Entree#getAlgorithme <em>Algorithme</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entree</em>' reference list.
+	 * @return the value of the '<em>Entree</em>' containment reference list.
 	 * @see algorithme.AlgorithmePackage#getAlgorithme_Entree()
 	 * @see algorithme.Entree#getAlgorithme
-	 * @model opposite="algorithme"
+	 * @model opposite="algorithme" containment="true"
 	 * @generated
 	 */
 	EList<Entree> getEntree();

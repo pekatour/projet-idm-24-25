@@ -104,7 +104,7 @@ public interface AlgorithmePackage extends EPackage {
 	int ALGORITHME__LANGAGE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Sortie</b></em>' reference.
+	 * The feature id for the '<em><b>Sortie</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -113,7 +113,7 @@ public interface AlgorithmePackage extends EPackage {
 	int ALGORITHME__SORTIE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Entree</b></em>' reference list.
+	 * The feature id for the '<em><b>Entree</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -140,52 +140,6 @@ public interface AlgorithmePackage extends EPackage {
 	int ALGORITHME_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link algorithme.impl.CatalogueImpl <em>Catalogue</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see algorithme.impl.CatalogueImpl
-	 * @see algorithme.impl.AlgorithmePackageImpl#getCatalogue()
-	 * @generated
-	 */
-	int CATALOGUE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Algorithmes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATALOGUE__ALGORITHMES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATALOGUE__NOM = 1;
-
-	/**
-	 * The number of structural features of the '<em>Catalogue</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATALOGUE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Catalogue</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATALOGUE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link algorithme.impl.EntreeImpl <em>Entree</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -193,25 +147,25 @@ public interface AlgorithmePackage extends EPackage {
 	 * @see algorithme.impl.AlgorithmePackageImpl#getEntree()
 	 * @generated
 	 */
-	int ENTREE = 2;
+	int ENTREE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Entree</b></em>' reference.
+	 * The feature id for the '<em><b>Algorithme</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTREE__ENTREE = 0;
+	int ENTREE__ALGORITHME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Algorithme</b></em>' reference.
+	 * The feature id for the '<em><b>Entree</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTREE__ALGORITHME = 1;
+	int ENTREE__ENTREE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Entree</em>' class.
@@ -239,25 +193,25 @@ public interface AlgorithmePackage extends EPackage {
 	 * @see algorithme.impl.AlgorithmePackageImpl#getSortie()
 	 * @generated
 	 */
-	int SORTIE = 3;
+	int SORTIE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Sortie</b></em>' reference.
+	 * The feature id for the '<em><b>Algorithme</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SORTIE__SORTIE = 0;
+	int SORTIE__ALGORITHME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Algorithme</b></em>' reference.
+	 * The feature id for the '<em><b>Sortie</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SORTIE__ALGORITHME = 1;
+	int SORTIE__SORTIE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Sortie</em>' class.
@@ -285,7 +239,7 @@ public interface AlgorithmePackage extends EPackage {
 	 * @see algorithme.impl.AlgorithmePackageImpl#getLangage()
 	 * @generated
 	 */
-	int LANGAGE = 4;
+	int LANGAGE = 3;
 
 	/**
 	 * Returns the meta object for class '{@link algorithme.Algorithme <em>Algorithme</em>}'.
@@ -342,10 +296,10 @@ public interface AlgorithmePackage extends EPackage {
 	EAttribute getAlgorithme_Langage();
 
 	/**
-	 * Returns the meta object for the reference '{@link algorithme.Algorithme#getSortie <em>Sortie</em>}'.
+	 * Returns the meta object for the containment reference '{@link algorithme.Algorithme#getSortie <em>Sortie</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Sortie</em>'.
+	 * @return the meta object for the containment reference '<em>Sortie</em>'.
 	 * @see algorithme.Algorithme#getSortie()
 	 * @see #getAlgorithme()
 	 * @generated
@@ -353,47 +307,15 @@ public interface AlgorithmePackage extends EPackage {
 	EReference getAlgorithme_Sortie();
 
 	/**
-	 * Returns the meta object for the reference list '{@link algorithme.Algorithme#getEntree <em>Entree</em>}'.
+	 * Returns the meta object for the containment reference list '{@link algorithme.Algorithme#getEntree <em>Entree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Entree</em>'.
+	 * @return the meta object for the containment reference list '<em>Entree</em>'.
 	 * @see algorithme.Algorithme#getEntree()
 	 * @see #getAlgorithme()
 	 * @generated
 	 */
 	EReference getAlgorithme_Entree();
-
-	/**
-	 * Returns the meta object for class '{@link algorithme.Catalogue <em>Catalogue</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Catalogue</em>'.
-	 * @see algorithme.Catalogue
-	 * @generated
-	 */
-	EClass getCatalogue();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link algorithme.Catalogue#getAlgorithmes <em>Algorithmes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Algorithmes</em>'.
-	 * @see algorithme.Catalogue#getAlgorithmes()
-	 * @see #getCatalogue()
-	 * @generated
-	 */
-	EReference getCatalogue_Algorithmes();
-
-	/**
-	 * Returns the meta object for the attribute '{@link algorithme.Catalogue#getNom <em>Nom</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nom</em>'.
-	 * @see algorithme.Catalogue#getNom()
-	 * @see #getCatalogue()
-	 * @generated
-	 */
-	EAttribute getCatalogue_Nom();
 
 	/**
 	 * Returns the meta object for class '{@link algorithme.Entree <em>Entree</em>}'.
@@ -406,21 +328,21 @@ public interface AlgorithmePackage extends EPackage {
 	EClass getEntree();
 
 	/**
-	 * Returns the meta object for the reference '{@link algorithme.Entree#getEntree <em>Entree</em>}'.
+	 * Returns the meta object for the attribute '{@link algorithme.Entree#getEntree <em>Entree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Entree</em>'.
+	 * @return the meta object for the attribute '<em>Entree</em>'.
 	 * @see algorithme.Entree#getEntree()
 	 * @see #getEntree()
 	 * @generated
 	 */
-	EReference getEntree_Entree();
+	EAttribute getEntree_Entree();
 
 	/**
-	 * Returns the meta object for the reference '{@link algorithme.Entree#getAlgorithme <em>Algorithme</em>}'.
+	 * Returns the meta object for the container reference '{@link algorithme.Entree#getAlgorithme <em>Algorithme</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Algorithme</em>'.
+	 * @return the meta object for the container reference '<em>Algorithme</em>'.
 	 * @see algorithme.Entree#getAlgorithme()
 	 * @see #getEntree()
 	 * @generated
@@ -438,21 +360,21 @@ public interface AlgorithmePackage extends EPackage {
 	EClass getSortie();
 
 	/**
-	 * Returns the meta object for the reference '{@link algorithme.Sortie#getSortie <em>Sortie</em>}'.
+	 * Returns the meta object for the attribute '{@link algorithme.Sortie#getSortie <em>Sortie</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Sortie</em>'.
+	 * @return the meta object for the attribute '<em>Sortie</em>'.
 	 * @see algorithme.Sortie#getSortie()
 	 * @see #getSortie()
 	 * @generated
 	 */
-	EReference getSortie_Sortie();
+	EAttribute getSortie_Sortie();
 
 	/**
-	 * Returns the meta object for the reference '{@link algorithme.Sortie#getAlgorithme <em>Algorithme</em>}'.
+	 * Returns the meta object for the container reference '{@link algorithme.Sortie#getAlgorithme <em>Algorithme</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Algorithme</em>'.
+	 * @return the meta object for the container reference '<em>Algorithme</em>'.
 	 * @see algorithme.Sortie#getAlgorithme()
 	 * @see #getSortie()
 	 * @generated
@@ -535,7 +457,7 @@ public interface AlgorithmePackage extends EPackage {
 		EAttribute ALGORITHME__LANGAGE = eINSTANCE.getAlgorithme_Langage();
 
 		/**
-		 * The meta object literal for the '<em><b>Sortie</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Sortie</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -543,38 +465,12 @@ public interface AlgorithmePackage extends EPackage {
 		EReference ALGORITHME__SORTIE = eINSTANCE.getAlgorithme_Sortie();
 
 		/**
-		 * The meta object literal for the '<em><b>Entree</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Entree</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference ALGORITHME__ENTREE = eINSTANCE.getAlgorithme_Entree();
-
-		/**
-		 * The meta object literal for the '{@link algorithme.impl.CatalogueImpl <em>Catalogue</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see algorithme.impl.CatalogueImpl
-		 * @see algorithme.impl.AlgorithmePackageImpl#getCatalogue()
-		 * @generated
-		 */
-		EClass CATALOGUE = eINSTANCE.getCatalogue();
-
-		/**
-		 * The meta object literal for the '<em><b>Algorithmes</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CATALOGUE__ALGORITHMES = eINSTANCE.getCatalogue_Algorithmes();
-
-		/**
-		 * The meta object literal for the '<em><b>Nom</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CATALOGUE__NOM = eINSTANCE.getCatalogue_Nom();
 
 		/**
 		 * The meta object literal for the '{@link algorithme.impl.EntreeImpl <em>Entree</em>}' class.
@@ -587,15 +483,15 @@ public interface AlgorithmePackage extends EPackage {
 		EClass ENTREE = eINSTANCE.getEntree();
 
 		/**
-		 * The meta object literal for the '<em><b>Entree</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Entree</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTREE__ENTREE = eINSTANCE.getEntree_Entree();
+		EAttribute ENTREE__ENTREE = eINSTANCE.getEntree_Entree();
 
 		/**
-		 * The meta object literal for the '<em><b>Algorithme</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Algorithme</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -613,15 +509,15 @@ public interface AlgorithmePackage extends EPackage {
 		EClass SORTIE = eINSTANCE.getSortie();
 
 		/**
-		 * The meta object literal for the '<em><b>Sortie</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Sortie</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SORTIE__SORTIE = eINSTANCE.getSortie_Sortie();
+		EAttribute SORTIE__SORTIE = eINSTANCE.getSortie_Sortie();
 
 		/**
-		 * The meta object literal for the '<em><b>Algorithme</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Algorithme</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

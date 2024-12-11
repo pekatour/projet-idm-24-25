@@ -4,6 +4,7 @@ package algorithme.provider;
 
 import algorithme.AlgorithmePackage;
 
+import algorithme.Entree;
 import java.util.Collection;
 import java.util.List;
 
@@ -19,6 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 import projet.schemaTable.provider.SchemaTableEditPlugin;
@@ -52,8 +54,8 @@ public class EntreeItemProvider extends ItemProviderAdapter implements IEditingD
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addEntreePropertyDescriptor(object);
 			addAlgorithmePropertyDescriptor(object);
+			addEntreePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,7 +71,8 @@ public class EntreeItemProvider extends ItemProviderAdapter implements IEditingD
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Entree_entree_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Entree_entree_feature", "_UI_Entree_type"),
-						AlgorithmePackage.Literals.ENTREE__ENTREE, true, false, true, null, null, null));
+						AlgorithmePackage.Literals.ENTREE__ENTREE, true, false, true,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -116,7 +119,9 @@ public class EntreeItemProvider extends ItemProviderAdapter implements IEditingD
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Entree_type");
+		String label = ((Entree) object).getEntree();
+		return label == null || label.length() == 0 ? getString("_UI_Entree_type")
+				: getString("_UI_Entree_type") + " " + label;
 	}
 
 	/**

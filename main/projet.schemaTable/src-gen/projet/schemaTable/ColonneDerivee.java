@@ -22,22 +22,22 @@ import algorithme.Algorithme;
  */
 public interface ColonneDerivee extends Colonne {
 	/**
-	 * Returns the value of the '<em><b>Algorithme</b></em>' reference.
+	 * Returns the value of the '<em><b>Algorithme</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Algorithme</em>' reference.
+	 * @return the value of the '<em>Algorithme</em>' containment reference.
 	 * @see #setAlgorithme(Algorithme)
 	 * @see projet.schemaTable.SchemaTablePackage#getColonneDerivee_Algorithme()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Algorithme getAlgorithme();
 
 	/**
-	 * Sets the value of the '{@link projet.schemaTable.ColonneDerivee#getAlgorithme <em>Algorithme</em>}' reference.
+	 * Sets the value of the '{@link projet.schemaTable.ColonneDerivee#getAlgorithme <em>Algorithme</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Algorithme</em>' reference.
+	 * @param value the new value of the '<em>Algorithme</em>' containment reference.
 	 * @see #getAlgorithme()
 	 * @generated
 	 */

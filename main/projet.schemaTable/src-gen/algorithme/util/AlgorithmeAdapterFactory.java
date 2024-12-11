@@ -72,11 +72,6 @@ public class AlgorithmeAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseCatalogue(Catalogue object) {
-			return createCatalogueAdapter();
-		}
-
-		@Override
 		public Adapter caseEntree(Entree object) {
 			return createEntreeAdapter();
 		}
@@ -116,20 +111,6 @@ public class AlgorithmeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAlgorithmeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link algorithme.Catalogue <em>Catalogue</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see algorithme.Catalogue
-	 * @generated
-	 */
-	public Adapter createCatalogueAdapter() {
 		return null;
 	}
 

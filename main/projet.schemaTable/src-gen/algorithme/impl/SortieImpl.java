@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import projet.schemaTable.Colonne;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,32 +25,32 @@ import projet.schemaTable.Colonne;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link algorithme.impl.SortieImpl#getSortie <em>Sortie</em>}</li>
  *   <li>{@link algorithme.impl.SortieImpl#getAlgorithme <em>Algorithme</em>}</li>
+ *   <li>{@link algorithme.impl.SortieImpl#getSortie <em>Sortie</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SortieImpl extends MinimalEObjectImpl.Container implements Sortie {
 	/**
-	 * The cached value of the '{@link #getSortie() <em>Sortie</em>}' reference.
+	 * The default value of the '{@link #getSortie() <em>Sortie</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSortie()
 	 * @generated
 	 * @ordered
 	 */
-	protected Colonne sortie;
+	protected static final String SORTIE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getAlgorithme() <em>Algorithme</em>}' reference.
+	 * The cached value of the '{@link #getSortie() <em>Sortie</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAlgorithme()
+	 * @see #getSortie()
 	 * @generated
 	 * @ordered
 	 */
-	protected Algorithme algorithme;
+	protected String sortie = SORTIE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,25 +77,7 @@ public class SortieImpl extends MinimalEObjectImpl.Container implements Sortie {
 	 * @generated
 	 */
 	@Override
-	public Colonne getSortie() {
-		if (sortie != null && sortie.eIsProxy()) {
-			InternalEObject oldSortie = (InternalEObject) sortie;
-			sortie = (Colonne) eResolveProxy(oldSortie);
-			if (sortie != oldSortie) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AlgorithmePackage.SORTIE__SORTIE,
-							oldSortie, sortie));
-			}
-		}
-		return sortie;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Colonne basicGetSortie() {
+	public String getSortie() {
 		return sortie;
 	}
 
@@ -105,8 +87,8 @@ public class SortieImpl extends MinimalEObjectImpl.Container implements Sortie {
 	 * @generated
 	 */
 	@Override
-	public void setSortie(Colonne newSortie) {
-		Colonne oldSortie = sortie;
+	public void setSortie(String newSortie) {
+		String oldSortie = sortie;
 		sortie = newSortie;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AlgorithmePackage.SORTIE__SORTIE, oldSortie, sortie));
@@ -119,25 +101,9 @@ public class SortieImpl extends MinimalEObjectImpl.Container implements Sortie {
 	 */
 	@Override
 	public Algorithme getAlgorithme() {
-		if (algorithme != null && algorithme.eIsProxy()) {
-			InternalEObject oldAlgorithme = (InternalEObject) algorithme;
-			algorithme = (Algorithme) eResolveProxy(oldAlgorithme);
-			if (algorithme != oldAlgorithme) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AlgorithmePackage.SORTIE__ALGORITHME,
-							oldAlgorithme, algorithme));
-			}
-		}
-		return algorithme;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Algorithme basicGetAlgorithme() {
-		return algorithme;
+		if (eContainerFeatureID() != AlgorithmePackage.SORTIE__ALGORITHME)
+			return null;
+		return (Algorithme) eInternalContainer();
 	}
 
 	/**
@@ -146,16 +112,7 @@ public class SortieImpl extends MinimalEObjectImpl.Container implements Sortie {
 	 * @generated
 	 */
 	public NotificationChain basicSetAlgorithme(Algorithme newAlgorithme, NotificationChain msgs) {
-		Algorithme oldAlgorithme = algorithme;
-		algorithme = newAlgorithme;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					AlgorithmePackage.SORTIE__ALGORITHME, oldAlgorithme, newAlgorithme);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eBasicSetContainer((InternalEObject) newAlgorithme, AlgorithmePackage.SORTIE__ALGORITHME, msgs);
 		return msgs;
 	}
 
@@ -166,11 +123,13 @@ public class SortieImpl extends MinimalEObjectImpl.Container implements Sortie {
 	 */
 	@Override
 	public void setAlgorithme(Algorithme newAlgorithme) {
-		if (newAlgorithme != algorithme) {
+		if (newAlgorithme != eInternalContainer()
+				|| (eContainerFeatureID() != AlgorithmePackage.SORTIE__ALGORITHME && newAlgorithme != null)) {
+			if (EcoreUtil.isAncestor(this, newAlgorithme))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
-			if (algorithme != null)
-				msgs = ((InternalEObject) algorithme).eInverseRemove(this, AlgorithmePackage.ALGORITHME__SORTIE,
-						Algorithme.class, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			if (newAlgorithme != null)
 				msgs = ((InternalEObject) newAlgorithme).eInverseAdd(this, AlgorithmePackage.ALGORITHME__SORTIE,
 						Algorithme.class, msgs);
@@ -191,9 +150,8 @@ public class SortieImpl extends MinimalEObjectImpl.Container implements Sortie {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case AlgorithmePackage.SORTIE__ALGORITHME:
-			if (algorithme != null)
-				msgs = ((InternalEObject) algorithme).eInverseRemove(this, AlgorithmePackage.ALGORITHME__SORTIE,
-						Algorithme.class, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			return basicSetAlgorithme((Algorithme) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -219,16 +177,27 @@ public class SortieImpl extends MinimalEObjectImpl.Container implements Sortie {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+		case AlgorithmePackage.SORTIE__ALGORITHME:
+			return eInternalContainer().eInverseRemove(this, AlgorithmePackage.ALGORITHME__SORTIE, Algorithme.class,
+					msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case AlgorithmePackage.SORTIE__SORTIE:
-			if (resolve)
-				return getSortie();
-			return basicGetSortie();
 		case AlgorithmePackage.SORTIE__ALGORITHME:
-			if (resolve)
-				return getAlgorithme();
-			return basicGetAlgorithme();
+			return getAlgorithme();
+		case AlgorithmePackage.SORTIE__SORTIE:
+			return getSortie();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -241,11 +210,11 @@ public class SortieImpl extends MinimalEObjectImpl.Container implements Sortie {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case AlgorithmePackage.SORTIE__SORTIE:
-			setSortie((Colonne) newValue);
-			return;
 		case AlgorithmePackage.SORTIE__ALGORITHME:
 			setAlgorithme((Algorithme) newValue);
+			return;
+		case AlgorithmePackage.SORTIE__SORTIE:
+			setSortie((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -259,11 +228,11 @@ public class SortieImpl extends MinimalEObjectImpl.Container implements Sortie {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case AlgorithmePackage.SORTIE__SORTIE:
-			setSortie((Colonne) null);
-			return;
 		case AlgorithmePackage.SORTIE__ALGORITHME:
 			setAlgorithme((Algorithme) null);
+			return;
+		case AlgorithmePackage.SORTIE__SORTIE:
+			setSortie(SORTIE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -277,12 +246,29 @@ public class SortieImpl extends MinimalEObjectImpl.Container implements Sortie {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case AlgorithmePackage.SORTIE__SORTIE:
-			return sortie != null;
 		case AlgorithmePackage.SORTIE__ALGORITHME:
-			return algorithme != null;
+			return getAlgorithme() != null;
+		case AlgorithmePackage.SORTIE__SORTIE:
+			return SORTIE_EDEFAULT == null ? sortie != null : !SORTIE_EDEFAULT.equals(sortie);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (sortie: ");
+		result.append(sortie);
+		result.append(')');
+		return result.toString();
 	}
 
 } //SortieImpl

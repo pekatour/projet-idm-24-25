@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -124,7 +124,7 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 	protected Langage langage = LANGAGE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSortie() <em>Sortie</em>}' reference.
+	 * The cached value of the '{@link #getSortie() <em>Sortie</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSortie()
@@ -134,7 +134,7 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 	protected Sortie sortie;
 
 	/**
-	 * The cached value of the '{@link #getEntree() <em>Entree</em>}' reference list.
+	 * The cached value of the '{@link #getEntree() <em>Entree</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEntree()
@@ -264,24 +264,6 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 	 */
 	@Override
 	public Sortie getSortie() {
-		if (sortie != null && sortie.eIsProxy()) {
-			InternalEObject oldSortie = (InternalEObject) sortie;
-			sortie = (Sortie) eResolveProxy(oldSortie);
-			if (sortie != oldSortie) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AlgorithmePackage.ALGORITHME__SORTIE,
-							oldSortie, sortie));
-			}
-		}
-		return sortie;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Sortie basicGetSortie() {
 		return sortie;
 	}
 
@@ -335,7 +317,7 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 	@Override
 	public EList<Entree> getEntree() {
 		if (entree == null) {
-			entree = new EObjectWithInverseResolvingEList<Entree>(Entree.class, this,
+			entree = new EObjectContainmentWithInverseEList<Entree>(Entree.class, this,
 					AlgorithmePackage.ALGORITHME__ENTREE, AlgorithmePackage.ENTREE__ALGORITHME);
 		}
 		return entree;
@@ -352,8 +334,8 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 		switch (featureID) {
 		case AlgorithmePackage.ALGORITHME__SORTIE:
 			if (sortie != null)
-				msgs = ((InternalEObject) sortie).eInverseRemove(this, AlgorithmePackage.SORTIE__ALGORITHME,
-						Sortie.class, msgs);
+				msgs = ((InternalEObject) sortie).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - AlgorithmePackage.ALGORITHME__SORTIE, null, msgs);
 			return basicSetSortie((Sortie) otherEnd, msgs);
 		case AlgorithmePackage.ALGORITHME__ENTREE:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getEntree()).basicAdd(otherEnd, msgs);
@@ -394,9 +376,7 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 		case AlgorithmePackage.ALGORITHME__LANGAGE:
 			return getLangage();
 		case AlgorithmePackage.ALGORITHME__SORTIE:
-			if (resolve)
-				return getSortie();
-			return basicGetSortie();
+			return getSortie();
 		case AlgorithmePackage.ALGORITHME__ENTREE:
 			return getEntree();
 		}

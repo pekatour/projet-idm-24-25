@@ -6,6 +6,7 @@ import algorithme.Algorithme;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -29,7 +30,7 @@ import projet.schemaTable.SchemaTablePackage;
  */
 public class ColonneDeriveeImpl extends ColonneImpl implements ColonneDerivee {
 	/**
-	 * The cached value of the '{@link #getAlgorithme() <em>Algorithme</em>}' reference.
+	 * The cached value of the '{@link #getAlgorithme() <em>Algorithme</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAlgorithme()
@@ -64,15 +65,6 @@ public class ColonneDeriveeImpl extends ColonneImpl implements ColonneDerivee {
 	 */
 	@Override
 	public Algorithme getAlgorithme() {
-		if (algorithme != null && algorithme.eIsProxy()) {
-			InternalEObject oldAlgorithme = (InternalEObject) algorithme;
-			algorithme = (Algorithme) eResolveProxy(oldAlgorithme);
-			if (algorithme != oldAlgorithme) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							SchemaTablePackage.COLONNE_DERIVEE__ALGORITHME, oldAlgorithme, algorithme));
-			}
-		}
 		return algorithme;
 	}
 
@@ -81,8 +73,18 @@ public class ColonneDeriveeImpl extends ColonneImpl implements ColonneDerivee {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Algorithme basicGetAlgorithme() {
-		return algorithme;
+	public NotificationChain basicSetAlgorithme(Algorithme newAlgorithme, NotificationChain msgs) {
+		Algorithme oldAlgorithme = algorithme;
+		algorithme = newAlgorithme;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					SchemaTablePackage.COLONNE_DERIVEE__ALGORITHME, oldAlgorithme, newAlgorithme);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -92,11 +94,34 @@ public class ColonneDeriveeImpl extends ColonneImpl implements ColonneDerivee {
 	 */
 	@Override
 	public void setAlgorithme(Algorithme newAlgorithme) {
-		Algorithme oldAlgorithme = algorithme;
-		algorithme = newAlgorithme;
-		if (eNotificationRequired())
+		if (newAlgorithme != algorithme) {
+			NotificationChain msgs = null;
+			if (algorithme != null)
+				msgs = ((InternalEObject) algorithme).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - SchemaTablePackage.COLONNE_DERIVEE__ALGORITHME, null, msgs);
+			if (newAlgorithme != null)
+				msgs = ((InternalEObject) newAlgorithme).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - SchemaTablePackage.COLONNE_DERIVEE__ALGORITHME, null, msgs);
+			msgs = basicSetAlgorithme(newAlgorithme, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SchemaTablePackage.COLONNE_DERIVEE__ALGORITHME,
-					oldAlgorithme, algorithme));
+					newAlgorithme, newAlgorithme));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case SchemaTablePackage.COLONNE_DERIVEE__ALGORITHME:
+			return basicSetAlgorithme(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -108,9 +133,7 @@ public class ColonneDeriveeImpl extends ColonneImpl implements ColonneDerivee {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case SchemaTablePackage.COLONNE_DERIVEE__ALGORITHME:
-			if (resolve)
-				return getAlgorithme();
-			return basicGetAlgorithme();
+			return getAlgorithme();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
