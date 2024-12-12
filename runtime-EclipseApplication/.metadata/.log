@@ -1327,3 +1327,810 @@ Caused by: java.lang.Exception: The resource tree is locked for modifications.
 	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
 	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
 	... 88 more
+!SESSION 2024-12-12 15:38:20.850 -----------------------------------------------
+eclipse.buildId=4.29.0.20230907-1200
+java.version=17.0.11
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -product org.eclipse.epp.package.modeling.product -data /home/mei6121/2A/IDM PR/projet-idm-24-25/main/../runtime-EclipseApplication -dev file:/home/mei6121/2A/IDM PR/projet-idm-24-25/main/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.pde.core 4 0 2024-12-12 15:38:50.603
+!MESSAGE Configuration directory does not exist: /home/tkn7092/2A/IDM/projet-idm-24-25/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/
+
+!ENTRY org.eclipse.pde.core 4 0 2024-12-12 15:38:50.605
+!MESSAGE The current target platform contains errors, open Window > Preferences > Plug-in Development > Target Platform for details.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems occurred while resolving the target contents
+	at org.eclipse.pde.internal.core.PluginModelManager.getExternalBundles(PluginModelManager.java:697)
+	at org.eclipse.pde.internal.core.PluginModelManager.initializeTable(PluginModelManager.java:606)
+	at org.eclipse.pde.internal.core.PluginModelManager.targetReloaded(PluginModelManager.java:542)
+	at org.eclipse.pde.internal.core.RequiredPluginsInitializer.lambda$0(RequiredPluginsInitializer.java:33)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Configuration directory does not exist: /home/tkn7092/2A/IDM/projet-idm-24-25/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/
+!SUBENTRY 1 org.eclipse.pde.core 4 0 2024-12-12 15:38:50.607
+!MESSAGE Problems occurred while resolving the target contents
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-12-12 15:38:50.608
+!MESSAGE Configuration directory does not exist: /home/tkn7092/2A/IDM/projet-idm-24-25/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/
+
+!ENTRY org.eclipse.pde.core 4 0 2024-12-12 15:38:50.613
+!MESSAGE Configuration directory does not exist: /home/tkn7092/2A/IDM/projet-idm-24-25/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/
+
+!ENTRY org.eclipse.sirius 4 0 2024-12-12 15:45:55.233
+!MESSAGE error while saving session
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: The resource tree is locked for modifications.
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.flush(PlatformResourceURIHandlerImpl.java:143)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.close(PlatformResourceURIHandlerImpl.java:91)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$WorkbenchHelper$1.close(PlatformResourceURIHandlerImpl.java:177)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.save(ResourceImpl.java:1048)
+	at org.eclipse.sirius.common.tools.api.resource.ResourceSetSync.doSave(ResourceSetSync.java:589)
+	at org.eclipse.sirius.common.tools.api.resource.ResourceSetSync.save(ResourceSetSync.java:541)
+	at org.eclipse.sirius.business.api.session.AbstractSavingPolicy.save(AbstractSavingPolicy.java:62)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl$1.run(DAnalysisSessionImpl.java:854)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.runExclusive(TransactionalEditingDomainImpl.java:323)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl.doSave(DAnalysisSessionImpl.java:863)
+	at org.eclipse.sirius.business.internal.session.danalysis.Saver.wrappedSave(Saver.java:144)
+	at org.eclipse.sirius.business.internal.session.danalysis.Saver.saveNow(Saver.java:113)
+	at org.eclipse.sirius.business.internal.session.danalysis.Saver.transactionClosed(Saver.java:85)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl$LifecycleImpl.fireLifecycleEvent(TransactionalEditingDomainImpl.java:1378)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl$LifecycleImpl.transactionClosed(TransactionalEditingDomainImpl.java:1396)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.close(TransactionImpl.java:728)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.commit(TransactionImpl.java:469)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:150)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:203)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:160)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:214)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesSynchronizer.removeResourceFromSession(SessionResourcesSynchronizer.java:260)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesSynchronizer.processAction(SessionResourcesSynchronizer.java:178)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesSynchronizer.processActions(SessionResourcesSynchronizer.java:163)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesSynchronizer.statusesChanged(SessionResourcesSynchronizer.java:113)
+	at org.eclipse.sirius.common.tools.api.resource.ResourceSetSync.notifyClientsInBatch(ResourceSetSync.java:424)
+	at org.eclipse.sirius.common.tools.api.resource.ResourceSetSync.statusesChanged(ResourceSetSync.java:479)
+	at org.eclipse.sirius.common.tools.internal.resource.ResourceSyncClientNotifier.run(ResourceSyncClientNotifier.java:80)
+	at org.eclipse.sirius.common.tools.internal.resource.EditingSessionWorkspaceListener.resourceChanged(EditingSessionWorkspaceListener.java:63)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:321)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:311)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:174)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:458)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1586)
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1571)
+	at org.eclipse.ltk.core.refactoring.resource.RenameResourceChange.perform(RenameResourceChange.java:118)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.ltk.internal.ui.refactoring.actions.RenameResourceHandler.performRename(RenameResourceHandler.java:110)
+	at org.eclipse.ltk.internal.ui.refactoring.actions.RenameResourceHandler.execute(RenameResourceHandler.java:58)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor57.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:300)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommandInContext(LegacyHandlerService.java:440)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.runCommand(LTKLauncher.java:140)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.renameResource(LTKLauncher.java:86)
+	at org.eclipse.ui.actions.RenameResourceAction.lambda$5(RenameResourceAction.java:550)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5040)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4520)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:645)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:552)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+Caused by: org.eclipse.core.internal.resources.ResourceException: The resource tree is locked for modifications.
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:122)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2403)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:355)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:452)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.flush(PlatformResourceURIHandlerImpl.java:135)
+	... 83 more
+Caused by: java.lang.Exception: The resource tree is locked for modifications.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 88 more
+
+!ENTRY org.eclipse.sirius 4 0 2024-12-12 15:47:06.243
+!MESSAGE error while saving session
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: The resource tree is locked for modifications.
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.flush(PlatformResourceURIHandlerImpl.java:143)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.close(PlatformResourceURIHandlerImpl.java:91)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$WorkbenchHelper$1.close(PlatformResourceURIHandlerImpl.java:177)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.save(ResourceImpl.java:1048)
+	at org.eclipse.sirius.common.tools.api.resource.ResourceSetSync.doSave(ResourceSetSync.java:589)
+	at org.eclipse.sirius.common.tools.api.resource.ResourceSetSync.save(ResourceSetSync.java:541)
+	at org.eclipse.sirius.business.api.session.AbstractSavingPolicy.save(AbstractSavingPolicy.java:62)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl$1.run(DAnalysisSessionImpl.java:854)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.runExclusive(TransactionalEditingDomainImpl.java:323)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl.doSave(DAnalysisSessionImpl.java:863)
+	at org.eclipse.sirius.business.internal.session.danalysis.Saver.wrappedSave(Saver.java:144)
+	at org.eclipse.sirius.business.internal.session.danalysis.Saver.saveNow(Saver.java:113)
+	at org.eclipse.sirius.business.internal.session.danalysis.Saver.transactionClosed(Saver.java:85)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl$LifecycleImpl.fireLifecycleEvent(TransactionalEditingDomainImpl.java:1378)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl$LifecycleImpl.transactionClosed(TransactionalEditingDomainImpl.java:1396)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.close(TransactionImpl.java:728)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.commit(TransactionImpl.java:469)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:150)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:203)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:160)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:214)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesSynchronizer.removeResourceFromSession(SessionResourcesSynchronizer.java:260)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesSynchronizer.processAction(SessionResourcesSynchronizer.java:178)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesSynchronizer.processActions(SessionResourcesSynchronizer.java:163)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesSynchronizer.statusesChanged(SessionResourcesSynchronizer.java:113)
+	at org.eclipse.sirius.common.tools.api.resource.ResourceSetSync.notifyClientsInBatch(ResourceSetSync.java:424)
+	at org.eclipse.sirius.common.tools.api.resource.ResourceSetSync.statusesChanged(ResourceSetSync.java:479)
+	at org.eclipse.sirius.common.tools.internal.resource.ResourceSyncClientNotifier.run(ResourceSyncClientNotifier.java:80)
+	at org.eclipse.sirius.common.tools.internal.resource.EditingSessionWorkspaceListener.resourceChanged(EditingSessionWorkspaceListener.java:63)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:321)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:311)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:174)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:458)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1586)
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1571)
+	at org.eclipse.ltk.core.refactoring.resource.RenameResourceChange.perform(RenameResourceChange.java:118)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.ltk.internal.ui.refactoring.actions.RenameResourceHandler.performRename(RenameResourceHandler.java:110)
+	at org.eclipse.ltk.internal.ui.refactoring.actions.RenameResourceHandler.execute(RenameResourceHandler.java:58)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor57.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:300)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommandInContext(LegacyHandlerService.java:440)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.runCommand(LTKLauncher.java:140)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.renameResource(LTKLauncher.java:86)
+	at org.eclipse.ui.actions.RenameResourceAction.lambda$5(RenameResourceAction.java:550)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5040)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4520)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:645)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:552)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+Caused by: org.eclipse.core.internal.resources.ResourceException: The resource tree is locked for modifications.
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:122)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2403)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:355)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:452)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.flush(PlatformResourceURIHandlerImpl.java:135)
+	... 83 more
+Caused by: java.lang.Exception: The resource tree is locked for modifications.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 88 more
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:14:19.191
+!MESSAGE Compilation error for expression [self.class.toString().matches("ColonneIdentifiants")=true/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:14:19.208
+!MESSAGE Compilation error for expression [self.class.toString().matches("ColonneIdentifiants")=true/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:14:19.231
+!MESSAGE Compilation error for expression [self.class.toString().matches("ColonneIdentifiants")=true/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:14:19.254
+!MESSAGE Compilation error for expression [self.class.toString().matches("ColonneIdentifiants")=true/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:14:19.282
+!MESSAGE Compilation error for expression [self.class.toString().matches("ColonneIdentifiants")=true/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:10.198
+!MESSAGE Compilation error for expression [self.class = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:10.210
+!MESSAGE Compilation error for expression [self.class = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:10.222
+!MESSAGE Compilation error for expression [self.class = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:10.236
+!MESSAGE Compilation error for expression [self.class = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:10.256
+!MESSAGE Compilation error for expression [self.class = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:21.742
+!MESSAGE Compilation error for expression [self.class.toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:21.772
+!MESSAGE Compilation error for expression [self.class.toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:21.788
+!MESSAGE Compilation error for expression [self.class.toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:21.799
+!MESSAGE Compilation error for expression [self.class.toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:21.812
+!MESSAGE Compilation error for expression [self.class.toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:47.253
+!MESSAGE Compilation error for expression [self.type.toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:47.265
+!MESSAGE Compilation error for expression [self.type.toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:47.278
+!MESSAGE Compilation error for expression [self.type.toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:47.290
+!MESSAGE Compilation error for expression [self.type.toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:15:47.303
+!MESSAGE Compilation error for expression [self.type.toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:19:48.935
+!MESSAGE Compilation error for expression [self.Class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:19:48.949
+!MESSAGE Compilation error for expression [self.Class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:19:48.962
+!MESSAGE Compilation error for expression [self.Class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:19:48.976
+!MESSAGE Compilation error for expression [self.Class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:19:48.991
+!MESSAGE Compilation error for expression [self.Class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:19:56.446
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:19:56.461
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:19:56.477
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:19:56.489
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:19:56.503
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:24:02.035
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:24:02.052
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:24:02.076
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:24:02.088
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:24:02.107
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:24:45.988
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:24:45.999
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:24:46.009
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:24:46.020
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:24:46.038
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:25:59.566
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:25:59.587
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:25:59.606
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:25:59.616
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:25:59.632
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:26:05.336
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:26:05.352
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:26:05.367
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:26:05.389
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:26:05.404
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:26:46.726
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:26:46.736
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:26:46.805
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:26:46.829
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:26:46.849
+!MESSAGE Compilation error for expression [self.class().toString() = "ColonneIdentifiants"/] : Usage of non-standard quoted element name: "ColonneIdentifiants"
+
+!ENTRY org.eclipse.sirius 4 0 2024-12-12 16:30:21.266
+!MESSAGE Impossible to get the style description for object : org.eclipse.sirius.diagram.description.impl.ConditionalNodeStyleDescriptionImpl@419587ca (predicateExpression: [self.oclIsTypeOf(ColonneDerivee)/])
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.GetStyleDescription.defaultCase(GetStyleDescription.java:65)
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.GetStyleDescription.defaultCase(GetStyleDescription.java:1)
+	at org.eclipse.sirius.diagram.description.util.DescriptionSwitch.doSwitch(DescriptionSwitch.java:424)
+	at org.eclipse.sirius.diagram.description.util.DescriptionSwitch.doSwitch(DescriptionSwitch.java:113)
+	at org.eclipse.sirius.diagram.description.util.DescriptionSwitch.doSwitch(DescriptionSwitch.java:101)
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.BestStyleDescriptionRegistry.getStyleDescription(BestStyleDescriptionRegistry.java:298)
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.BestStyleDescriptionRegistry.getBestStyleDescription(BestStyleDescriptionRegistry.java:101)
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.BestStyleDescriptionRegistry.get(BestStyleDescriptionRegistry.java:75)
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.MappingWithInterpreterHelper.getBestStyleDescription(MappingWithInterpreterHelper.java:121)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramElementSynchronizer.refresh(DDiagramElementSynchronizer.java:557)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramElementSynchronizer.refresh(DDiagramElementSynchronizer.java:484)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.handleKeptNode(DDiagramSynchronizer.java:967)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.handleKeptAndNewNodesWithOrder(DDiagramSynchronizer.java:908)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.refreshNodeMapping(DDiagramSynchronizer.java:804)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.refreshOperation(DDiagramSynchronizer.java:363)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.refresh(DDiagramSynchronizer.java:316)
+	at org.eclipse.sirius.diagram.business.internal.dialect.DiagramDialectServices.refresh(DiagramDialectServices.java:240)
+	at org.eclipse.sirius.business.internal.dialect.DialectManagerImpl.refresh(DialectManagerImpl.java:106)
+	at org.eclipse.sirius.business.api.dialect.command.RefreshRepresentationsCommand.doExecute(RefreshRepresentationsCommand.java:122)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:130)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:114)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:145)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:203)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:160)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:214)
+	at org.eclipse.sirius.diagram.ui.tools.internal.editor.DDiagramEditorImpl.launchRefresh(DDiagramEditorImpl.java:1417)
+	at org.eclipse.sirius.diagram.ui.tools.internal.editor.DDiagramEditorImpl$1.run(DDiagramEditorImpl.java:798)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.sirius 4 0 2024-12-12 16:32:08.731
+!MESSAGE Impossible to get the style description for object : org.eclipse.sirius.diagram.description.impl.ConditionalNodeStyleDescriptionImpl@14bae30a (predicateExpression: [self.oclIsTypeOf(ColonneEtrangere)/])
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.GetStyleDescription.defaultCase(GetStyleDescription.java:65)
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.GetStyleDescription.defaultCase(GetStyleDescription.java:1)
+	at org.eclipse.sirius.diagram.description.util.DescriptionSwitch.doSwitch(DescriptionSwitch.java:424)
+	at org.eclipse.sirius.diagram.description.util.DescriptionSwitch.doSwitch(DescriptionSwitch.java:113)
+	at org.eclipse.sirius.diagram.description.util.DescriptionSwitch.doSwitch(DescriptionSwitch.java:101)
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.BestStyleDescriptionRegistry.getStyleDescription(BestStyleDescriptionRegistry.java:298)
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.BestStyleDescriptionRegistry.getBestStyleDescription(BestStyleDescriptionRegistry.java:101)
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.BestStyleDescriptionRegistry.get(BestStyleDescriptionRegistry.java:75)
+	at org.eclipse.sirius.diagram.business.internal.metamodel.helper.MappingWithInterpreterHelper.getBestStyleDescription(MappingWithInterpreterHelper.java:121)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramElementSynchronizer.refresh(DDiagramElementSynchronizer.java:557)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramElementSynchronizer.refresh(DDiagramElementSynchronizer.java:484)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.handleKeptNode(DDiagramSynchronizer.java:967)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.handleKeptAndNewNodesWithOrder(DDiagramSynchronizer.java:908)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.refreshNodeMapping(DDiagramSynchronizer.java:804)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.refreshOperation(DDiagramSynchronizer.java:363)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.refresh(DDiagramSynchronizer.java:316)
+	at org.eclipse.sirius.diagram.business.internal.dialect.DiagramDialectServices.refresh(DiagramDialectServices.java:240)
+	at org.eclipse.sirius.business.internal.dialect.DialectManagerImpl.refresh(DialectManagerImpl.java:106)
+	at org.eclipse.sirius.business.api.dialect.command.RefreshRepresentationsCommand.doExecute(RefreshRepresentationsCommand.java:122)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:130)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:114)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:145)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:203)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:160)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:214)
+	at org.eclipse.sirius.diagram.ui.tools.internal.editor.DDiagramEditorImpl.launchRefresh(DDiagramEditorImpl.java:1417)
+	at org.eclipse.sirius.diagram.ui.tools.internal.editor.DDiagramEditorImpl$1.run(DDiagramEditorImpl.java:798)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:34:35.043
+!MESSAGE Compilation error for expression [Colonne + nom/] : Static call to non-static operation "+"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:34:35.063
+!MESSAGE Compilation error for expression [Colonne + nom/] : Static call to non-static operation "+"
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:22.515
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) & self.Container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:22.550
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) & self.Container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:22.587
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) & self.Container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:22.625
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) & self.Container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:22.644
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) & self.Container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:31.876
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) & self.container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:31.892
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) & self.container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:31.907
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) & self.container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:31.924
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) & self.container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:31.945
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) & self.container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:36.925
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) && self.container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:36.951
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) && self.container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:36.970
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) && self.container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:36.987
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) && self.container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.acceleo.parser 4 0 2024-12-12 16:54:37.000
+!MESSAGE Compilation error for expression [self.oclIsTypeOf(ColonneIdentifiants) && self.container.nom=Table.nom/] : 2:37 "&" unexpected character ignored
+
+!ENTRY org.eclipse.sirius.diagram 2 0 2024-12-12 17:38:30.056
+!MESSAGE An error occurred during the representation refresh of exmplTable.
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.sirius.business.api.session.Session.getSelectedViewpoints(boolean)" because "this.session" is null
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.activateNewMandatoryAdditionalLayers(DDiagramSynchronizer.java:300)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.refreshOperation(DDiagramSynchronizer.java:332)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.refresh(DDiagramSynchronizer.java:316)
+	at org.eclipse.sirius.diagram.business.internal.dialect.DiagramDialectServices.refresh(DiagramDialectServices.java:240)
+	at org.eclipse.sirius.business.internal.dialect.DialectManagerImpl.refresh(DialectManagerImpl.java:106)
+	at org.eclipse.sirius.business.api.dialect.command.RefreshRepresentationsCommand.doExecute(RefreshRepresentationsCommand.java:122)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:130)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:114)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:145)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:203)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:160)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:214)
+	at org.eclipse.sirius.diagram.ui.tools.internal.editor.DDiagramEditorImpl.launchRefresh(DDiagramEditorImpl.java:1417)
+	at org.eclipse.sirius.diagram.ui.tools.internal.editor.DDiagramEditorImpl$1.run(DDiagramEditorImpl.java:798)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.sirius.diagram 2 0 2024-12-12 17:38:30.073
+!MESSAGE An error occurred during the representation refresh of new TableDiagram.
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.sirius.business.api.session.Session.getSelectedViewpoints(boolean)" because "this.session" is null
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.activateNewMandatoryAdditionalLayers(DDiagramSynchronizer.java:300)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.refreshOperation(DDiagramSynchronizer.java:332)
+	at org.eclipse.sirius.diagram.business.internal.sync.DDiagramSynchronizer.refresh(DDiagramSynchronizer.java:316)
+	at org.eclipse.sirius.diagram.business.internal.dialect.DiagramDialectServices.refresh(DiagramDialectServices.java:240)
+	at org.eclipse.sirius.business.internal.dialect.DialectManagerImpl.refresh(DialectManagerImpl.java:106)
+	at org.eclipse.sirius.business.api.dialect.command.RefreshRepresentationsCommand.doExecute(RefreshRepresentationsCommand.java:122)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:130)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:114)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:145)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:203)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:160)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:214)
+	at org.eclipse.sirius.diagram.ui.tools.internal.editor.DDiagramEditorImpl.launchRefresh(DDiagramEditorImpl.java:1417)
+	at org.eclipse.sirius.diagram.ui.tools.internal.editor.DDiagramEditorImpl$1.run(DDiagramEditorImpl.java:798)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2024-12-12 17:46:09.099 -----------------------------------------------
+eclipse.buildId=4.29.0.20230907-1200
+java.version=17.0.11
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -product org.eclipse.epp.package.modeling.product -data /home/mei6121/2A/IDM PR/projet-idm-24-25/main/../runtime-EclipseApplication -dev file:/home/mei6121/2A/IDM PR/projet-idm-24-25/main/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.pde.core 4 0 2024-12-12 17:46:18.299
+!MESSAGE Configuration directory does not exist: /home/tkn7092/2A/IDM/projet-idm-24-25/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/
+
+!ENTRY org.eclipse.pde.core 4 0 2024-12-12 17:46:18.302
+!MESSAGE The current target platform contains errors, open Window > Preferences > Plug-in Development > Target Platform for details.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems occurred while resolving the target contents
+	at org.eclipse.pde.internal.core.PluginModelManager.getExternalBundles(PluginModelManager.java:697)
+	at org.eclipse.pde.internal.core.PluginModelManager.initializeTable(PluginModelManager.java:606)
+	at org.eclipse.pde.internal.core.PluginModelManager.targetReloaded(PluginModelManager.java:542)
+	at org.eclipse.pde.internal.core.RequiredPluginsInitializer.lambda$0(RequiredPluginsInitializer.java:33)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Configuration directory does not exist: /home/tkn7092/2A/IDM/projet-idm-24-25/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/
+!SUBENTRY 1 org.eclipse.pde.core 4 0 2024-12-12 17:46:18.304
+!MESSAGE Problems occurred while resolving the target contents
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-12-12 17:46:18.304
+!MESSAGE Configuration directory does not exist: /home/tkn7092/2A/IDM/projet-idm-24-25/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/
+
+!ENTRY org.eclipse.pde.core 4 0 2024-12-12 17:46:18.313
+!MESSAGE Configuration directory does not exist: /home/tkn7092/2A/IDM/projet-idm-24-25/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/
+
+!ENTRY org.eclipse.sirius.model 2 0 2024-12-12 17:46:24.453
+!MESSAGE org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleT1.table' does not exist.
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleT1.table' does not exist.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$ResourceLocator.demandLoadHelper(ResourceSetImpl.java:804)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$MappedResourceLocator.getResource(ResourceSetImpl.java:1204)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:352)
+	at org.eclipse.xtext.resource.XtextResourceSet.getResource(XtextResourceSet.java:237)
+	at org.eclipse.sirius.viewpoint.impl.DAnalysisImpl.getResource(DAnalysisImpl.java:226)
+	at org.eclipse.sirius.viewpoint.impl.DAnalysisImpl.getModels(DAnalysisImpl.java:198)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesTracker.resolveAllSemanticResourcesFromModels(SessionResourcesTracker.java:214)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesTracker.initialize(SessionResourcesTracker.java:93)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl$2.doExecute(DAnalysisSessionImpl.java:1203)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:130)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:114)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:145)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:203)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:160)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:214)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl.open(DAnalysisSessionImpl.java:1206)
+	at org.eclipse.sirius.business.internal.session.SessionManagerImpl.openSession(SessionManagerImpl.java:406)
+	at org.eclipse.sirius.ui.tools.internal.views.common.modelingproject.OpenRepresentationsFileJob.performOpenSession(OpenRepresentationsFileJob.java:193)
+	at org.eclipse.sirius.ui.tools.internal.views.common.modelingproject.OpenRepresentationsFileJob.runInWorkspace(OpenRepresentationsFileJob.java:162)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleT1.table' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:367)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:241)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:296)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$WorkbenchHelper.createPlatformResourceInputStream(PlatformResourceURIHandlerImpl.java:209)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl.createInputStream(PlatformResourceURIHandlerImpl.java:574)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:358)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1314)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 22 more
+Caused by: java.lang.Exception: Resource '/projet.table.samples/ExempleT1.table' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 32 more
+
+!ENTRY org.eclipse.sirius.model 2 0 2024-12-12 17:46:24.457
+!MESSAGE org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleTable.table' does not exist.
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleTable.table' does not exist.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$ResourceLocator.demandLoadHelper(ResourceSetImpl.java:804)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$MappedResourceLocator.getResource(ResourceSetImpl.java:1204)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:352)
+	at org.eclipse.xtext.resource.XtextResourceSet.getResource(XtextResourceSet.java:237)
+	at org.eclipse.sirius.viewpoint.impl.DAnalysisImpl.getResource(DAnalysisImpl.java:226)
+	at org.eclipse.sirius.viewpoint.impl.DAnalysisImpl.getModels(DAnalysisImpl.java:198)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesTracker.resolveAllSemanticResourcesFromModels(SessionResourcesTracker.java:214)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesTracker.initialize(SessionResourcesTracker.java:93)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl$2.doExecute(DAnalysisSessionImpl.java:1203)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:130)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:114)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:145)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:203)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:160)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:214)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl.open(DAnalysisSessionImpl.java:1206)
+	at org.eclipse.sirius.business.internal.session.SessionManagerImpl.openSession(SessionManagerImpl.java:406)
+	at org.eclipse.sirius.ui.tools.internal.views.common.modelingproject.OpenRepresentationsFileJob.performOpenSession(OpenRepresentationsFileJob.java:193)
+	at org.eclipse.sirius.ui.tools.internal.views.common.modelingproject.OpenRepresentationsFileJob.runInWorkspace(OpenRepresentationsFileJob.java:162)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleTable.table' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:367)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:241)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:296)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$WorkbenchHelper.createPlatformResourceInputStream(PlatformResourceURIHandlerImpl.java:209)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl.createInputStream(PlatformResourceURIHandlerImpl.java:574)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:358)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1314)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 22 more
+Caused by: java.lang.Exception: Resource '/projet.table.samples/ExempleTable.table' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 32 more
+
+!ENTRY org.eclipse.sirius.common.acceleo.aql 2 0 2024-12-12 17:46:56.576
+!MESSAGE Could not find Java extension class projet.calcul.design.Services
+
+!ENTRY org.eclipse.sirius.common.acceleo.aql 2 0 2024-12-12 17:47:01.203
+!MESSAGE Could not find Java extension class projet.calcul.design.Services
+
+!ENTRY org.eclipse.sirius.common.acceleo.aql 2 0 2024-12-12 17:47:01.564
+!MESSAGE Could not find Java extension class projet.calcul.design.Services
+
+!ENTRY org.eclipse.sirius.common.acceleo.aql 2 0 2024-12-12 17:47:53.926
+!MESSAGE Could not find Java extension class projet.calcul.design.Services
+
+!ENTRY org.eclipse.sirius.common.acceleo.aql 2 0 2024-12-12 17:47:54.027
+!MESSAGE Could not find Java extension class projet.calcul.design.Services
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-12 17:48:25.133
+!MESSAGE An internal error occurred during: "Session saving".
+!STACK 0
+org.eclipse.emf.common.util.BasicEList$BasicIndexOutOfBoundsException: index=4, size=4
+	at org.eclipse.emf.common.util.BasicEList.get(BasicEList.java:346)
+	at org.eclipse.emf.ecore.xmi.impl.XMISaveImpl.writeTopObjects(XMISaveImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLSaveImpl.traverse(XMLSaveImpl.java:595)
+	at org.eclipse.emf.ecore.xmi.impl.XMLSaveImpl.save(XMLSaveImpl.java:251)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doSave(XMLResourceImpl.java:389)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.save(ResourceImpl.java:1475)
+	at org.eclipse.sirius.business.internal.session.danalysis.ResourceSaveDiagnose.hasDifferentSerialization(ResourceSaveDiagnose.java:86)
+	at org.eclipse.sirius.business.api.session.AbstractSavingPolicy.hasDifferentSerialization(AbstractSavingPolicy.java:114)
+	at org.eclipse.sirius.business.internal.session.IsModifiedSavingPolicy.computeResourcesToSave(IsModifiedSavingPolicy.java:178)
+	at org.eclipse.sirius.business.api.session.AbstractSavingPolicy.save(AbstractSavingPolicy.java:60)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl$1.run(DAnalysisSessionImpl.java:854)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl.doSave(DAnalysisSessionImpl.java:865)
+	at org.eclipse.sirius.business.internal.session.danalysis.Saver.wrappedSave(Saver.java:144)
+	at org.eclipse.sirius.business.internal.session.danalysis.Saver$1.run(Saver.java:121)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2453)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2473)
+	at org.eclipse.sirius.business.internal.session.danalysis.Saver.saveNow(Saver.java:118)
+	at org.eclipse.sirius.business.internal.session.danalysis.Saver.save(Saver.java:95)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl.save(DAnalysisSessionImpl.java:827)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl.save(DAnalysisSessionImpl.java:822)
+	at org.eclipse.sirius.business.internal.session.danalysis.SaveSessionJob.performSave(SaveSessionJob.java:91)
+	at org.eclipse.sirius.business.internal.session.danalysis.SaveSessionJob.run(SaveSessionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.sirius.model 2 0 2024-12-12 17:52:02.328
+!MESSAGE org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleT1.table' does not exist.
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleT1.table' does not exist.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$ResourceLocator.demandLoadHelper(ResourceSetImpl.java:804)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$MappedResourceLocator.getResource(ResourceSetImpl.java:1204)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:352)
+	at org.eclipse.xtext.resource.XtextResourceSet.getResource(XtextResourceSet.java:237)
+	at org.eclipse.sirius.viewpoint.impl.DAnalysisImpl.getResource(DAnalysisImpl.java:226)
+	at org.eclipse.sirius.viewpoint.impl.DAnalysisImpl.getModels(DAnalysisImpl.java:198)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesTracker.resolveAllSemanticResourcesFromModels(SessionResourcesTracker.java:214)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesTracker.initialize(SessionResourcesTracker.java:93)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl$2.doExecute(DAnalysisSessionImpl.java:1203)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:130)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:114)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:145)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:203)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:160)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:214)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl.open(DAnalysisSessionImpl.java:1206)
+	at org.eclipse.sirius.business.internal.session.SessionManagerImpl.openSession(SessionManagerImpl.java:406)
+	at org.eclipse.sirius.ui.tools.internal.views.common.modelingproject.OpenRepresentationsFileJob.performOpenSession(OpenRepresentationsFileJob.java:193)
+	at org.eclipse.sirius.ui.tools.internal.views.common.modelingproject.OpenRepresentationsFileJob.runInWorkspace(OpenRepresentationsFileJob.java:162)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleT1.table' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:367)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:241)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:296)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$WorkbenchHelper.createPlatformResourceInputStream(PlatformResourceURIHandlerImpl.java:209)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl.createInputStream(PlatformResourceURIHandlerImpl.java:574)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:358)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1314)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 22 more
+Caused by: java.lang.Exception: Resource '/projet.table.samples/ExempleT1.table' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 32 more
+
+!ENTRY org.eclipse.sirius.model 2 0 2024-12-12 17:52:02.330
+!MESSAGE org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleTable.table' does not exist.
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleTable.table' does not exist.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$ResourceLocator.demandLoadHelper(ResourceSetImpl.java:804)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$MappedResourceLocator.getResource(ResourceSetImpl.java:1204)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:352)
+	at org.eclipse.xtext.resource.XtextResourceSet.getResource(XtextResourceSet.java:237)
+	at org.eclipse.sirius.viewpoint.impl.DAnalysisImpl.getResource(DAnalysisImpl.java:226)
+	at org.eclipse.sirius.viewpoint.impl.DAnalysisImpl.getModels(DAnalysisImpl.java:198)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesTracker.resolveAllSemanticResourcesFromModels(SessionResourcesTracker.java:214)
+	at org.eclipse.sirius.business.internal.session.danalysis.SessionResourcesTracker.initialize(SessionResourcesTracker.java:93)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl$2.doExecute(DAnalysisSessionImpl.java:1203)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:130)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:114)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:145)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:203)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:160)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:214)
+	at org.eclipse.sirius.business.internal.session.danalysis.DAnalysisSessionImpl.open(DAnalysisSessionImpl.java:1206)
+	at org.eclipse.sirius.business.internal.session.SessionManagerImpl.openSession(SessionManagerImpl.java:406)
+	at org.eclipse.sirius.ui.tools.internal.views.common.modelingproject.OpenRepresentationsFileJob.performOpenSession(OpenRepresentationsFileJob.java:193)
+	at org.eclipse.sirius.ui.tools.internal.views.common.modelingproject.OpenRepresentationsFileJob.runInWorkspace(OpenRepresentationsFileJob.java:162)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/projet.table.samples/ExempleTable.table' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:367)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:241)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:296)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$WorkbenchHelper.createPlatformResourceInputStream(PlatformResourceURIHandlerImpl.java:209)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl.createInputStream(PlatformResourceURIHandlerImpl.java:574)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:358)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1314)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 22 more
+Caused by: java.lang.Exception: Resource '/projet.table.samples/ExempleTable.table' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 32 more

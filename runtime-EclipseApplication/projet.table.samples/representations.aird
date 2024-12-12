@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:calcul="http://calcul" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:schemaTable="http://schemaTable" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_jivAcLiTEe-BqbBkn0Wyrw" selectedViews="_H7PDgLiUEe-BqbBkn0Wyrw _-FYb4LiXEe-rHo2YA0F0ZA" version="15.2.0.202303281325">
+    <semanticResources>ExempleT1.table</semanticResources>
+    <semanticResources>ExempleTable.table</semanticResources>
+    <semanticResources>ExempleT2.schematable</semanticResources>
+    <semanticResources>ExempleT3.schematable</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_H7PDgLiUEe-BqbBkn0Wyrw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_gIpCsLiUEe-BqbBkn0Wyrw" name="new CalculDiagram" repPath="#_gISdYLiUEe-BqbBkn0Wyrw" changeId="1734013342361">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']"/>
+        <target xmi:type="calcul:Calcul" href="ExempleCalcul.calcul#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_-FYb4LiXEe-rHo2YA0F0ZA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_EFRsULiZEe-rHo2YA0F0ZA" name="exmplTable" repPath="#_EFP3ILiZEe-rHo2YA0F0ZA" changeId="1734021360105">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']"/>
+        <target xmi:type="schemaTable:Table" href="ExempleTable.table#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mgk3UbijEe-rHo2YA0F0ZA" name="new TableDiagram" repPath="#_mgkQQLijEe-rHo2YA0F0ZA" changeId="1734021360105">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']"/>
+        <target xmi:type="schemaTable:Table" href="ExempleT1.table#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_gISdYLiUEe-BqbBkn0Wyrw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_gJCEQLiUEe-BqbBkn0Wyrw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_gJCEQbiUEe-BqbBkn0Wyrw" type="Sirius" element="_gISdYLiUEe-BqbBkn0Wyrw" measurementUnit="Pixel">
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_gJCEQriUEe-BqbBkn0Wyrw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_gJGVsLiUEe-BqbBkn0Wyrw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_gJGVsbiUEe-BqbBkn0Wyrw"/>
+    </ownedAnnotationEntries>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_gIbnULiUEe-BqbBkn0Wyrw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer"/>
+    <target xmi:type="calcul:Calcul" href="ExempleCalcul.calcul#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_EFP3ILiZEe-rHo2YA0F0ZA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_EFSTYLiZEe-rHo2YA0F0ZA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_EFSTYbiZEe-rHo2YA0F0ZA" type="Sirius" element="_EFP3ILiZEe-rHo2YA0F0ZA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_EFypsLiZEe-rHo2YA0F0ZA" type="2001" element="_EFYaALiZEe-rHo2YA0F0ZA">
+          <children xmi:type="notation:Node" xmi:id="_EF1F8LiZEe-rHo2YA0F0ZA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_EF1F8biZEe-rHo2YA0F0ZA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_nmugsLibEe-rHo2YA0F0ZA" type="3003" element="_nmqPQbibEe-rHo2YA0F0ZA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_nmugsbibEe-rHo2YA0F0ZA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nmugsribEe-rHo2YA0F0ZA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_EFypsbiZEe-rHo2YA0F0ZA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EFypsriZEe-rHo2YA0F0ZA" x="468" y="192" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_EF27ILiZEe-rHo2YA0F0ZA" type="2001" element="_EFlOULiZEe-rHo2YA0F0ZA">
+          <children xmi:type="notation:Node" xmi:id="_EF27I7iZEe-rHo2YA0F0ZA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_EF27JLiZEe-rHo2YA0F0ZA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_nmugs7ibEe-rHo2YA0F0ZA" type="3003" element="_nmq2UribEe-rHo2YA0F0ZA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_nmugtLibEe-rHo2YA0F0ZA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nmugtbibEe-rHo2YA0F0ZA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_EF27IbiZEe-rHo2YA0F0ZA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EF27IriZEe-rHo2YA0F0ZA" x="213" y="168" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_EF3iMLiZEe-rHo2YA0F0ZA" type="2001" element="_EFnDgbiZEe-rHo2YA0F0ZA">
+          <children xmi:type="notation:Node" xmi:id="_EF3iM7iZEe-rHo2YA0F0ZA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_EF3iNLiZEe-rHo2YA0F0ZA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__7ak4LihEe-rHo2YA0F0ZA" type="3003" element="__6W087ihEe-rHo2YA0F0ZA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__7ak4bihEe-rHo2YA0F0ZA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__7ak4rihEe-rHo2YA0F0ZA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_EF3iMbiZEe-rHo2YA0F0ZA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EF3iMriZEe-rHo2YA0F0ZA" x="213" y="292" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_EF3iNbiZEe-rHo2YA0F0ZA" type="2001" element="_EFpfwbiZEe-rHo2YA0F0ZA">
+          <children xmi:type="notation:Node" xmi:id="_EF4JQLiZEe-rHo2YA0F0ZA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_EF4JQbiZEe-rHo2YA0F0ZA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Dh4SELieEe-rHo2YA0F0ZA" type="3003" element="_Dgnt0bieEe-rHo2YA0F0ZA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Dh4SEbieEe-rHo2YA0F0ZA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Dh4SErieEe-rHo2YA0F0ZA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_EF3iNriZEe-rHo2YA0F0ZA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EF3iN7iZEe-rHo2YA0F0ZA" x="213" y="356" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_EF4JQriZEe-rHo2YA0F0ZA" type="2001" element="_EFr8AbiZEe-rHo2YA0F0ZA">
+          <children xmi:type="notation:Node" xmi:id="_EF4wULiZEe-rHo2YA0F0ZA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_EF4wUbiZEe-rHo2YA0F0ZA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_UEyDsLieEe-rHo2YA0F0ZA" type="3003" element="_UDiGgbieEe-rHo2YA0F0ZA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_UEyDsbieEe-rHo2YA0F0ZA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEyDsrieEe-rHo2YA0F0ZA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_EF4JQ7iZEe-rHo2YA0F0ZA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EF4JRLiZEe-rHo2YA0F0ZA" x="213" y="228" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_HdgPkLidEe-rHo2YA0F0ZA" visible="false" type="2001" element="_HcxPwbidEe-rHo2YA0F0ZA">
+          <children xmi:type="notation:Node" xmi:id="_HdhdsLidEe-rHo2YA0F0ZA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_HdhdsbidEe-rHo2YA0F0ZA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_HdhdsridEe-rHo2YA0F0ZA" type="3003" element="_Hcx20LidEe-rHo2YA0F0ZA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Hdhds7idEe-rHo2YA0F0ZA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HdhdtLidEe-rHo2YA0F0ZA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_HdgPkbidEe-rHo2YA0F0ZA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HdgPkridEe-rHo2YA0F0ZA" x="128" y="-60" width="30" height="30"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_EFSTYriZEe-rHo2YA0F0ZA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_EFtxMLiZEe-rHo2YA0F0ZA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_EFtxMbiZEe-rHo2YA0F0ZA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_EFYaALiZEe-rHo2YA0F0ZA" name="Colonne : zear" tooltipText="zear" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="schemaTable:Colonne" href="ExempleT1.table#//@colonneData.0"/>
+      <semanticElements xmi:type="schemaTable:Colonne" href="ExempleT1.table#//@colonneData.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_nmqPQbibEe-rHo2YA0F0ZA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" labelPosition="node" width="15" height="5" color="217,196,215">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_EFlOULiZEe-rHo2YA0F0ZA" name="Colonne : joliecolonne" tooltipText="joliecolonne" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="schemaTable:Colonne" href="ExempleTable.table#//@colonneData.0"/>
+      <semanticElements xmi:type="schemaTable:Colonne" href="ExempleTable.table#//@colonneData.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_nmq2UribEe-rHo2YA0F0ZA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" labelPosition="node" width="15" height="5" color="217,196,215">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_EFnDgbiZEe-rHo2YA0F0ZA" name="Colonne Identifiants : identifiants" tooltipText="identifiants" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="schemaTable:ColonneIdentifiants" href="ExempleTable.table#//@colonneData.1"/>
+      <semanticElements xmi:type="schemaTable:ColonneIdentifiants" href="ExempleTable.table#//@colonneData.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="__6W087ihEe-rHo2YA0F0ZA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="154,103,23" labelPosition="node" width="15" height="5" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_EFpfwbiZEe-rHo2YA0F0ZA" name="Colonne Dérivée : +1" tooltipText="+1" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="schemaTable:ColonneDerivee" href="ExempleTable.table#//@colonneData.2"/>
+      <semanticElements xmi:type="schemaTable:ColonneDerivee" href="ExempleTable.table#//@colonneData.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_Dgnt0bieEe-rHo2YA0F0ZA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="77,137,20" labelPosition="node" width="15" height="5" color="204,242,166">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_EFr8AbiZEe-rHo2YA0F0ZA" name="Colonne Etrangère: étrange" tooltipText="étrange" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="schemaTable:ColonneEtrangere" href="ExempleTable.table#//@colonneData.3"/>
+      <semanticElements xmi:type="schemaTable:ColonneEtrangere" href="ExempleTable.table#//@colonneData.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_UDiGgbieEe-rHo2YA0F0ZA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="156,12,12" labelPosition="node" width="15" height="5" color="246,139,139">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']/@conditionnalStyles.2/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_HcxPwbidEe-rHo2YA0F0ZA" name="Invalid feature as name" visible="false" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="schemaTable:ColonneEtrangere" href="ExempleTable.table#//@colonneData.3"/>
+      <semanticElements xmi:type="schemaTable:ColonneEtrangere" href="ExempleTable.table#//@colonneData.3"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_Hcx20LidEe-rHo2YA0F0ZA" labelSize="12" labelPosition="node">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='id']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='id']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_EFP3IbiZEe-rHo2YA0F0ZA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer"/>
+    <target xmi:type="schemaTable:Table" href="ExempleTable.table#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_mgkQQLijEe-rHo2YA0F0ZA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_mgk3U7ijEe-rHo2YA0F0ZA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_mgk3VLijEe-rHo2YA0F0ZA" type="Sirius" element="_mgkQQLijEe-rHo2YA0F0ZA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_mgqW4LijEe-rHo2YA0F0ZA" type="2001" element="_mgleYLijEe-rHo2YA0F0ZA">
+          <children xmi:type="notation:Node" xmi:id="_mgqW47ijEe-rHo2YA0F0ZA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_mgqW5LijEe-rHo2YA0F0ZA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mgrlBbijEe-rHo2YA0F0ZA" type="3003" element="_mgmFcLijEe-rHo2YA0F0ZA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mgrlBrijEe-rHo2YA0F0ZA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mgrlB7ijEe-rHo2YA0F0ZA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_mgqW4bijEe-rHo2YA0F0ZA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mgqW4rijEe-rHo2YA0F0ZA" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_mgqW5bijEe-rHo2YA0F0ZA" type="2001" element="_mgmFcrijEe-rHo2YA0F0ZA">
+          <children xmi:type="notation:Node" xmi:id="_mgq98LijEe-rHo2YA0F0ZA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_mgq98bijEe-rHo2YA0F0ZA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mgsMELijEe-rHo2YA0F0ZA" type="3003" element="_mgmsgLijEe-rHo2YA0F0ZA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mgsMEbijEe-rHo2YA0F0ZA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mgsMErijEe-rHo2YA0F0ZA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_mgqW5rijEe-rHo2YA0F0ZA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mgqW57ijEe-rHo2YA0F0ZA" x="208" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_mgq98rijEe-rHo2YA0F0ZA" type="2001" element="_mgmsgrijEe-rHo2YA0F0ZA">
+          <children xmi:type="notation:Node" xmi:id="_mgq99bijEe-rHo2YA0F0ZA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_mgq99rijEe-rHo2YA0F0ZA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mgsME7ijEe-rHo2YA0F0ZA" type="3003" element="_mgnTkLijEe-rHo2YA0F0ZA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mgsMFLijEe-rHo2YA0F0ZA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mgsMFbijEe-rHo2YA0F0ZA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_mgq987ijEe-rHo2YA0F0ZA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mgq99LijEe-rHo2YA0F0ZA" x="420" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_mgq997ijEe-rHo2YA0F0ZA" type="2001" element="_mgnTkrijEe-rHo2YA0F0ZA">
+          <children xmi:type="notation:Node" xmi:id="_mgq9-rijEe-rHo2YA0F0ZA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_mgq9-7ijEe-rHo2YA0F0ZA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mgsMFrijEe-rHo2YA0F0ZA" type="3003" element="_mgpIwLijEe-rHo2YA0F0ZA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mgsMF7ijEe-rHo2YA0F0ZA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mgsMGLijEe-rHo2YA0F0ZA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_mgq9-LijEe-rHo2YA0F0ZA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mgq9-bijEe-rHo2YA0F0ZA" x="632" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_mgrlALijEe-rHo2YA0F0ZA" type="2001" element="_mgpIwrijEe-rHo2YA0F0ZA">
+          <children xmi:type="notation:Node" xmi:id="_mgrlA7ijEe-rHo2YA0F0ZA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_mgrlBLijEe-rHo2YA0F0ZA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mgsMGbijEe-rHo2YA0F0ZA" type="3003" element="_mgpv0LijEe-rHo2YA0F0ZA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mgsMGrijEe-rHo2YA0F0ZA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mgsMG7ijEe-rHo2YA0F0ZA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_mgrlAbijEe-rHo2YA0F0ZA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mgrlArijEe-rHo2YA0F0ZA" x="840" width="150" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_mgk3VbijEe-rHo2YA0F0ZA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_mgpv0rijEe-rHo2YA0F0ZA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_mgpv07ijEe-rHo2YA0F0ZA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_mgleYLijEe-rHo2YA0F0ZA" name="Colonne : zear" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="schemaTable:Colonne" href="ExempleT1.table#//@colonneData.0"/>
+      <semanticElements xmi:type="schemaTable:Colonne" href="ExempleT1.table#//@colonneData.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_mgmFcLijEe-rHo2YA0F0ZA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" labelPosition="node" width="15" height="5" color="217,196,215">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_mgmFcrijEe-rHo2YA0F0ZA" name="Colonne : joliecolonne" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="schemaTable:Colonne" href="ExempleTable.table#//@colonneData.0"/>
+      <semanticElements xmi:type="schemaTable:Colonne" href="ExempleTable.table#//@colonneData.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_mgmsgLijEe-rHo2YA0F0ZA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" labelPosition="node" width="15" height="5" color="217,196,215">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_mgmsgrijEe-rHo2YA0F0ZA" name="Colonne Identifiants : identifiants" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="schemaTable:ColonneIdentifiants" href="ExempleTable.table#//@colonneData.1"/>
+      <semanticElements xmi:type="schemaTable:ColonneIdentifiants" href="ExempleTable.table#//@colonneData.1"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_mgnTkLijEe-rHo2YA0F0ZA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="154,103,23" labelPosition="node" width="15" height="5" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_mgnTkrijEe-rHo2YA0F0ZA" name="Colonne Dérivée : +1" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="schemaTable:ColonneDerivee" href="ExempleTable.table#//@colonneData.2"/>
+      <semanticElements xmi:type="schemaTable:ColonneDerivee" href="ExempleTable.table#//@colonneData.2"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_mgpIwLijEe-rHo2YA0F0ZA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="77,137,20" labelPosition="node" width="15" height="5" color="204,242,166">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_mgpIwrijEe-rHo2YA0F0ZA" name="Colonne Etrangère: étrange" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="schemaTable:ColonneEtrangere" href="ExempleTable.table#//@colonneData.3"/>
+      <semanticElements xmi:type="schemaTable:ColonneEtrangere" href="ExempleTable.table#//@colonneData.3"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_mgpv0LijEe-rHo2YA0F0ZA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="156,12,12" labelPosition="node" width="15" height="5" color="246,139,139">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']/@conditionnalStyles.2/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer/@nodeMappings[name='Colonne']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_mgk3ULijEe-rHo2YA0F0ZA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/projet.schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='SchemaTableViewpoint']/@ownedRepresentations[name='TableDiagram']/@defaultLayer"/>
+    <target xmi:type="schemaTable:Table" href="ExempleT1.table#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

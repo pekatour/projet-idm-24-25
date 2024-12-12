@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemaTable:Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaTable="http://schemaTable" colonneidentifiants="//@colonneData.2" nom="t3">
+  <colonneData nom="C31"/>
+  <colonneData nom="C32"/>
+  <colonneData xsi:type="schemaTable:ColonneIdentifiants" nom="C3I"/>
+</schemaTable:Table>
