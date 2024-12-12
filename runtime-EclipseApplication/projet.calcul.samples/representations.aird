@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:calcul="http://calcul" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description">
+  <viewpoint:DAnalysis uid="_jivAcLiTEe-BqbBkn0Wyrw" selectedViews="_H7PDgLiUEe-BqbBkn0Wyrw" version="15.2.0.202303281325">
+    <semanticResources>ExempleCalcul.calcul</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_H7PDgLiUEe-BqbBkn0Wyrw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_gIpCsLiUEe-BqbBkn0Wyrw" name="new CalculDiagram" repPath="#_gISdYLiUEe-BqbBkn0Wyrw" changeId="1734013342361">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']"/>
+        <target xmi:type="calcul:Calcul" href="ExempleCalcul.calcul#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_gISdYLiUEe-BqbBkn0Wyrw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_gJCEQLiUEe-BqbBkn0Wyrw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_gJCEQbiUEe-BqbBkn0Wyrw" type="Sirius" element="_gISdYLiUEe-BqbBkn0Wyrw" measurementUnit="Pixel">
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_gJCEQriUEe-BqbBkn0Wyrw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_gJGVsLiUEe-BqbBkn0Wyrw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_gJGVsbiUEe-BqbBkn0Wyrw"/>
+    </ownedAnnotationEntries>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_gIbnULiUEe-BqbBkn0Wyrw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer"/>
+    <target xmi:type="calcul:Calcul" href="ExempleCalcul.calcul#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
