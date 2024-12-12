@@ -10,7 +10,8 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: algorithme.presentation,
- projet.schemaTable.presentation
+ projet.schemaTable.presentation,
+ calcul.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  projet.schemaTable.edit;visibility:=reexport,

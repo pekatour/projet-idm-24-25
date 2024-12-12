@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/projet.schemaTable/src" modelPluginID="projet.schemaTable"
+    modelName="Algorithme" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>algorithme.ecore</foreignModel>
+  <genPackages prefix="Algorithme" disposableProviderFactory="true" ecorePackage="algorithme.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="algorithme.ecore#//Langage">
+      <genEnumLiterals ecoreEnumLiteral="algorithme.ecore#//Langage/PYTHON"/>
+      <genEnumLiterals ecoreEnumLiteral="algorithme.ecore#//Langage/INTERNE"/>
+    </genEnums>
+    <genClasses ecoreClass="algorithme.ecore#//Algorithme">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/ressource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/documentation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/langage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithme.ecore#//Algorithme/sortie"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithme.ecore#//Algorithme/entree"/>
+    </genClasses>
+    <genClasses ecoreClass="algorithme.ecore#//Entree">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference algorithme.ecore#//Entree/algorithme"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Entree/entree"/>
+    </genClasses>
+    <genClasses ecoreClass="algorithme.ecore#//Sortie">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference algorithme.ecore#//Sortie/algorithme"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Sortie/sortie"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

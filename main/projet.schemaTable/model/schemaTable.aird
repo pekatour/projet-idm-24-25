@@ -9,6 +9,8 @@
     <semanticResources>../Exemples/ExempleAlgorithme.xmi</semanticResources>
     <semanticResources>../Exemples/t1.xmi</semanticResources>
     <semanticResources>../Exemples/ExempleCalcul.xmi</semanticResources>
+    <semanticResources>calcul.genmodel</semanticResources>
+    <semanticResources>algorithme.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_2_ElwKHIEe-DfoCrKQ1Z9w">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_7yAtwKZREe-KeIwOmJ5FxQ" name="algorithme class diagram" repPath="#_7x9DYKZREe-KeIwOmJ5FxQ" changeId="1732615856367">

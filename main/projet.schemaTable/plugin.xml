@@ -22,4 +22,12 @@
             genModel="model/schemaTable.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated calcul -->
+      <package
+            uri="http://calcul"
+            class="calcul.CalculPackage"
+            genModel="model/calcul.genmodel"/>
+   </extension>
+
 </plugin>
