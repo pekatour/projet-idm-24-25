@@ -1,0 +1,11 @@
+Table 'maman Timothee' {
+    colonnes { 
+        c "appart", 
+        c_id "surface", 
+        c_deriv "loyer" 
+            algo Algorithme "pypy" { 
+                ressource "//mamam.zpzjd"
+                sortie "loyer"
+            }
+    }
+}

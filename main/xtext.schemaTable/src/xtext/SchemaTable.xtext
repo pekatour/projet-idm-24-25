@@ -1,0 +1,47 @@
+grammar xtext.SchemaTable with org.eclipse.xtext.common.Terminals
+
+import "http://schemaTable" 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://algorithme" as algorithme
+
+Table returns Table:
+	'Table'nom=EString
+	'{'
+		'colonnes' '{' colonneData+=Colonne ( "," colonneData+=Colonne)* '}' 
+		('contraintes' '{' algoContrainte+=Algorithme ( "," algoContrainte+=Algorithme)* '}' )?
+	'}';
+
+Colonne returns Colonne:
+	Colonne_Impl | ColonneDerivee | ColonneEtrangere | ColonneIdentifiants;
+
+
+Colonne_Impl returns Colonne:
+	'c' nom=EString;
+
+EString returns ecore::EString:
+	STRING | ID;
+
+Algorithme returns algorithme::Algorithme:
+	'Algorithme' nom=EString
+	'{' 
+		'ressource' ressource=EString
+		('documentation' documentation=EString)?
+		('langage' langage=Langage)?
+		('entree' '{' entree+=EString ( "," entree+=EString)* '}' )?
+		'sortie' sortie=EString
+	'}';
+
+ColonneDerivee returns ColonneDerivee:
+	'c_deriv' nom=EString
+		'algo' algorithme=Algorithme;
+
+ColonneEtrangere returns ColonneEtrangere:
+	'c_etr' nom=EString
+		'id' idColonneTableEtrangere=EString
+		'from' tableEtrangere=[Table|EString];
+
+ColonneIdentifiants returns ColonneIdentifiants:
+	'c_id' nom=EString;
+
+enum Langage returns algorithme::Langage:
+				PYTHON = 'PYTHON' | INTERNE = 'INTERNE';

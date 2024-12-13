@@ -72,18 +72,6 @@ public class AlgorithmeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AlgorithmePackage.ENTREE: {
-				Entree entree = (Entree)theEObject;
-				T result = caseEntree(entree);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AlgorithmePackage.SORTIE: {
-				Sortie sortie = (Sortie)theEObject;
-				T result = caseSortie(sortie);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -100,36 +88,6 @@ public class AlgorithmeSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAlgorithme(Algorithme object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entree</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entree</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEntree(Entree object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sortie</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sortie</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSortie(Sortie object) {
 		return null;
 	}
 

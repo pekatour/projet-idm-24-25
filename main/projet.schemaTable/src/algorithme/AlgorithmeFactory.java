@@ -31,24 +31,6 @@ public interface AlgorithmeFactory extends EFactory {
 	Algorithme createAlgorithme();
 
 	/**
-	 * Returns a new object of class '<em>Entree</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Entree</em>'.
-	 * @generated
-	 */
-	Entree createEntree();
-
-	/**
-	 * Returns a new object of class '<em>Sortie</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sortie</em>'.
-	 * @generated
-	 */
-	Sortie createSortie();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

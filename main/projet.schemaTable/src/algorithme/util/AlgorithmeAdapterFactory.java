@@ -72,14 +72,6 @@ public class AlgorithmeAdapterFactory extends AdapterFactoryImpl {
 				return createAlgorithmeAdapter();
 			}
 			@Override
-			public Adapter caseEntree(Entree object) {
-				return createEntreeAdapter();
-			}
-			@Override
-			public Adapter caseSortie(Sortie object) {
-				return createSortieAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -110,34 +102,6 @@ public class AlgorithmeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAlgorithmeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link algorithme.Entree <em>Entree</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see algorithme.Entree
-	 * @generated
-	 */
-	public Adapter createEntreeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link algorithme.Sortie <em>Sortie</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see algorithme.Sortie
-	 * @generated
-	 */
-	public Adapter createSortieAdapter() {
 		return null;
 	}
 

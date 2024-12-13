@@ -95,52 +95,6 @@ public class AlgorithmeItemProviderAdapterFactory extends AlgorithmeAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link algorithme.Entree} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EntreeItemProvider entreeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link algorithme.Entree}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEntreeAdapter() {
-		if (entreeItemProvider == null) {
-			entreeItemProvider = new EntreeItemProvider(this);
-		}
-
-		return entreeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link algorithme.Sortie} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SortieItemProvider sortieItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link algorithme.Sortie}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSortieAdapter() {
-		if (sortieItemProvider == null) {
-			sortieItemProvider = new SortieItemProvider(this);
-		}
-
-		return sortieItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -246,8 +200,6 @@ public class AlgorithmeItemProviderAdapterFactory extends AlgorithmeAdapterFacto
 	@Override
 	public void dispose() {
 		if (algorithmeItemProvider != null) algorithmeItemProvider.dispose();
-		if (entreeItemProvider != null) entreeItemProvider.dispose();
-		if (sortieItemProvider != null) sortieItemProvider.dispose();
 	}
 
 }

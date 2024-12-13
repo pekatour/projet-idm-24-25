@@ -15,16 +15,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/ressource"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/documentation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/langage"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithme.ecore#//Algorithme/sortie"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithme.ecore#//Algorithme/entree"/>
-    </genClasses>
-    <genClasses ecoreClass="algorithme.ecore#//Entree">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference algorithme.ecore#//Entree/algorithme"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Entree/entree"/>
-    </genClasses>
-    <genClasses ecoreClass="algorithme.ecore#//Sortie">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference algorithme.ecore#//Sortie/algorithme"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Sortie/sortie"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/entree"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithme.ecore#//Algorithme/sortie"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

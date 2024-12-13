@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="projet.schemaTable.presentation.SchemaTableModelWizardID"
+            id="schemaTable.presentation.SchemaTableModelWizardID"
             name="%_UI_SchemaTableModelWizard_label"
-            class="projet.schemaTable.presentation.SchemaTableModelWizard"
+            class="schemaTable.presentation.SchemaTableModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/SchemaTableModelFile.gif">
          <description>%_UI_SchemaTableModelWizard_description</description>
@@ -22,20 +22,20 @@
       </wizard>
    </extension>
 
+
    <extension point="org.eclipse.ui.editors">
       <!-- @generated schemaTable -->
       <editor
-            id="projet.schemaTable.presentation.SchemaTableEditorID"
+            id="schemaTable.presentation.SchemaTableEditorID"
             name="%_UI_SchemaTableEditor_label"
             icon="icons/full/obj16/SchemaTableModelFile.gif"
             extensions="schematable"
-            class="projet.schemaTable.presentation.SchemaTableEditor"
-            contributorClass="projet.schemaTable.presentation.SchemaTableActionBarContributor">
+            class="schemaTable.presentation.SchemaTableEditor"
+            contributorClass="schemaTable.presentation.SchemaTableActionBarContributor">
       </editor>
    </extension>
-
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated schemaTable -->
+      <!-- @generated algorithme -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
@@ -51,7 +51,7 @@
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated schemaTable -->
+      <!-- @generated algorithme -->
       <editor
             id="algorithme.presentation.AlgorithmeEditorID"
             name="%_UI_AlgorithmeEditor_label"

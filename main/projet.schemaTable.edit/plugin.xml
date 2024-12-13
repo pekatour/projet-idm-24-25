@@ -10,7 +10,7 @@
       <!-- @generated schemaTable -->
       <factory
             uri="http://schemaTable"
-            class="projet.schemaTable.provider.SchemaTableItemProviderAdapterFactory"
+            class="schemaTable.provider.SchemaTableItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -20,7 +20,7 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated schemaTable -->
+      <!-- @generated algorithme -->
       <factory
             uri="http://algorithme"
             class="algorithme.provider.AlgorithmeItemProviderAdapterFactory"

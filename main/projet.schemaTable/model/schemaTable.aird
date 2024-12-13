@@ -2,7 +2,6 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_2-IxoKHIEe-DfoCrKQ1Z9w" selectedViews="_2_ElwKHIEe-DfoCrKQ1Z9w _uNchEKZHEe-KeIwOmJ5FxQ _uNu08KZHEe-KeIwOmJ5FxQ _uOZjUKZHEe-KeIwOmJ5FxQ" version="15.2.0.202303281325">
     <semanticResources>schemaTable.ecore</semanticResources>
-    <semanticResources>schemaTable.genmodel</semanticResources>
     <semanticResources>calcul.ecore</semanticResources>
     <semanticResources>algorithme.ecore</semanticResources>
     <semanticResources>../Exemples/ExempleTable.xmi</semanticResources>
@@ -10,6 +9,9 @@
     <semanticResources>../Exemples/t1.xmi</semanticResources>
     <semanticResources>../Exemples/ExempleCalcul.xmi</semanticResources>
     <semanticResources>calcul.genmodel</semanticResources>
+    <semanticResources>../algorithme.ecore</semanticResources>
+    <semanticResources>../schemaTable.ecore</semanticResources>
+    <semanticResources>../schemaTable.genmodel</semanticResources>
     <semanticResources>algorithme.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_2_ElwKHIEe-DfoCrKQ1Z9w">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
@@ -37,7 +39,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="calcul.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_IsPgcLJDEe-oWpjBuQhW0w" name="schemaTable class diagram" repPath="#_IsNrQLJDEe-oWpjBuQhW0w" changeId="1734016880766">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_IsPgcLJDEe-oWpjBuQhW0w" name="schemaTable class diagram" repPath="#_IsNrQLJDEe-oWpjBuQhW0w" changeId="1734081770485">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="schemaTable.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1972,7 +1974,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_JKLZrbJDEe-oWpjBuQhW0w"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_JKLZqLJDEe-oWpjBuQhW0w" fontName="Ubuntu" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JKLZqbJDEe-oWpjBuQhW0w" x="208" y="356"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JKLZqbJDEe-oWpjBuQhW0w" x="198" y="402"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_JKLZrrJDEe-oWpjBuQhW0w" type="2003" element="_JKBBkbJDEe-oWpjBuQhW0w">
           <children xmi:type="notation:Node" xmi:id="_JKLZsbJDEe-oWpjBuQhW0w" type="5007"/>
@@ -2545,9 +2547,9 @@
       </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HQGIALckEe-bzq5p4zV0mA" sourceNode="_HP7I4bckEe-bzq5p4zV0mA" targetNode="_HP8-ELckEe-bzq5p4zV0mA" beginLabel="[1..1] algorithme" endLabel="[0..*] entree">
-      <target xmi:type="ecore:EReference" href="algorithme.ecore#//Algorithme/entree"/>
+      <target xmi:type="ecore:EAttribute" href="algorithme.ecore#//Algorithme/entree"/>
       <semanticElements xmi:type="ecore:EReference" href="algorithme.ecore#//Entree/algorithme"/>
-      <semanticElements xmi:type="ecore:EReference" href="algorithme.ecore#//Algorithme/entree"/>
+      <semanticElements xmi:type="ecore:EAttribute" href="algorithme.ecore#//Algorithme/entree"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_HQGvE7ckEe-bzq5p4zV0mA" description="_HQGvELckEe-bzq5p4zV0mA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_HQGvFLckEe-bzq5p4zV0mA" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_HQGvFbckEe-bzq5p4zV0mA" showIcon="false"/>
@@ -2555,9 +2557,9 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HQGvGbckEe-bzq5p4zV0mA" sourceNode="_HP7I4bckEe-bzq5p4zV0mA" targetNode="_HP-MMbckEe-bzq5p4zV0mA" beginLabel="[1..1] algorithme" endLabel="[1..1] sortie">
-      <target xmi:type="ecore:EReference" href="algorithme.ecore#//Algorithme/sortie"/>
+      <target xmi:type="ecore:EAttribute" href="algorithme.ecore#//Algorithme/sortie"/>
       <semanticElements xmi:type="ecore:EReference" href="algorithme.ecore#//Sortie/algorithme"/>
-      <semanticElements xmi:type="ecore:EReference" href="algorithme.ecore#//Algorithme/sortie"/>
+      <semanticElements xmi:type="ecore:EAttribute" href="algorithme.ecore#//Algorithme/sortie"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_HQHWI7ckEe-bzq5p4zV0mA" description="_HQHWILckEe-bzq5p4zV0mA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_HQHWJLckEe-bzq5p4zV0mA" showIcon="false">
           <labelFormat>bold</labelFormat>

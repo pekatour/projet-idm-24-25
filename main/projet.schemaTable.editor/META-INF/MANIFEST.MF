@@ -5,12 +5,12 @@ Bundle-SymbolicName: projet.schemaTable.editor;singleton:=true
 Automatic-Module-Name: projet.schemaTable.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: projet.schemaTable.presentation.SchemaTableEditorPlugin$Implementation
+Bundle-Activator: schemaTable.presentation.SchemaTableEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: algorithme.presentation,
- projet.schemaTable.presentation,
+ schemaTable.presentation,
  calcul.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,

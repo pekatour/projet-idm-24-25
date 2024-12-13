@@ -5,17 +5,14 @@ package algorithme.impl;
 import algorithme.Algorithme;
 import algorithme.AlgorithmeFactory;
 import algorithme.AlgorithmePackage;
-import algorithme.Entree;
 import algorithme.Langage;
-import algorithme.Sortie;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import schemaTable.SchemaTablePackage;
+import schemaTable.impl.SchemaTablePackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,20 +27,6 @@ public class AlgorithmePackageImpl extends EPackageImpl implements AlgorithmePac
 	 * @generated
 	 */
 	private EClass algorithmeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass entreeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sortieEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -98,11 +81,17 @@ public class AlgorithmePackageImpl extends EPackageImpl implements AlgorithmePac
 
 		isInited = true;
 
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SchemaTablePackage.eNS_URI);
+		SchemaTablePackageImpl theSchemaTablePackage = (SchemaTablePackageImpl)(registeredPackage instanceof SchemaTablePackageImpl ? registeredPackage : SchemaTablePackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theAlgorithmePackage.createPackageContents();
+		theSchemaTablePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theAlgorithmePackage.initializePackageContents();
+		theSchemaTablePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theAlgorithmePackage.freeze();
@@ -168,8 +157,8 @@ public class AlgorithmePackageImpl extends EPackageImpl implements AlgorithmePac
 	 * @generated
 	 */
 	@Override
-	public EReference getAlgorithme_Sortie() {
-		return (EReference)algorithmeEClass.getEStructuralFeatures().get(4);
+	public EAttribute getAlgorithme_Sortie() {
+		return (EAttribute)algorithmeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -178,68 +167,8 @@ public class AlgorithmePackageImpl extends EPackageImpl implements AlgorithmePac
 	 * @generated
 	 */
 	@Override
-	public EReference getAlgorithme_Entree() {
-		return (EReference)algorithmeEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getEntree() {
-		return entreeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEntree_Algorithme() {
-		return (EReference)entreeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEntree_Entree() {
-		return (EAttribute)entreeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getSortie() {
-		return sortieEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSortie_Algorithme() {
-		return (EReference)sortieEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getSortie_Sortie() {
-		return (EAttribute)sortieEClass.getEStructuralFeatures().get(1);
+	public EAttribute getAlgorithme_Entree() {
+		return (EAttribute)algorithmeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -286,16 +215,8 @@ public class AlgorithmePackageImpl extends EPackageImpl implements AlgorithmePac
 		createEAttribute(algorithmeEClass, ALGORITHME__RESSOURCE);
 		createEAttribute(algorithmeEClass, ALGORITHME__DOCUMENTATION);
 		createEAttribute(algorithmeEClass, ALGORITHME__LANGAGE);
-		createEReference(algorithmeEClass, ALGORITHME__SORTIE);
-		createEReference(algorithmeEClass, ALGORITHME__ENTREE);
-
-		entreeEClass = createEClass(ENTREE);
-		createEReference(entreeEClass, ENTREE__ALGORITHME);
-		createEAttribute(entreeEClass, ENTREE__ENTREE);
-
-		sortieEClass = createEClass(SORTIE);
-		createEReference(sortieEClass, SORTIE__ALGORITHME);
-		createEAttribute(sortieEClass, SORTIE__SORTIE);
+		createEAttribute(algorithmeEClass, ALGORITHME__ENTREE);
+		createEAttribute(algorithmeEClass, ALGORITHME__SORTIE);
 
 		// Create enums
 		langageEEnum = createEEnum(LANGAGE);
@@ -336,16 +257,8 @@ public class AlgorithmePackageImpl extends EPackageImpl implements AlgorithmePac
 		initEAttribute(getAlgorithme_Ressource(), ecorePackage.getEString(), "ressource", null, 1, 1, Algorithme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAlgorithme_Documentation(), ecorePackage.getEString(), "documentation", null, 0, 1, Algorithme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAlgorithme_Langage(), this.getLangage(), "langage", null, 0, 1, Algorithme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAlgorithme_Sortie(), this.getSortie(), this.getSortie_Algorithme(), "sortie", null, 1, 1, Algorithme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAlgorithme_Entree(), this.getEntree(), this.getEntree_Algorithme(), "entree", null, 0, -1, Algorithme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(entreeEClass, Entree.class, "Entree", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEntree_Algorithme(), this.getAlgorithme(), this.getAlgorithme_Entree(), "algorithme", null, 1, 1, Entree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntree_Entree(), ecorePackage.getEString(), "entree", null, 1, 1, Entree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(sortieEClass, Sortie.class, "Sortie", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSortie_Algorithme(), this.getAlgorithme(), this.getAlgorithme_Sortie(), "algorithme", null, 1, 1, Sortie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSortie_Sortie(), ecorePackage.getEString(), "sortie", null, 1, 1, Sortie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAlgorithme_Entree(), ecorePackage.getEString(), "entree", null, 0, -1, Algorithme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAlgorithme_Sortie(), ecorePackage.getEString(), "sortie", null, 1, 1, Algorithme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(langageEEnum, Langage.class, "Langage");

@@ -10,8 +10,8 @@
       <!-- @generated schemaTable -->
       <package
             uri="http://schemaTable"
-            class="projet.schemaTable.SchemaTablePackage"
-            genModel="model/schemaTable.genmodel"/>
+            class="schemaTable.SchemaTablePackage"
+            genModel="schemaTable.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -19,7 +19,7 @@
       <package
             uri="http://algorithme"
             class="algorithme.AlgorithmePackage"
-            genModel="model/schemaTable.genmodel"/>
+            genModel="schemaTable.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">

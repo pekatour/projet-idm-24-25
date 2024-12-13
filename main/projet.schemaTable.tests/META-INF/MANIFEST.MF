@@ -8,8 +8,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: calcul.tests,
- algorithme.tests
+Export-Package: algorithme.tests,
+ schemaTable.tests,
+ calcul.tests
 Require-Bundle: org.eclipse.core.runtime,
  projet.schemaTable;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

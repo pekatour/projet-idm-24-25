@@ -5,6 +5,8 @@
     <semanticResources>ExempleTable.table</semanticResources>
     <semanticResources>ExempleT2.schematable</semanticResources>
     <semanticResources>ExempleT3.schematable</semanticResources>
+    <semanticResources>ExempleT3.tbl</semanticResources>
+    <semanticResources>ExempleT4.tbl</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_H7PDgLiUEe-BqbBkn0Wyrw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_gIpCsLiUEe-BqbBkn0Wyrw" name="new CalculDiagram" repPath="#_gISdYLiUEe-BqbBkn0Wyrw" changeId="1734013342361">

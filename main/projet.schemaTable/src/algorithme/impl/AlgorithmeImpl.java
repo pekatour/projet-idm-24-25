@@ -4,25 +4,17 @@ package algorithme.impl;
 
 import algorithme.Algorithme;
 import algorithme.AlgorithmePackage;
-import algorithme.Entree;
 import algorithme.Langage;
-import algorithme.Sortie;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,8 +28,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link algorithme.impl.AlgorithmeImpl#getRessource <em>Ressource</em>}</li>
  *   <li>{@link algorithme.impl.AlgorithmeImpl#getDocumentation <em>Documentation</em>}</li>
  *   <li>{@link algorithme.impl.AlgorithmeImpl#getLangage <em>Langage</em>}</li>
- *   <li>{@link algorithme.impl.AlgorithmeImpl#getSortie <em>Sortie</em>}</li>
  *   <li>{@link algorithme.impl.AlgorithmeImpl#getEntree <em>Entree</em>}</li>
+ *   <li>{@link algorithme.impl.AlgorithmeImpl#getSortie <em>Sortie</em>}</li>
  * </ul>
  *
  * @generated
@@ -124,24 +116,34 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 	protected Langage langage = LANGAGE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSortie() <em>Sortie</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSortie()
-	 * @generated
-	 * @ordered
-	 */
-	protected Sortie sortie;
-
-	/**
-	 * The cached value of the '{@link #getEntree() <em>Entree</em>}' containment reference list.
+	 * The cached value of the '{@link #getEntree() <em>Entree</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEntree()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Entree> entree;
+	protected EList<String> entree;
+
+	/**
+	 * The default value of the '{@link #getSortie() <em>Sortie</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSortie()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SORTIE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSortie() <em>Sortie</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSortie()
+	 * @generated
+	 * @ordered
+	 */
+	protected String sortie = SORTIE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -260,7 +262,7 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 	 * @generated
 	 */
 	@Override
-	public Sortie getSortie() {
+	public String getSortie() {
 		return sortie;
 	}
 
@@ -269,14 +271,12 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSortie(Sortie newSortie, NotificationChain msgs) {
-		Sortie oldSortie = sortie;
+	@Override
+	public void setSortie(String newSortie) {
+		String oldSortie = sortie;
 		sortie = newSortie;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AlgorithmePackage.ALGORITHME__SORTIE, oldSortie, newSortie);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AlgorithmePackage.ALGORITHME__SORTIE, oldSortie, sortie));
 	}
 
 	/**
@@ -285,66 +285,11 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 	 * @generated
 	 */
 	@Override
-	public void setSortie(Sortie newSortie) {
-		if (newSortie != sortie) {
-			NotificationChain msgs = null;
-			if (sortie != null)
-				msgs = ((InternalEObject)sortie).eInverseRemove(this, AlgorithmePackage.SORTIE__ALGORITHME, Sortie.class, msgs);
-			if (newSortie != null)
-				msgs = ((InternalEObject)newSortie).eInverseAdd(this, AlgorithmePackage.SORTIE__ALGORITHME, Sortie.class, msgs);
-			msgs = basicSetSortie(newSortie, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AlgorithmePackage.ALGORITHME__SORTIE, newSortie, newSortie));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Entree> getEntree() {
+	public EList<String> getEntree() {
 		if (entree == null) {
-			entree = new EObjectContainmentWithInverseEList<Entree>(Entree.class, this, AlgorithmePackage.ALGORITHME__ENTREE, AlgorithmePackage.ENTREE__ALGORITHME);
+			entree = new EDataTypeUniqueEList<String>(String.class, this, AlgorithmePackage.ALGORITHME__ENTREE);
 		}
 		return entree;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AlgorithmePackage.ALGORITHME__SORTIE:
-				if (sortie != null)
-					msgs = ((InternalEObject)sortie).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AlgorithmePackage.ALGORITHME__SORTIE, null, msgs);
-				return basicSetSortie((Sortie)otherEnd, msgs);
-			case AlgorithmePackage.ALGORITHME__ENTREE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEntree()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AlgorithmePackage.ALGORITHME__SORTIE:
-				return basicSetSortie(null, msgs);
-			case AlgorithmePackage.ALGORITHME__ENTREE:
-				return ((InternalEList<?>)getEntree()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -363,10 +308,10 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 				return getDocumentation();
 			case AlgorithmePackage.ALGORITHME__LANGAGE:
 				return getLangage();
-			case AlgorithmePackage.ALGORITHME__SORTIE:
-				return getSortie();
 			case AlgorithmePackage.ALGORITHME__ENTREE:
 				return getEntree();
+			case AlgorithmePackage.ALGORITHME__SORTIE:
+				return getSortie();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -392,12 +337,12 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 			case AlgorithmePackage.ALGORITHME__LANGAGE:
 				setLangage((Langage)newValue);
 				return;
-			case AlgorithmePackage.ALGORITHME__SORTIE:
-				setSortie((Sortie)newValue);
-				return;
 			case AlgorithmePackage.ALGORITHME__ENTREE:
 				getEntree().clear();
-				getEntree().addAll((Collection<? extends Entree>)newValue);
+				getEntree().addAll((Collection<? extends String>)newValue);
+				return;
+			case AlgorithmePackage.ALGORITHME__SORTIE:
+				setSortie((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -423,11 +368,11 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 			case AlgorithmePackage.ALGORITHME__LANGAGE:
 				setLangage(LANGAGE_EDEFAULT);
 				return;
-			case AlgorithmePackage.ALGORITHME__SORTIE:
-				setSortie((Sortie)null);
-				return;
 			case AlgorithmePackage.ALGORITHME__ENTREE:
 				getEntree().clear();
+				return;
+			case AlgorithmePackage.ALGORITHME__SORTIE:
+				setSortie(SORTIE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -449,10 +394,10 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 				return DOCUMENTATION_EDEFAULT == null ? documentation != null : !DOCUMENTATION_EDEFAULT.equals(documentation);
 			case AlgorithmePackage.ALGORITHME__LANGAGE:
 				return langage != LANGAGE_EDEFAULT;
-			case AlgorithmePackage.ALGORITHME__SORTIE:
-				return sortie != null;
 			case AlgorithmePackage.ALGORITHME__ENTREE:
 				return entree != null && !entree.isEmpty();
+			case AlgorithmePackage.ALGORITHME__SORTIE:
+				return SORTIE_EDEFAULT == null ? sortie != null : !SORTIE_EDEFAULT.equals(sortie);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -475,6 +420,10 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 		result.append(documentation);
 		result.append(", langage: ");
 		result.append(langage);
+		result.append(", entree: ");
+		result.append(entree);
+		result.append(", sortie: ");
+		result.append(sortie);
 		result.append(')');
 		return result.toString();
 	}

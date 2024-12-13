@@ -58,8 +58,6 @@ public class AlgorithmeFactoryImpl extends EFactoryImpl implements AlgorithmeFac
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case AlgorithmePackage.ALGORITHME: return createAlgorithme();
-			case AlgorithmePackage.ENTREE: return createEntree();
-			case AlgorithmePackage.SORTIE: return createSortie();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -104,28 +102,6 @@ public class AlgorithmeFactoryImpl extends EFactoryImpl implements AlgorithmeFac
 	public Algorithme createAlgorithme() {
 		AlgorithmeImpl algorithme = new AlgorithmeImpl();
 		return algorithme;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Entree createEntree() {
-		EntreeImpl entree = new EntreeImpl();
-		return entree;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Sortie createSortie() {
-		SortieImpl sortie = new SortieImpl();
-		return sortie;
 	}
 
 	/**
