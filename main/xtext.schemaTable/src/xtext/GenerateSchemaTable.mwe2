@@ -33,7 +33,7 @@ Workflow {
 		language = StandardLanguage {
 			name = "xtext.SchemaTable"
 			fileExtensions = "tbl"
-			referencedResource = "platform:/resource/projet.schemaTable/schemaTable.genmodel"
+			referencedResource = "platform:/resource/projet.schemaTable/model/schemaTable.genmodel"
 			
 			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}
 

@@ -158,8 +158,6 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import algorithme.provider.AlgorithmeItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
-import schemaTable.presentation.SchemaTableEditorPlugin;
-import schemaTable.provider.SchemaTableItemProviderAdapterFactory;
 
 
 /**
@@ -543,7 +541,7 @@ public class AlgorithmeEditor
 					}
 				}
 				catch (CoreException exception) {
-					SchemaTableEditorPlugin.INSTANCE.log(exception);
+					AlgorithmeEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -660,7 +658,7 @@ public class AlgorithmeEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					SchemaTableEditorPlugin.INSTANCE.log(exception);
+					AlgorithmeEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -669,7 +667,7 @@ public class AlgorithmeEditor
 					markerHelper.updateMarkers(diagnostic);
 				}
 				catch (CoreException exception) {
-					SchemaTableEditorPlugin.INSTANCE.log(exception);
+					AlgorithmeEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		}
@@ -712,7 +710,6 @@ public class AlgorithmeEditor
 		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SchemaTableItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new AlgorithmeItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
@@ -1549,7 +1546,7 @@ public class AlgorithmeEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			SchemaTableEditorPlugin.INSTANCE.log(exception);
+			AlgorithmeEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1758,7 +1755,7 @@ public class AlgorithmeEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return SchemaTableEditorPlugin.INSTANCE.getString(key);
+		return AlgorithmeEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1768,7 +1765,7 @@ public class AlgorithmeEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return SchemaTableEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return AlgorithmeEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

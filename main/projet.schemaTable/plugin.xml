@@ -11,7 +11,7 @@
       <package
             uri="http://schemaTable"
             class="schemaTable.SchemaTablePackage"
-            genModel="schemaTable.genmodel"/>
+            genModel="model/schemaTable.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -19,7 +19,7 @@
       <package
             uri="http://algorithme"
             class="algorithme.AlgorithmePackage"
-            genModel="schemaTable.genmodel"/>
+            genModel="model/schemaTable.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">

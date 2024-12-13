@@ -1,9 +1,269 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" name="calcul" version="12.0.0.2017041100">
-  <ownedViewpoints name="CalculViewpoint" modelFileExtension="calcul">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="calcul" version="12.0.0.2017041100">
+  <ownedViewpoints name="CalculViewpoint">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CalculDiagram" domainClass="calcul::Calcul" enablePopupBars="true">
       <metamodel href="http://calcul#/"/>
-      <defaultLayer name="Default"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="Constante" domainClass="calcul::Constante">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="feature:valeur" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Unaire" domainClass="calcul::Unaire">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:type" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Entree" domainClass="calcul::Entree">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="aql:'Colonne ' + self.valeur" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Binaire" domainClass="calcul::Binaire">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:type" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="fils" sourceMapping="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Unaire']" targetMapping="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Binaire'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Constante'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Unaire']" targetFinderExpression="feature:expression">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="filsGauche" sourceMapping="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Binaire']" targetMapping="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Binaire'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Constante'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Unaire']" targetFinderExpression="feature:expressiong">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="fGauche">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="filsDroite" sourceMapping="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Binaire']" targetMapping="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Binaire'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Constante'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Unaire'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']" targetFinderExpression="feature:expressiond">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="fDroit">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="flecheDefEntree" preconditionExpression="[not (source = target)/]" sourceMapping="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']" targetMapping="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Binaire'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Constante'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Unaire'] //@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']" targetFinderExpression="aql:self.eContainer().expression">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="creerFilsGauche">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerConstante" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsGauche']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expressiong == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Constante" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expressiong" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerEntree" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsGauche']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expressiong == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Entree" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expressiong" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerUnaire" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsGauche']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expressiong == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Unaire" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expressiong" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerBinaire" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsGauche']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expressiong == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Binaire" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expressiong" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="creerFilsDroit">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerConstante" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsDroite']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expressiond == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Constante" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expressiond" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerEntree" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsDroite']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expressiond == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Entree" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expressiond" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerUnaire" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsDroite']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expressiond == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Unaire" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expressiond" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerBinaire" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsDroite']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expressiond == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Binaire" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expressiond" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="creerFilsUnique">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerConstante" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='fils']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expression == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Constante" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expression" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerEntree" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='fils']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expression == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Entree" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expression" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerUnaire" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='fils']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expression == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Unaire" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expression" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="creerBinaire" edgeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='fils']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:If" conditionExpression="aql: self.expression == null">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Binaire" referenceName="Expression" variableName="fils"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="expression" valueExpression="[fils/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="creerRacineUnique">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="creerRacineConstante" nodeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Constante']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Constante" referenceName="expression"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="creerRacineEntree" nodeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Entree" referenceName="expression"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="creerRacineUnaire" nodeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Unaire']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Unaire" referenceName="expression"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="creerRacineBinaire" nodeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Binaire']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Binaire" referenceName="expression"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="declarerEntree">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="declarerEntree" nodeMappings="//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="calcul::Entree" referenceName="entree"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="projet.calcul.design.Services"/>
   </ownedViewpoints>

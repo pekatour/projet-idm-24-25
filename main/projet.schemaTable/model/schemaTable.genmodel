@@ -4,7 +4,7 @@
     modelName="SchemaTable" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
-  <foreignModel>model/schemaTable.ecore</foreignModel>
+  <foreignModel>schemaTable.ecore</foreignModel>
   <genPackages prefix="SchemaTable" disposableProviderFactory="true" ecorePackage="schemaTable.ecore#/">
     <genClasses ecoreClass="schemaTable.ecore#//Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Table/colonneData"/>

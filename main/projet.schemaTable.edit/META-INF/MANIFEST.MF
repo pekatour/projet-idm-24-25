@@ -5,7 +5,7 @@ Bundle-SymbolicName: projet.schemaTable.edit;singleton:=true
 Automatic-Module-Name: projet.schemaTable.edit
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: schemaTable.provider.SchemaTableEditPlugin$Implementation
+Bundle-Activator: algorithme.provider.AlgorithmeEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17

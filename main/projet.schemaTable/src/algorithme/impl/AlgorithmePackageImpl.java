@@ -11,8 +11,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import schemaTable.SchemaTablePackage;
-import schemaTable.impl.SchemaTablePackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -81,17 +79,11 @@ public class AlgorithmePackageImpl extends EPackageImpl implements AlgorithmePac
 
 		isInited = true;
 
-		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SchemaTablePackage.eNS_URI);
-		SchemaTablePackageImpl theSchemaTablePackage = (SchemaTablePackageImpl)(registeredPackage instanceof SchemaTablePackageImpl ? registeredPackage : SchemaTablePackage.eINSTANCE);
-
 		// Create package meta-data objects
 		theAlgorithmePackage.createPackageContents();
-		theSchemaTablePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theAlgorithmePackage.initializePackageContents();
-		theSchemaTablePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theAlgorithmePackage.freeze();
