@@ -3,8 +3,7 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:calcul="http://calcul"
-    xsi:schemaLocation="http://calcul ../model/calcul.ecore">
+    xmlns:calcul="http://calcul">
   <expression
       xsi:type="calcul:Binaire"
       type="MAXIMUM">
@@ -24,6 +23,6 @@
           valeur="triste"/>
     </expressiond>
   </expression>
-  <entree valeur="triste"/>
   <entree valeur="tres triste"/>
+  <entree valeur="triste"/>
 </calcul:Calcul>

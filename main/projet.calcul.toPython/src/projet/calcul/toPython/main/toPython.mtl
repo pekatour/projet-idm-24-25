@@ -7,10 +7,96 @@
 [file ('calcul.py', false, 'UTF-8')]
 
 from math import *
+import sys
+import ast
 
+def somme(a,b):
+	return a+b
 
+def soustraction(a,b):
+	return a-b
 
+def mult(a,b):
+	return a*b
+
+def division(a,b):
+	return a/b
+
+def main():
+	# Import data
+	args = sys.argv['['/]1:]
+	arrays = {}
+	
+	for i in range(0,len(args),2):
+		if (i+1) < len(args):
+			cle = args['['/]i]
+			valeur = ast.literal_eval(args['['/]i+1])
+			arrays['['/]cle] = valeur
+	
+	# Longueur des colonnes
+	n = len(valeur)
+	
+	# Calcul
+	[let racine : Expression = aCalcul.expression] 
+	res = [racine.calcul()/]
+	[/let]
+
+	print(res)
+
+if __name__ == "__main__":
+	main()
 
 
 [/file]
 [/template]
+
+[query public binaire(t: TypeBinaire) : String =
+	if t = TypeBinaire::ADDITION then
+		'somme'
+	else if t = TypeBinaire::DIVISION then
+		'division'
+	else if t = TypeBinaire::MAXIMUM then
+		'max'
+	else if t = TypeBinaire::MINIMUM then
+		'min'
+	else if t = TypeBinaire::MULTIPLICATION then
+		'mult'
+	else
+		'soustraction'
+	endif endif endif endif endif
+/]
+
+[query public unaire(t: TypeUnaire) : String =
+	if t = TypeUnaire::COS then
+		'cos'
+	else if t = TypeUnaire::EXP then
+		'exp'
+	else if t = TypeUnaire::INVERSE then
+		'1/'
+	else if t = TypeUnaire::OPPOSE then
+		'-'
+	else if t = TypeUnaire::RACINE then
+		'sqrt'
+	else
+		'sin'
+	endif endif endif endif endif
+/]
+
+[query public calcul(e: Expression) : String =
+	if e.oclIsTypeOf(Entree) then
+		'arrays["' + e.oclAsType(Entree).valeur + '"]'
+	else 
+		if e.oclIsTypeOf(Constante) then
+			'['+e.oclAsType(Constante).valeur+']*n'
+		else
+			if e.oclIsTypeOf(Unaire) then
+				'[' + e.oclAsType(Unaire).type.unaire() + '(x) for x in ' + e.oclAsType(Unaire).expression.calcul() + ']'
+			else
+				'[' + e.oclAsType(Binaire).type.binaire() +
+				 '(x,y) for x,y in zip(' +
+				 e.oclAsType(Binaire).expressiong.calcul() + ', ' +
+ 				 e.oclAsType(Binaire).expressiond.calcul() +')]'
+			endif
+		endif
+	endif
+/]

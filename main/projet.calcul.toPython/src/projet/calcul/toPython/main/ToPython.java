@@ -11,9 +11,12 @@
 package projet.calcul.toPython.main;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import calcul.*;
 
 import org.eclipse.acceleo.engine.event.IAcceleoTextGenerationListener;
 import org.eclipse.acceleo.engine.generation.strategy.IAcceleoGenerationStrategy;
@@ -335,7 +338,7 @@ public class ToPython extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated NOT
      */
     @Override
     public void registerPackages(ResourceSet resourceSet) {
@@ -372,6 +375,8 @@ public class ToPython extends AbstractAcceleoGenerator {
          * 
          * To learn more about Package Registration, have a look at the Acceleo documentation (Help -> Help Contents).
          */
+        
+        resourceSet.getPackageRegistry().put("http://calcul", CalculPackage.eINSTANCE);
     }
 
     /**
