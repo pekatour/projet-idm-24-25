@@ -120,6 +120,18 @@ public interface Algorithme extends EObject {
 	void setLangage(Langage value);
 
 	/**
+	 * Returns the value of the '<em><b>Entree</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Entree</em>' attribute list.
+	 * @see algorithme.AlgorithmePackage#getAlgorithme_Entree()
+	 * @model
+	 * @generated
+	 */
+	EList<String> getEntree();
+
+	/**
 	 * Returns the value of the '<em><b>Sortie</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -140,17 +152,5 @@ public interface Algorithme extends EObject {
 	 * @generated
 	 */
 	void setSortie(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Entree</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entree</em>' attribute list.
-	 * @see algorithme.AlgorithmePackage#getAlgorithme_Entree()
-	 * @model
-	 * @generated
-	 */
-	EList<String> getEntree();
 
 } // Algorithme

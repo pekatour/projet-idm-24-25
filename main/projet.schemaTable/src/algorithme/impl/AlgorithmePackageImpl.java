@@ -6,10 +6,12 @@ import algorithme.Algorithme;
 import algorithme.AlgorithmeFactory;
 import algorithme.AlgorithmePackage;
 import algorithme.Langage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -149,8 +151,8 @@ public class AlgorithmePackageImpl extends EPackageImpl implements AlgorithmePac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAlgorithme_Sortie() {
-		return (EAttribute)algorithmeEClass.getEStructuralFeatures().get(5);
+	public EAttribute getAlgorithme_Entree() {
+		return (EAttribute)algorithmeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -159,8 +161,8 @@ public class AlgorithmePackageImpl extends EPackageImpl implements AlgorithmePac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAlgorithme_Entree() {
-		return (EAttribute)algorithmeEClass.getEStructuralFeatures().get(4);
+	public EAttribute getAlgorithme_Sortie() {
+		return (EAttribute)algorithmeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**

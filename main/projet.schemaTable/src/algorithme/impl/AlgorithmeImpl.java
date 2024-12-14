@@ -5,12 +5,15 @@ package algorithme.impl;
 import algorithme.Algorithme;
 import algorithme.AlgorithmePackage;
 import algorithme.Langage;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -262,6 +265,19 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 	 * @generated
 	 */
 	@Override
+	public EList<String> getEntree() {
+		if (entree == null) {
+			entree = new EDataTypeUniqueEList<String>(String.class, this, AlgorithmePackage.ALGORITHME__ENTREE);
+		}
+		return entree;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getSortie() {
 		return sortie;
 	}
@@ -277,19 +293,6 @@ public class AlgorithmeImpl extends MinimalEObjectImpl.Container implements Algo
 		sortie = newSortie;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AlgorithmePackage.ALGORITHME__SORTIE, oldSortie, sortie));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<String> getEntree() {
-		if (entree == null) {
-			entree = new EDataTypeUniqueEList<String>(String.class, this, AlgorithmePackage.ALGORITHME__ENTREE);
-		}
-		return entree;
 	}
 
 	/**

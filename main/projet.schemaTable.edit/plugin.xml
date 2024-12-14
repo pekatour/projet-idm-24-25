@@ -20,7 +20,7 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated algorithme -->
+      <!-- @generated schemaTable -->
       <factory
             uri="http://algorithme"
             class="algorithme.provider.AlgorithmeItemProviderAdapterFactory"

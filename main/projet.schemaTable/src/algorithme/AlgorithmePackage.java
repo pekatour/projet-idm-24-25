@@ -204,17 +204,6 @@ public interface AlgorithmePackage extends EPackage {
 	EAttribute getAlgorithme_Langage();
 
 	/**
-	 * Returns the meta object for the attribute '{@link algorithme.Algorithme#getSortie <em>Sortie</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Sortie</em>'.
-	 * @see algorithme.Algorithme#getSortie()
-	 * @see #getAlgorithme()
-	 * @generated
-	 */
-	EAttribute getAlgorithme_Sortie();
-
-	/**
 	 * Returns the meta object for the attribute list '{@link algorithme.Algorithme#getEntree <em>Entree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -224,6 +213,17 @@ public interface AlgorithmePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAlgorithme_Entree();
+
+	/**
+	 * Returns the meta object for the attribute '{@link algorithme.Algorithme#getSortie <em>Sortie</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Sortie</em>'.
+	 * @see algorithme.Algorithme#getSortie()
+	 * @see #getAlgorithme()
+	 * @generated
+	 */
+	EAttribute getAlgorithme_Sortie();
 
 	/**
 	 * Returns the meta object for enum '{@link algorithme.Langage <em>Langage</em>}'.
@@ -301,20 +301,20 @@ public interface AlgorithmePackage extends EPackage {
 		EAttribute ALGORITHME__LANGAGE = eINSTANCE.getAlgorithme_Langage();
 
 		/**
-		 * The meta object literal for the '<em><b>Sortie</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ALGORITHME__SORTIE = eINSTANCE.getAlgorithme_Sortie();
-
-		/**
 		 * The meta object literal for the '<em><b>Entree</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute ALGORITHME__ENTREE = eINSTANCE.getAlgorithme_Entree();
+
+		/**
+		 * The meta object literal for the '<em><b>Sortie</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ALGORITHME__SORTIE = eINSTANCE.getAlgorithme_Sortie();
 
 		/**
 		 * The meta object literal for the '{@link algorithme.Langage <em>Langage</em>}' enum.

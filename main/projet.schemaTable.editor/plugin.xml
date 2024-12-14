@@ -22,7 +22,6 @@
       </wizard>
    </extension>
 
-
    <extension point="org.eclipse.ui.editors">
       <!-- @generated schemaTable -->
       <editor
@@ -34,8 +33,9 @@
             contributorClass="schemaTable.presentation.SchemaTableActionBarContributor">
       </editor>
    </extension>
+
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated algorithme -->
+      <!-- @generated schemaTable -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
@@ -51,7 +51,7 @@
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated algorithme -->
+      <!-- @generated schemaTable -->
       <editor
             id="algorithme.presentation.AlgorithmeEditorID"
             name="%_UI_AlgorithmeEditor_label"

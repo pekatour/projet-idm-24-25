@@ -1,0 +1,16 @@
+[comment encoding = UTF-8 /]
+[module toPython('http://calcul')]
+
+
+[template public generateElement(aCalcul : Calcul)]
+[comment @main/]
+[file ('calcul.py', false, 'UTF-8')]
+
+from math import *
+
+
+
+
+
+[/file]
+[/template]
