@@ -23,4 +23,28 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ColonneIdentifiants" eSuperTypes="#//Colonne"/>
+  <eSubpackages name="schemaTable" nsURI="http://schemaTable" nsPrefix="schemaTable">
+    <eClassifiers xsi:type="ecore:EClass" name="Table">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="colonneData" lowerBound="1"
+          upperBound="-1" eType="#//schemaTable/Colonne" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="algoContrainte" upperBound="-1"
+          eType="ecore:EClass algorithme.ecore#//Algorithme" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Colonne">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          defaultValueLiteral=""/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ColonneDerivee" eSuperTypes="#//schemaTable/Colonne">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="algorithme" lowerBound="1"
+          eType="ecore:EClass algorithme.ecore#//Algorithme" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ColonneEtrangere" eSuperTypes="#//schemaTable/Colonne">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tableEtrangere" lowerBound="1"
+          eType="#//schemaTable/Table"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idColonneTableEtrangere"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ColonneIdentifiants" eSuperTypes="#//schemaTable/Colonne"/>
+  </eSubpackages>
 </ecore:EPackage>
