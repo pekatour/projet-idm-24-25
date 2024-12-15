@@ -329,7 +329,6 @@ public class SchemaTableValidator {
             }
         }
         
-        System.out.println("Il reste les contraintes sur les colonnes étrangères à implémenter !!");
         return errors;
     }
     

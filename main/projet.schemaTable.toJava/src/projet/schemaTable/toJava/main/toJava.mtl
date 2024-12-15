@@ -1,0 +1,264 @@
+[comment encoding = UTF-8 /]
+[module toJava('http://schemaTable', 'http://algorithme')]
+
+
+[template public generateJava(aTable : Table)]
+[comment @main/]
+[file (aTable.nom + 'Donnees.java', false, 'UTF-8')]
+import java.util.*;
+
+public class [aTable.nom/]Donnees {
+	public Map<String, List<Float>> donneesJava;
+	public String id;
+	public List<String> valeurs_id;
+
+	public [aTable.nom/]Donnees(Map<String, List<Float>> donneesJava, String id, List<String> valeurs_id) {
+		this.donneesJava = donneesJava;
+		this.id = id;
+		this.valeurs_id = valeurs_id;
+	}
+
+}
+[/file]
+
+[file (aTable.nom + 'Importer.java', false, 'UTF-8')]
+import java.io.*;
+import java.util.*;
+
+public class [aTable.nom/]Importer {
+
+
+     // Fonction pour convertir une List<String> en List<Float>
+     public static List<Float> stringListToFloatList(List<String> stringList) {
+        List<Float> floatList = new ArrayList<>();
+        
+        for (String str : stringList) {
+            try {
+                // Convertir chaque chaîne en un float et ajouter à la liste
+                floatList.add(Float.parseFloat(str));
+            } catch (NumberFormatException e) {
+                System.err.println("Données invalides dans le CSV (ne doit contenir que des float sauf pour la colonne identifiants) " + str);
+                System.exit(1);
+            }
+        }
+        
+        return floatList;
+    }
+
+    public static exempleDonnees importer(String['['/]] args) throws Exception {
+
+        // Chemin du fichier CSV passé en argument
+        String fichierCsv = args['['/]0];
+
+        // HashMap pour stocker les données
+        Map<String, List<String>> map = new HashMap<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(fichierCsv))) {
+            String ligne;
+            String['['/]] entetes = null;
+
+            // Lire la première ligne (les noms des colonnes)
+            if ((ligne = br.readLine()) != null) {
+                entetes = ligne.split(","); 
+                for (String entete : entetes) {
+                    map.put(entete, new ArrayList<>());
+                }
+            }
+
+            // Lire les lignes suivantes et les ajouter à la HashMap
+            while ((ligne = br.readLine()) != null) {
+                String['['/]] valeurs = ligne.split(",");
+
+                for (int i = 0; i < entetes.length; i++) {
+                    map.get(entetes['['/]i]).add(valeurs['['/]i]);
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	
+	// Les colonnes du schémaTable
+	List<String> colonnesTable = new LinkedList<>();
+	Collections.addAll(colonnesTable, [for (c: Colonne | aTable.getColonnesPures())] "[c.nom/]",[/for]"" );
+	colonnesTable.remove("");
+	
+	// Validité du CSV
+	for (String str : colonnesTable) {
+		if (!(map.keySet().contains(str))) {
+			throw new Exception("CSV invalide");
+		}
+	}
+
+	for (String str : map.keySet()) {
+		if (!(colonnesTable.contains(str))) {
+			throw new Exception("CSV invalide");
+		}
+	}
+	String id = "[aTable.getColonneId()/]";
+	List<String> valeurs_id = map.remove("[aTable.getColonneId()/]");
+	
+	Map<String, List<Float>> donneesJava = new HashMap<>();
+	for (String cle : map.keySet()){
+		donneesJava.put(cle,stringListToFloatList(map.get(cle)));
+	}
+	
+	// System.out.println(donneesJava.toString() + id + valeurs_id);
+	return new [aTable.nom/]Donnees(donneesJava,id, valeurs_id);
+    }
+
+}
+[/file]
+
+[file (aTable.nom + 'Verifier.java', false, 'UTF-8')]
+
+[/file]
+
+[file (aTable.nom + 'CalculAuto.java', false, 'UTF-8')]
+
+[/file]
+
+[file (aTable.nom + 'Exporter.java', false, 'UTF-8')]
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
+
+public class [aTable.nom/]Exporter {
+
+    /**
+     * Crée un fichier .csv comportant les données
+     * @param donneesJava   issues de l'import d'un csv (HashMap)
+     * @param id            le nom de la colonne identitée
+     * @param valeurs_id    les valeurs de la colonne identitée
+     */
+    public static void exporter(HashMap<String, List<Float>> donneesJava, String id, List<String> valeurs_id) {
+        String fileName = "[aTable.nom/]Export.csv";
+        
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            
+            writer.write(id); // Nom de la colonne identitée
+            for (String key : donneesJava.keySet()) {
+                writer.write("," + key); // Nom des autres colonnes
+            }
+            writer.newLine(); // Nouvelle ligne après l'en-tête
+            
+            // Ecrire les valeurs des lignes
+            for (String valueId : valeurs_id) {
+                writer.write(valueId);
+                
+                for (String key : donneesJava.keySet()) {
+                    List<Float> valeurs = donneesJava.get(key);
+                    // Trouver l'indice de valueId dans valeurs_id et récupérer la valeur correspondante
+                    int index = valeurs_id.indexOf(valueId);
+                    if (index != -1 && index < valeurs.size()) {
+                        writer.write("," + valeurs.get(index));
+                    } else {
+                        writer.write(",");
+                    }
+                }
+                writer.newLine();
+            }
+
+            System.out.println("Fichier CSV créé avec succès : " + fileName);
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Erreur lors de l'export du fichier CSV.");
+        }
+    }
+
+	// Exemple
+    public static void main(String['['/]] args) {
+        HashMap<String, List<Float>> donneesJava = new HashMap<>();
+        donneesJava.put("Colonne1", List.of(1.1f, 2.2f, 3.3f));
+        donneesJava.put("Colonne2", List.of(4.4f, 5.5f, 6.6f));
+        List<String> valeurs_id = List.of("ID1", "ID2", "ID3");
+
+        exporter(donneesJava, "Identifiant", valeurs_id);
+    }
+}
+[/file]
+
+[file (aTable.nom + 'Visualisation.java', false, 'UTF-8')]
+import java.io.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Arrays;
+
+public class [aTable.nom/]Visualisation {
+	
+	/**
+	 * Créer un fichier .html affichant les données
+	 * @param donneesJava   issues de l'import d'un csv
+	 * @param id            le nom de la colonne identitée
+	 * @param valeurs_id    les valeurs de la colonne identitée
+	 */
+	public static void toHTML(HashMap<String, List<Float>> donneesJava, String id, List<String> valeurs_id) {
+        try {
+            FileWriter writer = new FileWriter("[aTable.nom/]Tableau.html");
+
+            // Début du fichier
+            writer.write("<html><head><title>[aTable.nom/]</title></head><body>");
+            writer.write("<h1>[aTable.nom/]</h1>");
+            writer.write("<table border='1'>");
+
+            // en-tête du tableau
+            writer.write("<tr><th>" + id + "</th>");
+            for (String key : donneesJava.keySet()) {
+                writer.write("<th>" + key + "</th>");
+            }
+            writer.write("</tr>");
+
+            // lignes du tableau
+            for (int i = 0; i < valeurs_id.size(); i++) {
+                writer.write("<tr>");
+                // Afficher la valeur de la colonne d'identité
+                writer.write("<td>" + valeurs_id.get(i) + "</td>");
+                // Afficher les autres données pour chaque ligne
+                for (String key : donneesJava.keySet()) {
+                    List<Float> dataList = donneesJava.get(key);
+                    if (dataList.size() > i) {
+                        writer.write("<td>" + dataList.get(i) + "</td>");
+                    } else {
+                        writer.write("<td></td>");
+                    }
+                }
+                writer.write("</tr>");
+            }
+
+            // Fin du fichier HTML
+            writer.write("</table>");
+            writer.write("</body></html>");
+            writer.close();
+
+            System.out.println("Le fichier HTML a été généré avec succès : [aTable.nom/]Tableau.html");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+	
+	
+	/**
+	 * Main pour tester un exemple
+	 */
+	public static void main(String['['/]] args) {
+        HashMap<String, List<Float>> donneesJava = new HashMap<>();
+        donneesJava.put("loyer / mois", Arrays.asList(400f, 290f, 590f));
+        donneesJava.put("surface (m²)", Arrays.asList(25f, 3f, 400f));
+        donneesJava.put("charges / mois", Arrays.asList(30f, 4f, 600f));
+
+        toHTML(donneesJava, "Identité", Arrays.asList("appart 1", "appart 2", "appart 3"));
+    }
+}
+[/file]
+[/template]
+
+[query public getColonnesPures(t: Table) : OrderedSet(Colonne) = 
+	t.colonneData->select( e | not(e.oclIsTypeOf(ColonneEtrangere) or e.oclIsTypeOf(ColonneDerivee)))
+		->asOrderedSet()
+/]
+
+[query public getColonneId(t: Table) : String = 
+	t.colonneData->select( e | e.oclIsTypeOf(ColonneIdentifiants)).nom
+/]

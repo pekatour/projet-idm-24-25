@@ -25,6 +25,9 @@
     <tableEtrangere
         href="t1.xmi#/"/>
   </colonneData>
+  <colonneData
+      xsi:type="schemaTable:ColonneIdentifiants"
+      nom="oui"/>
   <algoContrainte
       nom="Contrainte1"
       ressource="./?"
