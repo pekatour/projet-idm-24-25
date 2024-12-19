@@ -109,7 +109,7 @@ public class AppartementsCalculAuto {
 		}
 
 		String line;
-		int max_iter = 100;
+		int max_iter = 3+1;
 		int iter = 0;
 
 		while (iter < max_iter && c_der.values().stream().anyMatch(b -> !b)) {

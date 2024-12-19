@@ -299,7 +299,7 @@ public class SchemaTableValidator {
     				+ "ou référencient une colonne dérivée ou la colonne identifiants\n");
     	} if (!validateTableAlgorithmRessourceExiste(table)) {
     		errors.add("Les ressources de certains algorithmes de contraintes n'existent pas\n"
-    				+ "(Une ressource doit être le chemin depuis la racine du projet)\n");
+    				+ "(Une ressource doit être le chemin absolue vers le fichier de calcul)\n");
     	} if (!validateTableAlgorithmLanguage(table)) {
     		errors.add("Les ressources de certains algorithmes de contraintes ne sont pas du type du langage associé"
     				+ "\n(.py pour PYTHON et .calc pour le langage INTERNE)\n");
@@ -328,7 +328,7 @@ public class SchemaTableValidator {
             				+ " ou référencient la colonne elle-même\n");
             	} if (!validateAlgorithmRessourceExiste(colonned)) {
             		errors.add("La ressource de l'algorithme de la colonne " + dname + " n'existe pas\n"
-            				+ "(Une ressource doit être le chemin depuis la racine du projet)\n");
+            				+ "(Une ressource doit être le chemin absolue vers le fichier de calcul)\n");
             	} if (!validateAlgorithmLanguage(colonned)) {
             		errors.add("La ressource de l'algorithme de la colonne " + dname + " doit être du type du langage associé"
             				+ "\n(.py pour PYTHON et .calc pour le langage INTERNE)\n");

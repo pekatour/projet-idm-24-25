@@ -2,7 +2,10 @@
 <calcul:Calcul xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:calcul="http://calcul">
   <expression xsi:type="calcul:Binaire">
     <expressiong xsi:type="calcul:Constante" valeur="-9.0"/>
-    <expressiond xsi:type="calcul:Entree" valeur="a"/>
+    <expressiond xsi:type="calcul:Binaire" type="MINIMUM">
+      <expressiong xsi:type="calcul:Entree" valeur="a"/>
+      <expressiond xsi:type="calcul:Constante" valeur="9.0"/>
+    </expressiond>
   </expression>
   <entree valeur="a"/>
 </calcul:Calcul>
