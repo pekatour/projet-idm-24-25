@@ -24,6 +24,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import schemaTable.provider.SchemaTableEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link algorithme.Algorithme} object.
@@ -272,7 +273,7 @@ public class AlgorithmeItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return AlgorithmeEditPlugin.INSTANCE;
+		return SchemaTableEditPlugin.INSTANCE;
 	}
 
 }

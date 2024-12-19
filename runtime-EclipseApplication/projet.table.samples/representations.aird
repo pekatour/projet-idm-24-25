@@ -3,10 +3,8 @@
   <viewpoint:DAnalysis uid="_jivAcLiTEe-BqbBkn0Wyrw" selectedViews="_H7PDgLiUEe-BqbBkn0Wyrw _-FYb4LiXEe-rHo2YA0F0ZA" version="15.2.0.202303281325">
     <semanticResources>ExempleT1.table</semanticResources>
     <semanticResources>ExempleTable.table</semanticResources>
-    <semanticResources>ExempleT2.schematable</semanticResources>
-    <semanticResources>ExempleT3.schematable</semanticResources>
     <semanticResources>ExempleT3.tbl</semanticResources>
-    <semanticResources>ExempleT4.tbl</semanticResources>
+    <semanticResources>TableAppartements.tbl</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_H7PDgLiUEe-BqbBkn0Wyrw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_gIpCsLiUEe-BqbBkn0Wyrw" name="new CalculDiagram" repPath="#_gISdYLiUEe-BqbBkn0Wyrw" changeId="1734013342361">

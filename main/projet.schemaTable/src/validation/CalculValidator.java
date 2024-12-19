@@ -54,7 +54,7 @@ public class CalculValidator {
 		
 		// cas d'erreur
 		if (expr == null) {
-			errors.add("Une expression n'est pas définie : ExpressionNullException");
+			errors.add("Une expression n'est pas définie : ExpressionNullException\n");
 			return errors;
 		}
 		
@@ -63,14 +63,14 @@ public class CalculValidator {
 			Constante cst = (Constante) expr;
 			
 			if (!validateConstExistence(cst)) {
-				errors.add("Une constante est mal déclarée");
+				errors.add("Une constante est mal déclarée\n");
 			}
 		
 		} else if (expr instanceof Entree) {
 			Entree entr = (Entree) expr;
 			
 			if (!validateEntryDeclared(entr,entrees)) {
-				errors.add("Une entrée utilisée dans le calcul n'est pas déclarée comme entrée : " + entr.getValeur());
+				errors.add("Une entrée utilisée dans le calcul n'est pas déclarée comme entrée : " + entr.getValeur() + "\n");
 			}
 			// TODO contraintes sur entree
 			
@@ -162,7 +162,7 @@ public class CalculValidator {
         // Récupérer l'instance racine
         Calcul calcul = (Calcul) resource.getContents().get(0);
 
-        System.out.println("Début de la vérification du fichier : " + file.toString());
+        System.out.println("Début de la vérification du fichier : " + file.toString() + "\n");
         // Valider la table
         List<String> errors = validateCalcul(calcul);
 

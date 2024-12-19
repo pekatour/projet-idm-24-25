@@ -455,6 +455,26 @@ public class CalculPackageImpl extends EPackageImpl implements CalculPackage {
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.obeo.fr/dsl/dnc/archetype
+		createArchetypeAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.obeo.fr/dsl/dnc/archetype</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createArchetypeAnnotations() {
+		String source = "http://www.obeo.fr/dsl/dnc/archetype";
+		addAnnotation
+		  (entreeEClass,
+		   source,
+		   new String[] {
+			   "archetype", "Role"
+		   });
 	}
 
 } //CalculPackageImpl

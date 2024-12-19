@@ -1,0 +1,37 @@
+Table 'Appartements' {
+    colonnes { 
+        c_id "N° appart", 
+        c "surface",
+        c_deriv "loyer" 
+        	algo Algorithme "fois3"{
+        		ressource "/home/tkn7092/2A/IDM/projet-idm-24-25/main/projet.schemaTable/Exemples/fois3.calc"
+                documentation "Calcul le loyer"
+                entree {"surface"}
+                sortie "loyer"
+        	},
+        c_deriv "loyer3"
+            algo Algorithme "fois3" { 
+                ressource "/home/tkn7092/2A/IDM/projet-idm-24-25/main/projet.schemaTable/Exemples/fois3.calc"
+                documentation "Calcul le triple du loyer"
+                langage INTERNE
+                entree {"loyer"}
+                sortie "loyer3"
+            },
+        c_deriv "loyer9"
+            algo Algorithme "fois3" { 
+                ressource "/home/tkn7092/2A/IDM/projet-idm-24-25/main/projet.schemaTable/Exemples/fois3.py"
+                documentation "Calcul le loyer * 9"
+                langage PYTHON
+                entree {"loyer3"}
+                sortie "loyer9"
+            }
+         
+    }
+    contraintes {Algorithme "superieur à 9" { 
+                ressource "/home/tkn7092/2A/IDM/projet-idm-24-25/main/projet.schemaTable/Exemples/superieur_a_9.calc"
+                documentation "Toutes les surfaces sont supérieures à 9"
+                langage INTERNE
+                entree {"surface"}
+                sortie ""
+            }}
+}

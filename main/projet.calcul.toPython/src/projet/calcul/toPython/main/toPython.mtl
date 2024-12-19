@@ -35,19 +35,26 @@ def main():
 	
 	# Longueur des colonnes
 	n = len(valeur)
-	
+	#print(arrays)
 	# Calcul
 	[let racine : Expression = aCalcul.expression] 
 	res = [racine.calcul()/]
 	[/let]
 
-	print(res)
+	with open("data.txt", "w") as file:
+		file.write(str(res))
+	#print(res)
 
 if __name__ == "__main__":
 	main()
 
 
 [/file]
+
+[file ('arguments.txt', false, 'UTF-8')]
+[for (e: Entree | aCalcul.entree)][e.valeur/], [/for]
+[/file]
+
 [/template]
 
 [query public binaire(t: TypeBinaire) : String =

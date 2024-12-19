@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemaTable:Table
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:schemaTable="http://schemaTable"
+    nom="Appartements">
+  <colonneData
+      xsi:type="schemaTable:ColonneDerivee"
+      nom="loyer9">
+    <algorithme
+        nom="loyer_fois_9"
+        ressource="/home/tkn7092/2A/IDM/projet-idm-24-25/main/projet.schemaTable/Exemples/fois3.calc"
+        documentation="loyer*9"
+        langage="INTERNE"
+        sortie="loyer9">
+      <entree>loyer3</entree>
+    </algorithme>
+  </colonneData>
+  <colonneData
+      xsi:type="schemaTable:ColonneIdentifiants"
+      nom="N° appartements"/>
+  <colonneData
+      nom="surface"/>
+  <colonneData
+      xsi:type="schemaTable:ColonneDerivee"
+      nom="loyer">
+    <algorithme
+        nom="calcul du loyer"
+        ressource="/home/tkn7092/2A/IDM/projet-idm-24-25/main/projet.schemaTable/Exemples/fois3.calc"
+        documentation="pas de documentation"
+        langage="INTERNE"
+        sortie="loyer">
+      <entree>surface</entree>
+    </algorithme>
+  </colonneData>
+  <colonneData
+      xsi:type="schemaTable:ColonneEtrangere"
+      nom="charges 2014"
+      idColonneTableEtrangere="2014">
+    <tableEtrangere
+        href="Charges.xmi#/"/>
+  </colonneData>
+  <colonneData
+      xsi:type="schemaTable:ColonneDerivee"
+      nom="loyer3">
+    <algorithme
+        nom="loyer_fois_3"
+        ressource="/home/tkn7092/2A/IDM/projet-idm-24-25/main/projet.schemaTable/Exemples/fois3.py"
+        documentation="loyer * 3"
+        sortie="loyer3">
+      <entree>loyer</entree>
+    </algorithme>
+  </colonneData>
+  <algoContrainte
+      nom="surface minimal requise"
+      ressource="/home/tkn7092/2A/IDM/projet-idm-24-25/main/projet.schemaTable/Exemples/superieur_a_9.calc"
+      documentation="Vérifie que la surface soit d'au moins 9m²"
+      langage="INTERNE">
+    <entree>surface</entree>
+  </algoContrainte>
+</schemaTable:Table>

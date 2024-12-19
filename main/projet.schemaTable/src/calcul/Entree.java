@@ -16,7 +16,7 @@ package calcul;
  * </ul>
  *
  * @see calcul.CalculPackage#getEntree()
- * @model
+ * @model annotation="http://www.obeo.fr/dsl/dnc/archetype archetype='Role'"
  * @generated
  */
 public interface Entree extends Expression {

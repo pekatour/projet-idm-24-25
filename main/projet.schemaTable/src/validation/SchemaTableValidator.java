@@ -77,7 +77,8 @@ public class SchemaTableValidator {
     	return b;
     }
     
-    /** les colonnes d'entrees de l'algo sont dans la table */
+    /** les colonnes d'entrees de l'algo sont dans la table 
+     * et ne référencient pas une colonne d'identifiants ni une colonne dérivée */
     public static boolean validateTableAlgorithmIN(Table table) {
     	boolean b = true;
     	// on créer la liste des noms
@@ -90,6 +91,14 @@ public class SchemaTableValidator {
     	for (Algorithme algo : table.getAlgoContrainte()) {
     		for (String aname : algo.getEntree()) {
     			if (!columnNames.contains(aname)) {
+            		b = false;
+            	}
+    			if (table.getColonneData().stream().filter(c -> c instanceof ColonneIdentifiants 
+            			&& c.getNom().equals(aname)).count() != 0) {
+            		b = false;
+            	}
+    			if (table.getColonneData().stream().filter(c -> c instanceof ColonneDerivee 
+            			&& c.getNom().equals(aname)).count() != 0) {
             		b = false;
             	}
     		}
@@ -175,7 +184,9 @@ public class SchemaTableValidator {
         return true; // pour éviter de renvoyer 2 fois la même erreur
     }
     
-    /** les colonnes d'entrees de l'algo sont dans la table */
+    /** les colonnes d'entrees de l'algo sont dans la table 
+     * et ne référencient pas une colonne d'identifiants 
+     * et ne référencient pas la sortie */
     public static boolean validateAlgorithmIN(ColonneDerivee colonned, Table table) {
         if (colonned.getAlgorithme() != null) {
         	Set<String> columnNames = new HashSet<>();
@@ -186,6 +197,13 @@ public class SchemaTableValidator {
             }
             for (String name : colonned.getAlgorithme().getEntree()) {
             	if (!columnNames.contains(name)) {
+            		return false;
+            	}
+            	if (table.getColonneData().stream().filter(c -> c instanceof ColonneIdentifiants 
+            			&& c.getNom().equals(name)).count() != 0) {
+            		return false;
+            	}
+            	if (colonned.getAlgorithme().getEntree().contains(colonned.getNom())) {
             		return false;
             	}
             }
@@ -266,30 +284,31 @@ public class SchemaTableValidator {
         
         // contrainte sur table
         if (!validateTableName(table)) {
-            errors.add("Nom de la table invalide");
+            errors.add("Nom de la table invalide\n");
         } if (redondant != "") {
-            errors.add("Au moins un nom de colonne est redondant : " + redondant);
+            errors.add("Au moins un nom de colonne est redondant : " + redondant + "\n");
         } if (!validateIdentityColumnExistence(table)) {
-            errors.add("Il faut une (unique) colonne identifiants dans la table");
+            errors.add("Il faut une (unique) colonne identifiants dans la table\n");
         }
         
         // contrainte sur les algos de contraintes de la table
         if (!validateTableAlgorithmName(table)) {
-    		errors.add("Le nom de certains algorithmes de contraintes n'est pas défini");
+    		errors.add("Le nom de certains algorithmes de contraintes n'est pas défini\n");
     	} if (!validateTableAlgorithmIN(table)) {
-    		errors.add("Les entrées de certains algorithmes de contraintes n'existent pas dans la table");
+    		errors.add("Les entrées de certains algorithmes de contraintes n'existent pas dans la table "
+    				+ "ou référencient une colonne dérivée ou la colonne identifiants\n");
     	} if (!validateTableAlgorithmRessourceExiste(table)) {
     		errors.add("Les ressources de certains algorithmes de contraintes n'existent pas\n"
-    				+ "(Une ressource doit être le chemin depuis la racine du projet)");
+    				+ "(Une ressource doit être le chemin depuis la racine du projet)\n");
     	} if (!validateTableAlgorithmLanguage(table)) {
     		errors.add("Les ressources de certains algorithmes de contraintes ne sont pas du type du langage associé"
-    				+ "\n(.py pour PYTHON et .calc pour le langage INTERNE)");
+    				+ "\n(.py pour PYTHON et .calc pour le langage INTERNE)\n");
     	}
         // contrainte sur colonne
         for (Colonne colonne : table.getColonneData()) {
         	// colonne normale
             if (!validateColumnName(colonne)) {
-                errors.add("Nom de colonne invalide : un nom de colonne n'est pas défini");
+                errors.add("Nom de colonne invalide : un nom de colonne n'est pas défini\n");
             }
             
             // contraintes sur colonne dérivées 
@@ -298,19 +317,21 @@ public class SchemaTableValidator {
             	String dname = colonned.getNom();
             	
             	if (!validateAlgorithmExistence(colonned)) {
-                    errors.add("L'algorithme de la colonne : " + dname + " n'est pas défini");
+                    errors.add("L'algorithme de la colonne : " + dname + " n'est pas défini\n");
                 } if (!validateAlgorithmName(colonned)) {
-            		errors.add("Le nom de l'algorithme de la colonne : " + dname + " n'est pas défini");
+            		errors.add("Le nom de l'algorithme de la colonne : " + dname + " n'est pas défini\n");
             	} if (!validateAlgorithmOUT(colonned)) {
-            		errors.add("La sortie de l'algorithme n'est pas relié à sa colonne dérivée : " + dname);
+            		errors.add("La sortie de l'algorithme n'est pas relié à sa colonne dérivée : " + dname + "\n");
             	} if (!validateAlgorithmIN(colonned, table)) {
-            		errors.add("Les entrées de l'algorithme de " + dname + " n'existent pas dans la table : " + table.getNom());
+            		errors.add("Les entrées de l'algorithme de " + dname + " n'existent pas dans la table : " + table.getNom()
+            				+ "\nou référencient la colonne identifiants"
+            				+ " ou référencient la colonne elle-même\n");
             	} if (!validateAlgorithmRessourceExiste(colonned)) {
             		errors.add("La ressource de l'algorithme de la colonne " + dname + " n'existe pas\n"
-            				+ "(Une ressource doit être le chemin depuis la racine du projet)");
+            				+ "(Une ressource doit être le chemin depuis la racine du projet)\n");
             	} if (!validateAlgorithmLanguage(colonned)) {
             		errors.add("La ressource de l'algorithme de la colonne " + dname + " doit être du type du langage associé"
-            				+ "\n(.py pour PYTHON et .calc pour le langage INTERNE)");
+            				+ "\n(.py pour PYTHON et .calc pour le langage INTERNE)\n");
             	}
             
             // contraintes sur colonne étrangères
@@ -318,14 +339,13 @@ public class SchemaTableValidator {
             	ColonneEtrangere ce = (ColonneEtrangere) colonne;
             	
             	if (!validateTableEtrangereExiste(ce)) {
-            		errors.add("La table référencée de la colonne " + ce.getNom() + " n'existe pas" );
+            		errors.add("La table référencée de la colonne " + ce.getNom() + " n'existe pas\n" );
             	} if (!validateTableEtrangereDifferente(ce, table)) {
             		errors.add("La table référencée de la colonne " + ce.getNom() + " ne doit pas être celle dont elle provient"
-            				+ "\n(vous pouvez utiliser une colonne dérivée pour ça)");
+            				+ "\n(vous pouvez utiliser une colonne dérivée pour ça)\n");
             	} if (!validateTableEtrangereColonneExiste(ce)) {
-            		errors.add("La colonne référencée dans la table étrangère de " + ce.getNom() + " n'existe pas");
+            		errors.add("La colonne référencée dans la table étrangère de " + ce.getNom() + " n'existe pas\n");
             	}
-            	// TODO
             }
         }
         
@@ -379,7 +399,7 @@ public class SchemaTableValidator {
         // Récupérer l'instance racine
         Table table = (Table) resource.getContents().get(0);
 
-        System.out.println("Début de la vérification du fichier : " + file.toString());
+        System.out.println("Début de la vérification du fichier : " + file.toString() + "\n");
         // Valider la table
         List<String> errors = validateTable(table);
 

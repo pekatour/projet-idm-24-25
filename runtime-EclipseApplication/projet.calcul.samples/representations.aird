@@ -4,7 +4,7 @@
     <semanticResources>ExempleCalcul.calcul</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_H7PDgLiUEe-BqbBkn0Wyrw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_gIpCsLiUEe-BqbBkn0Wyrw" name="new CalculDiagram" repPath="#_gISdYLiUEe-BqbBkn0Wyrw" changeId="1734183956494">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_gIpCsLiUEe-BqbBkn0Wyrw" name="new CalculDiagram" repPath="#_gISdYLiUEe-BqbBkn0Wyrw" changeId="1734302861800">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']"/>
         <target xmi:type="calcul:Calcul" href="ExempleCalcul.calcul#/"/>
       </ownedRepresentationDescriptors>
@@ -13,119 +13,171 @@
   <diagram:DSemanticDiagram uid="_gISdYLiUEe-BqbBkn0Wyrw">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_gJCEQLiUEe-BqbBkn0Wyrw" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_gJCEQbiUEe-BqbBkn0Wyrw" type="Sirius" element="_gISdYLiUEe-BqbBkn0Wyrw" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_05DPUbmAEe-TubaldJY6Yw" type="2001" element="_05AMALmAEe-TubaldJY6Yw">
-          <children xmi:type="notation:Node" xmi:id="_05D2YLmAEe-TubaldJY6Yw" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_05D2YbmAEe-TubaldJY6Yw" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_2DzHELs0Ee-vA5duAczaAA" type="2001" element="_2Dng4Ls0Ee-vA5duAczaAA">
+          <children xmi:type="notation:Node" xmi:id="_2D6b0Ls0Ee-vA5duAczaAA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_2D6b0bs0Ee-vA5duAczaAA" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_05D2YrmAEe-TubaldJY6Yw" type="3016" element="_05AzELmAEe-TubaldJY6Yw">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_05D2Y7mAEe-TubaldJY6Yw" fontName="Ubuntu"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_05D2ZLmAEe-TubaldJY6Yw"/>
+          <children xmi:type="notation:Node" xmi:id="_2D8RALs0Ee-vA5duAczaAA" type="3016" element="_2DovALs0Ee-vA5duAczaAA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_2D8RAbs0Ee-vA5duAczaAA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2D8RArs0Ee-vA5duAczaAA"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_05DPUrmAEe-TubaldJY6Yw" fontColor="16777215" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_05DPU7mAEe-TubaldJY6Yw" x="235" y="40" width="83" height="82"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_2DzHEbs0Ee-vA5duAczaAA" fontColor="16777215" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2DzHErs0Ee-vA5duAczaAA" x="264" y="-60" width="181" height="127"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_58ZihLmCEe-TubaldJY6Yw" type="2001" element="_58XtULmCEe-TubaldJY6Yw">
-          <children xmi:type="notation:Node" xmi:id="_58Zih7mCEe-TubaldJY6Yw" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_58ZiiLmCEe-TubaldJY6Yw" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_-ZXD0Ls0Ee-vA5duAczaAA" type="2001" element="_-ZHzQLs0Ee-vA5duAczaAA">
+          <children xmi:type="notation:Node" xmi:id="_-ZXq4Ls0Ee-vA5duAczaAA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-ZXq4bs0Ee-vA5duAczaAA" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_58ZiibmCEe-TubaldJY6Yw" type="3016" element="_58XtUbmCEe-TubaldJY6Yw">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_58ZiirmCEe-TubaldJY6Yw" fontName="Ubuntu"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_58Zii7mCEe-TubaldJY6Yw"/>
+          <children xmi:type="notation:Node" xmi:id="_-ZY5ALs0Ee-vA5duAczaAA" type="3003" element="_-ZJocLs0Ee-vA5duAczaAA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-ZY5Abs0Ee-vA5duAczaAA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ZY5Ars0Ee-vA5duAczaAA"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_58ZihbmCEe-TubaldJY6Yw" fontColor="16777215" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_58ZihrmCEe-TubaldJY6Yw" x="392" y="208" width="94" height="83"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-ZXD0bs0Ee-vA5duAczaAA" fontColor="16777215" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ZXD0rs0Ee-vA5duAczaAA" x="258" y="96" width="193" height="133"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_vOnJ4LohEe-eDd0pwX6x4Q" type="2001" element="_vOa8oLohEe-eDd0pwX6x4Q">
-          <children xmi:type="notation:Node" xmi:id="_vOq0QLohEe-eDd0pwX6x4Q" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_vOq0QbohEe-eDd0pwX6x4Q" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_B9R2gLs1Ee-vA5duAczaAA" type="2001" element="_B9DNALs1Ee-vA5duAczaAA">
+          <children xmi:type="notation:Node" xmi:id="_B9R2g7s1Ee-vA5duAczaAA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_B9R2hLs1Ee-vA5duAczaAA" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_vOsCYLohEe-eDd0pwX6x4Q" type="3016" element="_vObjsLohEe-eDd0pwX6x4Q">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_vOsCYbohEe-eDd0pwX6x4Q" fontName="Ubuntu"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vOsCYrohEe-eDd0pwX6x4Q"/>
+          <children xmi:type="notation:Node" xmi:id="_B9SdkLs1Ee-vA5duAczaAA" type="3016" element="_B9D0ELs1Ee-vA5duAczaAA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_B9Sdkbs1Ee-vA5duAczaAA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B9Sdkrs1Ee-vA5duAczaAA"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_vOnJ4bohEe-eDd0pwX6x4Q" fontColor="16777215" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vOnJ4rohEe-eDd0pwX6x4Q" x="505" y="55" width="105" height="85"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_B9R2gbs1Ee-vA5duAczaAA" fontColor="16777215" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B9R2grs1Ee-vA5duAczaAA" x="84" y="276" width="78" height="85"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_EjNW8Ls1Ee-vA5duAczaAA" type="2001" element="_EjC-4rs1Ee-vA5duAczaAA">
+          <children xmi:type="notation:Node" xmi:id="_EjNW87s1Ee-vA5duAczaAA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_EjNW9Ls1Ee-vA5duAczaAA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EjN-ALs1Ee-vA5duAczaAA" type="3016" element="_EjC-47s1Ee-vA5duAczaAA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_EjN-Abs1Ee-vA5duAczaAA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EjN-Ars1Ee-vA5duAczaAA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_EjNW8bs1Ee-vA5duAczaAA" fontColor="16777215" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EjNW8rs1Ee-vA5duAczaAA" x="534" y="288" width="115" height="91"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_gJCEQriUEe-BqbBkn0Wyrw"/>
-        <edges xmi:type="notation:Edge" xmi:id="_58aJkLmCEe-TubaldJY6Yw" type="4001" element="_58Y7cLmCEe-TubaldJY6Yw" source="_05DPUbmAEe-TubaldJY6Yw" target="_58ZihLmCEe-TubaldJY6Yw">
-          <children xmi:type="notation:Node" xmi:id="_58aJlLmCEe-TubaldJY6Yw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_58aJlbmCEe-TubaldJY6Yw" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_-ZaHILs0Ee-vA5duAczaAA" type="4001" element="_-ZV1sLs0Ee-vA5duAczaAA" source="_2DzHELs0Ee-vA5duAczaAA" target="_-ZXD0Ls0Ee-vA5duAczaAA">
+          <children xmi:type="notation:Node" xmi:id="_-ZauMLs0Ee-vA5duAczaAA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ZauMbs0Ee-vA5duAczaAA" x="-11" y="-1"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_58aJlrmCEe-TubaldJY6Yw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_58aJl7mCEe-TubaldJY6Yw" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_-Zb8ULs0Ee-vA5duAczaAA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-Zb8Ubs0Ee-vA5duAczaAA" x="11" y="4"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_58aJmLmCEe-TubaldJY6Yw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_58aJmbmCEe-TubaldJY6Yw" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_-ZcjYLs0Ee-vA5duAczaAA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ZcjYbs0Ee-vA5duAczaAA" x="5" y="-4"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_58aJkbmCEe-TubaldJY6Yw"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_58aJkrmCEe-TubaldJY6Yw" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_58aJk7mCEe-TubaldJY6Yw" points="[13, 15, -91, -101]$[90, 101, -14, -15]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_58aJmrmCEe-TubaldJY6Yw" id="(0.8192771084337349,0.8170731707317073)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_58aJm7mCEe-TubaldJY6Yw" id="(0.1595744680851064,0.18072289156626506)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-ZaHIbs0Ee-vA5duAczaAA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-ZaHIrs0Ee-vA5duAczaAA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-ZaHI7s0Ee-vA5duAczaAA" points="[2, 64, -2, -29]$[4, 93, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-ZgNwLs0Ee-vA5duAczaAA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-ZgNwbs0Ee-vA5duAczaAA" id="(0.5181347150259067,0.0)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_vOspcLohEe-eDd0pwX6x4Q" type="4001" element="_vOkGlLohEe-eDd0pwX6x4Q" source="_vOnJ4LohEe-eDd0pwX6x4Q" target="_58ZihLmCEe-TubaldJY6Yw">
-          <children xmi:type="notation:Node" xmi:id="_vOtQgLohEe-eDd0pwX6x4Q" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vOtQgbohEe-eDd0pwX6x4Q" x="-2" y="-9"/>
+        <edges xmi:type="notation:Edge" xmi:id="_B9TEoLs1Ee-vA5duAczaAA" type="4001" element="_B9FCMrs1Ee-vA5duAczaAA" source="_-ZXD0Ls0Ee-vA5duAczaAA" target="_B9R2gLs1Ee-vA5duAczaAA">
+          <children xmi:type="notation:Node" xmi:id="_B9TEpLs1Ee-vA5duAczaAA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B9TEpbs1Ee-vA5duAczaAA" x="-4" y="9"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_vOueoLohEe-eDd0pwX6x4Q" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vOueobohEe-eDd0pwX6x4Q" x="3" y="11"/>
+          <children xmi:type="notation:Node" xmi:id="_B9TrsLs1Ee-vA5duAczaAA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B9Trsbs1Ee-vA5duAczaAA" x="3" y="-9"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_vOueorohEe-eDd0pwX6x4Q" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vOueo7ohEe-eDd0pwX6x4Q" x="5" y="9"/>
+          <children xmi:type="notation:Node" xmi:id="_B9Trsrs1Ee-vA5duAczaAA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B9Trs7s1Ee-vA5duAczaAA" x="3" y="-9"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_vOspcbohEe-eDd0pwX6x4Q"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_vOspcrohEe-eDd0pwX6x4Q" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vOspc7ohEe-eDd0pwX6x4Q" points="[-19, 15, 137, -109]$[-109, 86, 47, -38]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vOwT0LohEe-eDd0pwX6x4Q" id="(0.8571428571428571,0.8235294117647058)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vOwT0bohEe-eDd0pwX6x4Q" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_B9TEobs1Ee-vA5duAczaAA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_B9TEors1Ee-vA5duAczaAA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_B9TEo7s1Ee-vA5duAczaAA" points="[0, 0, 156, -67]$[-156, 67, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_B9TrtLs1Ee-vA5duAczaAA" id="(0.15544041450777202,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_B9Trtbs1Ee-vA5duAczaAA" id="(0.6153846153846154,0.2388323750552853)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_EjN-A7s1Ee-vA5duAczaAA" type="4001" element="_EjENBLs1Ee-vA5duAczaAA" source="_-ZXD0Ls0Ee-vA5duAczaAA" target="_EjNW8Ls1Ee-vA5duAczaAA">
+          <children xmi:type="notation:Node" xmi:id="_EjN-B7s1Ee-vA5duAczaAA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EjN-CLs1Ee-vA5duAczaAA" x="-5" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EjN-Cbs1Ee-vA5duAczaAA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EjN-Crs1Ee-vA5duAczaAA" x="5" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EjN-C7s1Ee-vA5duAczaAA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EjN-DLs1Ee-vA5duAczaAA" x="5" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_EjN-BLs1Ee-vA5duAczaAA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_EjN-Bbs1Ee-vA5duAczaAA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EjN-Brs1Ee-vA5duAczaAA" points="[0, 0, -156, -132]$[138, 77, -18, -55]$[138, 77, -18, -55]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EjOlELs1Ee-vA5duAczaAA" id="(0.7150259067357513,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EjOlEbs1Ee-vA5duAczaAA" id="(0.16219869339941428,0.8021978021978022)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_gJGVsLiUEe-BqbBkn0Wyrw" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_gJGVsbiUEe-BqbBkn0Wyrw"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_58XtULmCEe-TubaldJY6Yw" name="Colonne " incomingEdges="_58Y7cLmCEe-TubaldJY6Yw _vOkGlLohEe-eDd0pwX6x4Q" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@expression"/>
-      <semanticElements xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@expression"/>
-      <ownedStyle xmi:type="diagram:Ellipse" uid="_58XtUbmCEe-TubaldJY6Yw" labelSize="12" labelColor="255,255,255" labelPosition="node" color="77,137,20">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_05AMALmAEe-TubaldJY6Yw" name="Colonne " outgoingEdges="_58Y7cLmCEe-TubaldJY6Yw" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@entree.0"/>
-      <semanticElements xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@entree.0"/>
-      <ownedStyle xmi:type="diagram:Ellipse" uid="_05AzELmAEe-TubaldJY6Yw" labelSize="12" labelColor="255,255,255" labelPosition="node" color="77,137,20">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_vOa8oLohEe-eDd0pwX6x4Q" name="Colonne " outgoingEdges="_vOkGlLohEe-eDd0pwX6x4Q" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@entree.1"/>
-      <semanticElements xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@entree.1"/>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_-ZHzQLs0Ee-vA5duAczaAA" name="ADDITION" outgoingEdges="_B9FCMrs1Ee-vA5duAczaAA _EjENBLs1Ee-vA5duAczaAA" incomingEdges="_-ZV1sLs0Ee-vA5duAczaAA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="calcul:Binaire" href="ExempleCalcul.calcul#//@expression"/>
+      <semanticElements xmi:type="calcul:Binaire" href="ExempleCalcul.calcul#//@expression"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Ellipse" uid="_vObjsLohEe-eDd0pwX6x4Q" labelSize="12" labelColor="255,255,255" labelPosition="node" color="77,137,20">
+      <ownedStyle xmi:type="diagram:Square" uid="_-ZJocLs0Ee-vA5duAczaAA" labelSize="12" labelColor="255,255,255" labelPosition="node" color="156,12,12">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Binaire']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Binaire']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_EjC-4rs1Ee-vA5duAczaAA" name="Colonne a" incomingEdges="_EjENBLs1Ee-vA5duAczaAA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@expression/@expressiond"/>
+      <semanticElements xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@expression/@expressiond"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_EjC-47s1Ee-vA5duAczaAA" labelSize="12" labelColor="255,255,255" labelPosition="node" color="77,137,20">
         <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_58Y7cLmCEe-TubaldJY6Yw" sourceNode="_05AMALmAEe-TubaldJY6Yw" targetNode="_58XtULmCEe-TubaldJY6Yw">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_2Dng4Ls0Ee-vA5duAczaAA" name="Colonne a" outgoingEdges="_-ZV1sLs0Ee-vA5duAczaAA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@entree.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_58ZigLmCEe-TubaldJY6Yw" size="2" strokeColor="77,137,20">
+      <semanticElements xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@entree.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_2DovALs0Ee-vA5duAczaAA" labelSize="12" labelColor="255,255,255" labelPosition="node" color="77,137,20">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Entree']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-ZV1sLs0Ee-vA5duAczaAA" sourceNode="_2Dng4Ls0Ee-vA5duAczaAA" targetNode="_-ZHzQLs0Ee-vA5duAczaAA">
+      <target xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@entree.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_-ZV1sbs0Ee-vA5duAczaAA" size="2" strokeColor="77,137,20">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='flecheDefEntree']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_58ZigbmCEe-TubaldJY6Yw" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_-ZV1srs0Ee-vA5duAczaAA" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='flecheDefEntree']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_vOkGlLohEe-eDd0pwX6x4Q" sourceNode="_vOa8oLohEe-eDd0pwX6x4Q" targetNode="_58XtULmCEe-TubaldJY6Yw">
-      <target xmi:type="calcul:Entree" href="ExempleCalcul.calcul#//@entree.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_vOktoLohEe-eDd0pwX6x4Q" size="2" strokeColor="77,137,20">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='flecheDefEntree']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_vOktobohEe-eDd0pwX6x4Q" labelSize="12"/>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_B9DNALs1Ee-vA5duAczaAA" name="-9.0" incomingEdges="_B9FCMrs1Ee-vA5duAczaAA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="calcul:Constante" href="ExempleCalcul.calcul#//@expression/@expressiong"/>
+      <semanticElements xmi:type="calcul:Constante" href="ExempleCalcul.calcul#//@expression/@expressiong"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_B9D0ELs1Ee-vA5duAczaAA" labelSize="12" labelColor="255,255,255" labelPosition="node" color="39,76,114">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Constante']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='flecheDefEntree']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@nodeMappings[name='Constante']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_B9FCMrs1Ee-vA5duAczaAA" name="fGauche" sourceNode="_-ZHzQLs0Ee-vA5duAczaAA" targetNode="_B9DNALs1Ee-vA5duAczaAA">
+      <target xmi:type="calcul:Binaire" href="ExempleCalcul.calcul#//@expression"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_B9FpQLs1Ee-vA5duAczaAA" size="2" strokeColor="156,12,12">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsGauche']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_B9FpQbs1Ee-vA5duAczaAA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsGauche']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_EjENBLs1Ee-vA5duAczaAA" name="fDroit" sourceNode="_-ZHzQLs0Ee-vA5duAczaAA" targetNode="_EjC-4rs1Ee-vA5duAczaAA">
+      <target xmi:type="calcul:Binaire" href="ExempleCalcul.calcul#//@expression"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_EjENBbs1Ee-vA5duAczaAA" size="2" strokeColor="156,12,12">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsDroite']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_EjENBrs1Ee-vA5duAczaAA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']/@defaultLayer/@edgeMappings[name='filsDroite']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/projet.calcul.design/description/calcul.odesign#//@ownedViewpoints[name='CalculViewpoint']/@ownedRepresentations[name='CalculDiagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_gIbnULiUEe-BqbBkn0Wyrw"/>
